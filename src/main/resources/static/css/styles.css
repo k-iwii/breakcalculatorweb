@@ -1,0 +1,29 @@
+/* Style for the primary button */
+.primary-button {
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+}
+
+.primary-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for the secondary button */
+.secondary-button {
+  background-color: #008cba; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+}
+
+.secondary-button:hover {
+  background-color: #007bb5; /* Darker blue on hover */
+}
