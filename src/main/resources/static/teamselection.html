@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Selection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Break Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            background: white;
+            padding: 0px 80px;
+            text-align: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            font-size: 50pt;
+            color: #bdbdbd;
+            margin-top: 80px;
+            margin-bottom: 30px;
+            /*margin-left: 100px;*/
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+        }
+
+        .search-bar {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 95%;
+            display: flex;
+            gap: 0px;
+            align-items: flex-start;
+        }
+
+        input[type="text"], input[type="number"], select {
+            flex: 1;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+            background: #f5f5f5;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+        }
+
+        input[type="text"]::placeholder {
+            font-style: italic;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            border-color: #f5f5f5;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .search-button {
+            background: #919191;
+            color: white;
+            border: none;
+            padding: 15px 15px;
+            font-size: 1.2rem;
+            border-radius: 0px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .search-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px f5f5f5;
+        }
+
+        .search-button:active {
+            transform: translateY(-1px);
+        }
+
+        .table-container {
+            margin-top: 30px;
+            width: 95%;
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #standingsTable {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #standingsTable thead {
+            position: sticky;
+            top: 0;
+            background: #f8f9fa;
+            z-index: 10;
+        }
+
+        #standingsTable th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        #standingsTable td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        #standingsTable tbody tr:hover {
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+
+        #standingsTable tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        #standingsTable tbody tr:nth-child(even):hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Which team are you?</h1>
+        <div class="search-bar">
+                <input type="text" id="teamSearch" placeholder="Search for a team..." autocomplete="off">
+                <button class="search-button" onclick="handleSubmit()"><img src="Vector.png" alt="Search"></button>
+        </div>
+        
+        <div class="table-container">
+            <table id="standingsTable">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Speakers</th>
+                        <th>Break Category</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="standingsTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        let currentTournamentUrl = '';
+        
+        function loadStandings(tournamentUrl) {
+            if (!tournamentUrl) return;
+            
+            currentTournamentUrl = tournamentUrl;
+            
+            fetch(`/api/standings?url=${encodeURIComponent(tournamentUrl)}`)
+                .then(response => response.json())
+                .then(data => {
+                    populateStandingsTable(data);
+                })
+                .catch(error => {
+                    console.error('Error loading standings:', error);
+                });
+        }
+        
+        function populateStandingsTable(standings) {
+            const tableBody = document.getElementById('standingsTableBody');
+            tableBody.innerHTML = '';
+            
+            standings.forEach(standing => {
+                const team = standing[0];
+                const points = standing[1];
+                
+                const row = document.createElement('tr');
+                
+                const teamNameCell = document.createElement('td');
+                teamNameCell.textContent = team ? team.name : 'Unknown Team';
+                
+                const speakersCell = document.createElement('td');
+                if (team && team.speakers) {
+                    const speakerNames = team.speakers.map(speaker => speaker.name).join(', ');
+                    speakersCell.textContent = speakerNames;
+                } else {
+                    speakersCell.textContent = 'N/A';
+                }
+                
+                const breakCategoryCell = document.createElement('td');
+                if (team && team.junior !== undefined) {
+                    breakCategoryCell.textContent = team.junior ? 'Junior' : 'Open';
+                } else {
+                    breakCategoryCell.textContent = 'Open';
+                }
+                
+                const pointsCell = document.createElement('td');
+                pointsCell.textContent = points;
+                
+                row.appendChild(teamNameCell);
+                row.appendChild(speakersCell);
+                row.appendChild(breakCategoryCell);
+                row.appendChild(pointsCell);
+                
+                row.addEventListener('click', function() {
+                    document.getElementById('teamSearch').value = team ? team.name : '';
+                });
+                
+                tableBody.appendChild(row);
+            });
+        }
+        
+        function handleSubmit() {
+            const searchValue = document.getElementById('teamSearch').value;
+            console.log('Searching for team:', searchValue);
+        }
+        
+        // Load standings when page loads (you'll need to provide the tournament URL)
+        // For now, this is a placeholder - you'll need to get the tournament URL from somewhere
+        // loadStandings('your-tournament-url-here');
+    </script>
+</body>
+</html>
