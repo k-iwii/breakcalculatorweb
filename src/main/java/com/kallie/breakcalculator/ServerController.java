@@ -1,5 +1,10 @@
 package com.kallie.breakcalculator;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +27,7 @@ public class ServerController {
         @RequestParam int totalRounds,
         @RequestParam String format
      */
-    @PostMapping("/calculate")
+    /*@PostMapping("/calculate")
     public String calculateBreaks(@RequestParam String url) {
         System.out.println("DEBUG: Received POST request to /api/calculate");
         System.out.println("DEBUG: URL parameter: " + url);
@@ -39,20 +44,29 @@ public class ServerController {
             e.printStackTrace();
             return "Error processing request: " + e.getMessage();
         }
-    }
+    }*/
     
     @GetMapping("/standings")
-    public Object[][] getStandings(@RequestParam String url) {
+    public List<Map<String, Object>> getStandings(@RequestParam String url) {
         System.out.println("DEBUG: Received GET request to /api/standings");
         System.out.println("DEBUG: URL parameter: " + url);
         
         try {
             StandingsProcessor standingsProcessor = new StandingsProcessor(url);
-            return standingsProcessor.getCurrentStandings();
+            Object[][] standings = standingsProcessor.getCurrentStandings();
+            
+            List<Map<String, Object>> result = new ArrayList<>();
+            for (Object[] standing : standings) {
+                Map<String, Object> standingMap = new HashMap<>();
+                standingMap.put("team", standing[0]);
+                standingMap.put("points", standing[1]);
+                result.add(standingMap);
+            }
+            return result;
         } catch (Exception e) {
             System.out.println("DEBUG: Error occurred: " + e.getMessage());
             e.printStackTrace();
-            return new Object[0][0];
+            return new ArrayList<>();
         }
     }
 }

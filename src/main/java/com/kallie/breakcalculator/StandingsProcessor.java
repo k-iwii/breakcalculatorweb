@@ -1,13 +1,15 @@
 package com.kallie.breakcalculator;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,6 +18,8 @@ import org.jsoup.select.Elements;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.apache.commons.text.StringEscapeUtils;
 
 public class StandingsProcessor {
     private String serverUrl;
@@ -26,11 +30,14 @@ public class StandingsProcessor {
     public StandingsProcessor(String url) {
         System.out.println("DEBUG: StandingsProcessor constructor called with URL: " + url);
         String[] tournamentUrl = url.split("/");
+        if (tournamentUrl.length < 4) {
+            System.out.println("ERROR: Invalid URL format. Expected format: protocol://domain/tournament-slug");
+            return;
+        }
         this.serverUrl = tournamentUrl[0] + "//" + tournamentUrl[2] + "/";
         this.tournamentSlug = tournamentUrl[3];
         System.out.println("DEBUG: Server URL: " + this.serverUrl);
         System.out.println("DEBUG: Tournament slug: " + this.tournamentSlug);
-        findTeams();
     }
     
     private String urlToString(String urlString) throws IOException {
@@ -45,32 +52,38 @@ public class StandingsProcessor {
         if (responseCode != 200) {
             return responseCode + "";
         }
-        Scanner scanner = new Scanner(url.openStream());
-        StringBuilder inline = new StringBuilder();
-        while (scanner.hasNext()) {
-            inline.append(scanner.next());
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
+            return reader.lines().collect(Collectors.joining());
         }
-        scanner.close();
-
-        return inline.toString();
     }
     
-    private void findTeams() {
+    private HashMap<String, Team> findTeams() {
         String urlString = serverUrl + "api/v1/tournaments/" + tournamentSlug + "/teams";
         System.out.println("DEBUG: Fetching teams from: " + urlString);
+
+        HashMap<String, Team> teamMap = new HashMap<>();
 
         try {
             ObjectMapper mapper = new ObjectMapper();
             mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
             String response = urlToString(urlString);
-            System.out.println("DEBUG: Teams API response length: " + response.length());
+            
+            // Check if response is an HTTP error code
+            try {
+                Integer.parseInt(response);
+                System.out.println("DEBUG: API returned error code: " + response);
+                return new HashMap<String, Team>(); // Exit if we got an error code instead of JSON
+            } catch (NumberFormatException e) {
+                // Response is not a number, proceed with JSON parsing
+            }
             
             Team[] teamArray = mapper.readValue(response, Team[].class);
             System.out.println("DEBUG: Found " + teamArray.length + " teams");
             
             for (Team team : teamArray) {
                 teams.add(team);
+                teamMap.put(team.getReference(), team);
                 if (team.isJunior())
                     jrTeams.add(team);
             }
@@ -79,21 +92,35 @@ public class StandingsProcessor {
             System.out.println("DEBUG: Error in findTeams: " + e.getMessage());
             e.printStackTrace();
         }
+
+        return teamMap;
     }
     
     public Object[][] getCurrentStandings() {
         List<List<Map<String, Object>>> standingsData = readStandings();
         List<Object[]> currentStandings = new ArrayList<>();
-        
-        // Create a map for quick team lookup by name
-        Map<String, Team> teamMap = new HashMap<>();
-        for (Team team : teams) {
-            teamMap.put(team.getName(), team);
-        }
+
+        HashMap<String, Team> teamMap = findTeams();
         
         for (List<Map<String, Object>> teamData : standingsData) {
-            String teamName = teamData.get(0).get("text").toString();
-            
+            // get team name
+            String teamName = StringEscapeUtils.unescapeHtml4(teamData.get(0).get("text").toString());
+
+            // find the Team object that matches this team name
+            Team teamObject = teamMap.get(teamName);
+            if (teamObject == null) {
+                // If exact match not found, try to find by checking if the displayed name contains the team reference
+                String capName = teamName.toUpperCase();
+                for (Team team : teams) {
+                    if (capName.contains(team.getReference().toUpperCase())
+                        || capName.contains(team.getShortName().toUpperCase())) {
+                        teamObject = team;
+                        break;
+                    }
+                }
+            }
+
+            // get points
             int teamPoints = 0;
             if (teamData.get(1).containsKey("sort")) {
                 teamPoints = Integer.parseInt(teamData.get(1).get("sort").toString());
@@ -101,23 +128,11 @@ public class StandingsProcessor {
                 teamPoints = Integer.parseInt(teamData.get(2).get("sort").toString());
             }
             
-            // Find the Team object that matches this team name
-            Team teamObject = teamMap.get(teamName);
-            if (teamObject == null) {
-                // If exact match not found, try to find by checking if the displayed name contains the team reference
-                for (Team team : teams) {
-                    if (teamName.contains(team.getName())) {
-                        teamObject = team;
-                        break;
-                    }
-                }
-            }
-            
             currentStandings.add(new Object[]{teamObject, teamPoints});
         }
         
         // Sort by points (descending order)
-        currentStandings.sort((a, b) -> Integer.compare((Integer)b[1], (Integer)a[1]));
+        //currentStandings.sort((a, b) -> Integer.compare((Integer)b[1], (Integer)a[1]));
         
         return currentStandings.toArray(new Object[0][]);
     }
@@ -128,20 +143,26 @@ public class StandingsProcessor {
 
         try {
             String url = urlToString(urlString);
+
             if (url.equals("403")) {
                 return new ArrayList<>();
             }
-            Document doc = Jsoup.parse(url);
+            
+            Document doc = Jsoup.parse(url);            
+
             Elements scriptElements = doc.select("script");
 
             for (Element script : scriptElements) {
                 String scriptContent = script.html();
-                int startIdx = scriptContent.indexOf("tablesData:[");
-                int endIdx = scriptContent.lastIndexOf("]");
-                if (startIdx == -1 || endIdx == -1)
+                int startIdx = scriptContent.indexOf("tablesData: [");
+                if (startIdx == -1)
                     continue;
-                scriptContent = scriptContent.substring(0, endIdx);
-                scriptContent = scriptContent.substring(startIdx + 12);
+                
+                int endIdx = scriptContent.lastIndexOf("]");
+                if (endIdx == -1)
+                    continue;
+                    
+                scriptContent = scriptContent.substring(startIdx + 13, endIdx);
 
                 ObjectMapper mapper = new ObjectMapper();
                 @SuppressWarnings("unchecked")
@@ -151,6 +172,19 @@ public class StandingsProcessor {
                 List<List<Map<String, Object>>> teams = (List<List<Map<String, Object>>>)map.get("data");
                 ans = teams;
                 break;
+
+                /*
+                ObjectMapper mapper = new ObjectMapper();
+                
+                // Debug: log the extracted JSON content
+                System.out.println("Extracted JSON content: " + scriptContent);
+                System.out.println("JSON length: " + scriptContent.length());
+                
+                @SuppressWarnings("unchecked")
+                List<List<Map<String, Object>>> teams = mapper.readValue(scriptContent, List.class);
+                ans = teams;
+                break;
+                 */
             }
         } catch (IOException e) {
             e.printStackTrace();

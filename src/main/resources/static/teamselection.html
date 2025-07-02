@@ -35,7 +35,7 @@
 
         .search-bar {
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             width: 95%;
             display: flex;
             gap: 0px;
@@ -97,14 +97,13 @@
         }
 
         .table-container {
-            margin-top: 30px;
+            margin-top: 10px;
             width: 95%;
             height: 400px;
             overflow-y: auto;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         #standingsTable {
@@ -116,16 +115,16 @@
         #standingsTable thead {
             position: sticky;
             top: 0;
-            background: #f8f9fa;
+            background: #919191;
             z-index: 10;
         }
 
         #standingsTable th {
             padding: 15px 12px;
             text-align: left;
-            font-weight: 600;
-            color: #333;
-            border-bottom: 2px solid #e0e0e0;
+            font-weight: 300;
+            color: #ffffff;
+            border: 1px solid #e5e5e5;
             font-size: 0.95rem;
         }
 
@@ -181,7 +180,6 @@
             if (!tournamentUrl) return;
             
             currentTournamentUrl = tournamentUrl;
-            
             fetch(`/api/standings?url=${encodeURIComponent(tournamentUrl)}`)
                 .then(response => response.json())
                 .then(data => {
@@ -197,8 +195,8 @@
             tableBody.innerHTML = '';
             
             standings.forEach(standing => {
-                const team = standing[0];
-                const points = standing[1];
+                const team = standing.team;
+                const points = standing.points;
                 
                 const row = document.createElement('tr');
                 
@@ -243,7 +241,10 @@
         
         // Load standings when page loads (you'll need to provide the tournament URL)
         // For now, this is a placeholder - you'll need to get the tournament URL from somewhere
-        // loadStandings('your-tournament-url-here');
+        const urlParams = new URLSearchParams(window.location.search);
+        const tournamentUrl = urlParams.get('url');
+        if (tournamentUrl)
+            loadStandings(tournamentUrl);
     </script>
 </body>
 </html>

@@ -24,6 +24,7 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.jsoup:jsoup:1.16.1'
+	implementation 'org.apache.commons:commons-text:1.11.0'
 }
 
 tasks.named('test') {

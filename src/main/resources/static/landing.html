@@ -138,7 +138,7 @@
             }
             
             // Redirect to team selection page
-            window.location.href = 'teamselection.html';
+            window.location.href = `teamselection.html?url=${encodeURIComponent(url)}`;
         }
 
         // Allow Enter key to submit from URL input

@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Team {
     private int id;
-    private String name;
+    private String reference;
+    private String shortName;
     private String url;
     private boolean isJunior;
     /*@JsonProperty("break_categories")
@@ -21,13 +22,22 @@ public class Team {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getReference() {
+        return reference;
     }
 
     @JsonProperty("reference")
-    public void setName(String name) {
-        this.name = name;
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    public String getShortName() {
+        return shortName;
+    }
+
+    @JsonProperty("short_name")
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
     public String getUrl() {
@@ -79,8 +89,8 @@ public class Team {
     // Custom method to check and set name if null
     @JsonProperty("code_name")
     public void checkAndSetName(String codeName) {
-        if (this.name == null) {
-            this.name = codeName;
+        if (this.reference == null) {
+            this.reference = codeName;
         }
     }
     
