@@ -14,37 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api") // Base path for all endpoints in this controller
 public class ServerController {
-    @GetMapping("/test")
-    public String testEndpoint(@RequestParam(value = "name", required = false) String name) {
-        if (name != null) {
-            return "Hello, " + name + "!";
-        }
-        return "This is a test response!";
-    }
-    /*
-        @RequestParam int openBreak,
-        @RequestParam int jrBreak,
-        @RequestParam int totalRounds,
-        @RequestParam String format
-     */
-    /*@PostMapping("/calculate")
-    public String calculateBreaks(@RequestParam String url) {
-        System.out.println("DEBUG: Received POST request to /api/calculate");
-        System.out.println("DEBUG: URL parameter: " + url);
-        
-        try {
-            System.out.println("DEBUG: Creating StandingsProcessor...");
-            StandingsProcessor standingsProcessor = new StandingsProcessor(url);
-            System.out.println("DEBUG: StandingsProcessor created successfully");
-            Object[][] standings = standingsProcessor.getCurrentStandings();
-            
-            return "Calculation initiated for tournament: " + url;
-        } catch (Exception e) {
-            System.out.println("DEBUG: Error occurred: " + e.getMessage());
-            e.printStackTrace();
-            return "Error processing request: " + e.getMessage();
-        }
-    }*/
+    
+    private String debateFormat;
+    private int totalRounds;
+    private int openBreak;
+    private int jrBreak;
+    private int teams;
+    private int jrTeams;
     
     @GetMapping("/standings")
     public List<Map<String, Object>> getStandings(@RequestParam String url) {
@@ -68,5 +44,60 @@ public class ServerController {
             e.printStackTrace();
             return new ArrayList<>();
         }
+    }
+    
+    @PostMapping("/tournament-details")
+    public String saveTournamentDetails(
+        @RequestParam String debateFormat,
+        @RequestParam int totalRounds,
+        @RequestParam String openElimRound,
+        @RequestParam String jrElimRound
+    ) {
+        this.debateFormat = debateFormat;
+        this.totalRounds = totalRounds;
+
+        switch (openElimRound.toLowerCase()) {
+            case "partial double octofinals":
+                openBreak = 48; break;
+            case "octofinals":
+                openBreak = 32; break;
+            case "quarterfinals":
+                openBreak = 16; break;
+            case "semifinals":
+                openBreak = 8; break;
+            case "finals":
+                openBreak = 4; break;
+        }
+
+        switch (jrElimRound.toLowerCase()) {
+            case "junior partial double octofinals":
+                jrBreak = 48; break;
+            case "junior octofinals":
+                jrBreak = 32; break;
+            case "junior quarterfinals":
+                jrBreak = 16; break;
+            case "junior semifinals":
+                jrBreak = 8; break;
+            case "junior finals":
+                jrBreak = 4; break;
+        }
+
+        if (this.debateFormat.equals("World Schools")) {
+            openBreak /= 2;
+            jrBreak /= 2;
+        }
+        
+        return "Tournament details saved successfully";
+    }
+    
+    @GetMapping("/results")
+    public Map<String, Object> getResults() {
+        Map<String, Object> results = new HashMap<>();
+        results.put("debateFormat", this.debateFormat);
+        results.put("numberOfRounds", this.totalRounds);
+
+        
+        
+        return results;
     }
 }

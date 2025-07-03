@@ -27,6 +27,14 @@ public class StandingsProcessor {
     private List<Team> teams = new ArrayList<>();
     private List<Team> jrTeams = new ArrayList<>();
 
+    public int getNumTeams() {
+        return teams.size();
+    }
+
+    public int getNumJrTeams() {
+        return jrTeams.size();
+    }
+
     public StandingsProcessor(String url) {
         System.out.println("DEBUG: StandingsProcessor constructor called with URL: " + url);
         String[] tournamentUrl = url.split("/");

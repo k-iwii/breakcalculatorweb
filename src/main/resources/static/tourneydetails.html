@@ -1,42 +1,222 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Tourney Details</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Debate Break Calculator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        .container {
-            background: white;
-            padding: 0px 80px;
-            text-align: left;
-            margin-left: 50px;
-            margin-right: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            font-family: 'Montserrat', sans-serif;
-        }
+      .container {
+        background: white;
+        padding: 0px 80px;
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-family: "Montserrat", sans-serif;
+      }
 
-        h1 {
-            font-size: 50pt;
-            color: #bdbdbd;
-            margin-top: 80px;
-            margin-bottom: 30px;
-            /*margin-left: 100px;*/
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -1px;
-            font-family: 'Montserrat', sans-serif;
-            text-align: left;
-        }
+      h1 {
+        font-size: 50pt;
+        color: #bdbdbd;
+        margin-top: 80px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        font-family: "Montserrat", sans-serif;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 20pt;
+        color: #000000;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        font-family: "Montserrat", sans-serif;
+        text-align: left;
+      }
+
+      h3 {
+        font-size: 12pt;
+        color: #000000;
+        font-weight: 300;
+        margin-top: 10px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+        font-family: "Montserrat", sans-serif;
+        text-align: left;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Tournament details</h1>
+      <h1>Tournament details</h1>
+      <h2>Debate Format</h2>
+      <div style="display: flex; gap: 30px; margin-bottom: 10px">
+        <label
+          style="
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12pt;
+            font-weight: 300;
+          "
+        >
+          <input
+            type="radio"
+            name="debateFormat"
+            value="bp"
+            style="margin-right: 8px"
+          />
+          British Parliamentary
+        </label>
+        <label
+          style="
+            display: flex;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12pt;
+            font-weight: 300;
+          "
+        >
+          <input
+            type="radio"
+            name="debateFormat"
+            value="ws"
+            style="margin-right: 8px"
+          />
+          World Schools
+        </label>
+      </div>
+      <h2>Number of Debate Rounds</h2>
+      <input
+        type="text"
+        maxlength="2"
+        placeholder="5"
+        id="numberOfRounds"
+        style="
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12pt;
+          font-weight: 300;
+          color: #000000;
+          border: 1px solid #ccc;
+          padding: 8px;
+          margin-bottom: 10px;
+          width: 15px;
+          text-align: left;
+        "
+      />
+      <style>
+        input::placeholder {
+          font-weight: 300;
+          font-style: italic;
+        }
+      </style>
+      <h2>First Open Elimination Round</h2>
+      <select
+        id="openEliminationRound"
+        style="
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12pt;
+          font-weight: 300;
+          color: #000000;
+          border: 1px solid #ccc;
+          padding: 8px;
+          margin-bottom: 10px;
+          background-color: white;
+        "
+      >
+        <option value="finals">Finals</option>
+        <option value="semifinals">Semifinals</option>
+        <option value="quarterfinals">Quarterfinals</option>
+        <option value="octofinals">Octofinals</option>
+        <option value="partial-double-octofinals">Partial Double Octofinals</option>
+      </select>
+      <h2>First Junior Elimination Round</h2>
+      <select
+        id="juniorEliminationRound"
+        style="
+          font-family: 'Montserrat', sans-serif;
+          font-size: 12pt;
+          font-weight: 300;
+          color: #000000;
+          border: 1px solid #ccc;
+          padding: 8px;
+          margin-bottom: 15px;
+          background-color: white;
+        "
+      >
+        <option value="junior-finals">Junior Finals</option>
+        <option value="junior-semifinals">Junior Semifinals</option>
+        <option value="junior-quarterfinals">Junior Quarterfinals</option>
+        <option value="junior-octofinals">Junior Octofinals</option>
+        <option value="junior-partial-double-octofinals">Junior Partial Double Octofinals</option>
+      </select>
+      
+      <button
+        onclick="saveTournamentDetails()"
+        style="
+          background-color: #919191;
+          color: white;
+          border: none;
+          padding: 15px 30px;
+          font-size: 14pt;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          cursor: pointer;
+          margin-top: 20px;
+          transition: all 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.transform='translateY(0px)'"
+      >
+        Calculate
+      </button>
+      
+      <script>
+        function saveTournamentDetails() {
+          const debateFormat = document.querySelector('input[name="debateFormat"]:checked')?.value;
+          const numberOfRounds = document.getElementById('numberOfRounds').value;
+          const openEliminationRound = document.getElementById('openEliminationRound').value;
+          const juniorEliminationRound = document.getElementById('juniorEliminationRound').value;
+          
+          if (!debateFormat || !numberOfRounds) {
+            alert('Please fill in all required fields');
+            return;
+          }
+          
+          const formData = new FormData();
+          formData.append('debateFormat', debateFormat);
+          formData.append('numberOfRounds', parseInt(numberOfRounds));
+          formData.append('openEliminationRound', openEliminationRound);
+          formData.append('juniorEliminationRound', juniorEliminationRound);
+          
+          fetch('/api/tournament-details', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.text())
+          .then(data => {
+            console.log('Success:', data);
+            window.location.href = 'results.html';
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+            alert('Error saving tournament details');
+          });
+        }
+      </script>
     </div>
-</body>
+  </body>
 </html>
