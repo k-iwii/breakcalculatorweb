@@ -172,19 +172,6 @@ public class StandingsProcessor {
                 List<List<Map<String, Object>>> teams = (List<List<Map<String, Object>>>)map.get("data");
                 ans = teams;
                 break;
-
-                /*
-                ObjectMapper mapper = new ObjectMapper();
-                
-                // Debug: log the extracted JSON content
-                System.out.println("Extracted JSON content: " + scriptContent);
-                System.out.println("JSON length: " + scriptContent.length());
-                
-                @SuppressWarnings("unchecked")
-                List<List<Map<String, Object>>> teams = mapper.readValue(scriptContent, List.class);
-                ans = teams;
-                break;
-                 */
             }
         } catch (IOException e) {
             e.printStackTrace();

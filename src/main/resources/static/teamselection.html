@@ -130,7 +130,7 @@
 
         #standingsTable td {
             padding: 12px;
-            border-bottom: 1px solid #f0f0f0;
+            border: 1px solid #e5e5e5;
             font-size: 0.9rem;
             color: #555;
         }
@@ -147,14 +147,24 @@
         #standingsTable tbody tr:nth-child(even):hover {
             background-color: #f0f0f0;
         }
+
+        #standingsTable tbody tr.selected {
+            background-color: #e5e5e5 !important;
+            border: 2px solid #919191;
+        }
+
+        #standingsTable tbody tr.selected td {
+            border: 1px solid #919191;
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Which team are you?</h1>
         <div class="search-bar">
-                <input type="text" id="teamSearch" placeholder="Search for a team..." autocomplete="off">
-                <button class="search-button" onclick="handleSubmit()"><img src="Vector.png" alt="Search"></button>
+                <input type="text" id="teamSearch" placeholder="Search for a team..." autocomplete="off" onkeypress="handleKeyPress(event)">
+                <button class="search-button" onclick="handleSubmit()"><img src="SearchIcon.png" alt="Search"></button>
         </div>
         
         <div class="table-container">
@@ -201,7 +211,7 @@
                 const row = document.createElement('tr');
                 
                 const teamNameCell = document.createElement('td');
-                teamNameCell.textContent = team ? team.name : 'Unknown Team';
+                teamNameCell.textContent = team ? team.reference : 'Unknown Team';
                 
                 const speakersCell = document.createElement('td');
                 if (team && team.speakers) {
@@ -227,7 +237,18 @@
                 row.appendChild(pointsCell);
                 
                 row.addEventListener('click', function() {
-                    document.getElementById('teamSearch').value = team ? team.name : '';
+                    if (row.classList.contains('selected')) {
+                        // If clicking on already selected team, proceed to next page
+                        window.location.href = '/tourneydetails';
+                    } else {
+                        // Remove selection from all rows first
+                        const allRows = document.querySelectorAll('#standingsTable tbody tr');
+                        allRows.forEach(r => r.classList.remove('selected'));
+                        
+                        // Select the clicked team
+                        row.classList.add('selected');
+                        document.getElementById('teamSearch').value = team ? team.reference : '';
+                    }
                 });
                 
                 tableBody.appendChild(row);
@@ -235,9 +256,34 @@
         }
         
         function handleSubmit() {
-            const searchValue = document.getElementById('teamSearch').value;
-            console.log('Searching for team:', searchValue);
+            const searchValue = document.getElementById('teamSearch').value.trim();
+            if (!searchValue) return;
+            
+            const tableBody = document.getElementById('standingsTableBody');
+            const rows = tableBody.getElementsByTagName('tr');
+            
+            for (let i = 0; i < rows.length; i++) {
+                const teamNameCell = rows[i].getElementsByTagName('td')[0];
+                if (teamNameCell) {
+                    const teamName = teamNameCell.textContent.toLowerCase();
+                    if (teamName.includes(searchValue.toLowerCase())) {
+                        const tableContainer = document.querySelector('.table-container');
+                        const headerHeight = document.querySelector('#standingsTable thead').offsetHeight;
+                        const rowHeight = rows[i].offsetHeight;
+                        const targetScrollTop = rows[i].offsetTop - headerHeight;
+                        tableContainer.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+                        return;
+                    }
+                }
+            }
         }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                handleSubmit();
+            }
+        }
+        
         
         // Load standings when page loads (you'll need to provide the tournament URL)
         // For now, this is a placeholder - you'll need to get the tournament URL from somewhere
