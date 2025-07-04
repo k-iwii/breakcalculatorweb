@@ -39,11 +39,13 @@ public class BPSimulator {
             int[][] sim = simTourney(Arrays.stream(startingPoints).map(a -> Arrays.copyOf(a, a.length)).toArray(int[][]::new));
 
             //UPDATE JR
-            if (roundsLeft == 5) {
-                handleBestCase(sim);
-                handleWorstCase(sim);
-            } else {
-                if (!handleJr(sim)) continue;
+            if (jrTeams > 0) {
+                if (roundsLeft == 5) {
+                    handleBestCase(sim);
+                    handleWorstCase(sim);
+                } else {
+                    if (!handleJr(sim)) continue;
+                }
             }
 
             // UPDATE OPEN

@@ -29,18 +29,18 @@ public class WSDCSimulator {
 	public void beginSim(int[][] startingPoints) {
         sortDescending(startingPoints);
 
-        if (teams % 2 == 1) teams++; // assume that they will add swing teams
-
         for (int i = 0; i < simulationRuns; i++) {
             // simulate using duplicate array of startingPoints
             int[][] sim = simTourney(Arrays.stream(startingPoints).map(a -> Arrays.copyOf(a, a.length)).toArray(int[][]::new));
 
             //UPDATE JR
-            if (roundsLeft == 5) {
-                handleBestCase(sim);
-                handleWorstCase(sim);
-            } else {
-                if (!handleJr(sim)) continue;
+            if (jrTeams > 0) {
+                if (roundsLeft == 5) {
+                    handleBestCase(sim);
+                    handleWorstCase(sim);
+                } else {
+                    if (!handleJr(sim)) continue;
+                }
             }
 
             // UPDATE OPEN
@@ -179,7 +179,7 @@ public class WSDCSimulator {
     }
 
     public boolean handleJr(int[][] sim) {
-        // FINDING X
+        // FINDING X (min # points needed to break jr)
         int x = -1;
         ArrayList<Integer> jrBreaking = new ArrayList<>();
         int i = openBreak;

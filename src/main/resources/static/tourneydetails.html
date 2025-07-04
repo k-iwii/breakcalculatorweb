@@ -75,7 +75,7 @@
         >
           <input
             type="radio"
-            name="debateFormat"
+            name="format"
             value="bp"
             style="margin-right: 8px"
           />
@@ -92,7 +92,7 @@
         >
           <input
             type="radio"
-            name="debateFormat"
+            name="format"
             value="ws"
             style="margin-right: 8px"
           />
@@ -104,7 +104,7 @@
         type="text"
         maxlength="2"
         placeholder="5"
-        id="numberOfRounds"
+        id="totalRounds"
         style="
           font-family: 'Montserrat', sans-serif;
           font-size: 12pt;
@@ -125,7 +125,7 @@
       </style>
       <h2>First Open Elimination Round</h2>
       <select
-        id="openEliminationRound"
+        id="openElimRound"
         style="
           font-family: 'Montserrat', sans-serif;
           font-size: 12pt;
@@ -145,7 +145,7 @@
       </select>
       <h2>First Junior Elimination Round</h2>
       <select
-        id="juniorEliminationRound"
+        id="jrElimRound"
         style="
           font-family: 'Montserrat', sans-serif;
           font-size: 12pt;
@@ -186,21 +186,21 @@
       
       <script>
         function saveTournamentDetails() {
-          const debateFormat = document.querySelector('input[name="debateFormat"]:checked')?.value;
-          const numberOfRounds = document.getElementById('numberOfRounds').value;
-          const openEliminationRound = document.getElementById('openEliminationRound').value;
-          const juniorEliminationRound = document.getElementById('juniorEliminationRound').value;
+          const format = document.querySelector('input[name="format"]:checked')?.value;
+          const totalRounds = document.getElementById('totalRounds').value;
+          const openElimRound = document.getElementById('openElimRound').value;
+          const jrElimRound = document.getElementById('jrElimRound').value;
           
-          if (!debateFormat || !numberOfRounds) {
+          if (!format || !totalRounds) {
             alert('Please fill in all required fields');
             return;
           }
           
           const formData = new FormData();
-          formData.append('debateFormat', debateFormat);
-          formData.append('numberOfRounds', parseInt(numberOfRounds));
-          formData.append('openEliminationRound', openEliminationRound);
-          formData.append('juniorEliminationRound', juniorEliminationRound);
+          formData.append('format', format);
+          formData.append('totalRounds', parseInt(totalRounds));
+          formData.append('openElimRound', openElimRound);
+          formData.append('jrElimRound', jrElimRound);
           
           fetch('/api/tournament-details', {
             method: 'POST',

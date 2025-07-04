@@ -24,6 +24,7 @@ import org.apache.commons.text.StringEscapeUtils;
 public class StandingsProcessor {
     private String serverUrl;
     private String tournamentSlug;
+    private int roundsPassed = -1;
     private List<Team> teams = new ArrayList<>();
     private List<Team> jrTeams = new ArrayList<>();
 
@@ -33,6 +34,10 @@ public class StandingsProcessor {
 
     public int getNumJrTeams() {
         return jrTeams.size();
+    }
+
+    public int getRoundsPassed() {
+        return roundsPassed;
     }
 
     public StandingsProcessor(String url) {
@@ -178,6 +183,8 @@ public class StandingsProcessor {
 
                 @SuppressWarnings("unchecked")
                 List<List<Map<String, Object>>> teams = (List<List<Map<String, Object>>>)map.get("data");
+                // it could also be teams.get(0).size() - 3 (ex: autumnloo tabs)
+                roundsPassed = teams.get(0).size() - 2;
                 ans = teams;
                 break;
             }

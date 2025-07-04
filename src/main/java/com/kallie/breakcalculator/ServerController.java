@@ -10,35 +10,36 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/api") // Base path for all endpoints in this controller
 public class ServerController {
     
-    private String debateFormat;
-    private int totalRounds;
-    private int openBreak;
-    private int jrBreak;
-    private int teams;
-    private int jrTeams;
+    static final int simulationRuns = 100000;
+    private String format;
+    private int totalRounds, roundsLeft, roundsPassed;
+    private int openBreak, jrBreak;
+    private int teams, jrTeams;
+
+    private List<Object[]> currentStandings = new ArrayList<>();
     
     @GetMapping("/standings")
-    public List<Map<String, Object>> getStandings(@RequestParam String url) {
+    public List<Object[]> getStandings(@RequestParam String url) {
         System.out.println("DEBUG: Received GET request to /api/standings");
         System.out.println("DEBUG: URL parameter: " + url);
         
         try {
             StandingsProcessor standingsProcessor = new StandingsProcessor(url);
-            Object[][] standings = standingsProcessor.getCurrentStandings();
+            Object[][] teamResults = standingsProcessor.getCurrentStandings();
+
+            teams = standingsProcessor.getNumTeams();
+            jrTeams = standingsProcessor.getNumJrTeams();
+            roundsPassed = standingsProcessor.getRoundsPassed();
             
-            List<Map<String, Object>> result = new ArrayList<>();
-            for (Object[] standing : standings) {
-                Map<String, Object> standingMap = new HashMap<>();
-                standingMap.put("team", standing[0]);
-                standingMap.put("points", standing[1]);
-                result.add(standingMap);
-            }
-            return result;
+            for (Object[] team : teamResults)
+                currentStandings.add(team);
+            return currentStandings;
         } catch (Exception e) {
             System.out.println("DEBUG: Error occurred: " + e.getMessage());
             e.printStackTrace();
@@ -48,16 +49,21 @@ public class ServerController {
     
     @PostMapping("/tournament-details")
     public String saveTournamentDetails(
-        @RequestParam String debateFormat,
+        @RequestParam String format,
         @RequestParam int totalRounds,
         @RequestParam String openElimRound,
         @RequestParam String jrElimRound
     ) {
-        this.debateFormat = debateFormat;
+        this.format = format;
         this.totalRounds = totalRounds;
 
+        if (roundsPassed == -1 || roundsPassed >= totalRounds) // roundsPassed wrong
+            roundsLeft = totalRounds;
+        else
+            roundsLeft = totalRounds - roundsPassed;
+
         switch (openElimRound.toLowerCase()) {
-            case "partial double octofinals":
+            case "partial-double-octofinals":
                 openBreak = 48; break;
             case "octofinals":
                 openBreak = 32; break;
@@ -70,19 +76,21 @@ public class ServerController {
         }
 
         switch (jrElimRound.toLowerCase()) {
-            case "junior partial double octofinals":
+            case "junior-partial-double-octofinals":
                 jrBreak = 48; break;
-            case "junior octofinals":
+            case "junior-octofinals":
                 jrBreak = 32; break;
-            case "junior quarterfinals":
+            case "junior-quarterfinals":
                 jrBreak = 16; break;
-            case "junior semifinals":
+            case "junior-semifinals":
                 jrBreak = 8; break;
-            case "junior finals":
+            case "junior-finals":
                 jrBreak = 4; break;
+            default:
+                jrBreak = 0; // No junior break
         }
 
-        if (this.debateFormat.equals("World Schools")) {
+        if (this.format.equals("ws")) {
             openBreak /= 2;
             jrBreak /= 2;
         }
@@ -92,8 +100,42 @@ public class ServerController {
     
     @GetMapping("/results")
     public Map<String, Object> getResults() {
+        int[][] startingPoints = new int[teams][2]; // [0] = points, [1] = junior status
+        for (int i = 0; i < teams; i++) {
+            Object[] teamResults = currentStandings.get(i);
+            Team t = (Team) teamResults[0];
+            int points = (int) teamResults[1];
+            startingPoints[i][0] = points;
+            startingPoints[i][1] = t.isJunior() ? 1 : 0; // 1 for junior, 0 for open
+        }
+
+        if (format.equals("bp")){
+            while (teams % 4 != 0) teams++; // add swings; if mid-tourney, swings will enter as 0-pt teams
+
+            BPSimulator sim = new BPSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);
+
+            if (roundsLeft == totalRounds) {
+                // reset all scores, only keep jr status
+                for (int i = 0; i < teams; i++)
+                    startingPoints[i][0] = 0;
+            }
+                
+            sim.beginSim(startingPoints);
+        } else if (format.equals("ws")) {
+            if (teams % 2 != 0) teams++; // add swings
+
+            WSDCSimulator sim = new WSDCSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);
+
+            if (roundsLeft == totalRounds) {
+                // reset all scores, only keep jr status
+                for (int i = 0; i < teams; i++)
+                    startingPoints[i][0] = 0;
+            }
+            sim.beginSim(startingPoints);
+        }
+
         Map<String, Object> results = new HashMap<>();
-        results.put("debateFormat", this.debateFormat);
+        results.put("debateFormat", this.format);
         results.put("numberOfRounds", this.totalRounds);
 
         

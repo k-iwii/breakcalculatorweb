@@ -205,8 +205,8 @@
             tableBody.innerHTML = '';
             
             standings.forEach(standing => {
-                const team = standing.team;
-                const points = standing.points;
+                const team = standing[0];
+                const points = standing[1];
                 
                 const row = document.createElement('tr');
                 
