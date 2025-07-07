@@ -16,7 +16,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -24,38 +24,326 @@
             font-size: 50pt;
             color: #bdbdbd;
             margin-top: 80px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             /*margin-left: 100px;*/
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -1px;
             font-family: 'Montserrat', sans-serif;
+            align-self: flex-start;
+        }
+
+        h2 {
+            font-size: 18pt;
+            color: #000000;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            /*margin-left: 100px;*/
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        .results-columns {
+            margin-top: 5px;
+            display: flex;
+            border:#000000;
+            gap: 100px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .column {
+            margin-top: 5px;
+            flex: 1;
+            /*background: #f8f9fa;*/
+            min-width: 400px;
+            padding: 5px;
+        }
+
+        .column h1 {
+            margin-top: 0px;
+            font-size: 14pt;
+            color: #000000;
+            margin-bottom: 0px;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .column h2 {
+            font-size: 14pt;
+            color: #919191;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.2px;
+        }
+
+        .table-container {
+            margin-top: 30px;
+            width: 95%;
+            height: auto;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: white;
+            align-self: flex-start;
+        }
+
+        .table-container.junior-mode {
+            height: 180px;
+            max-height: 180px;
+        }
+
+        #standingsTable {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #standingsTable thead {
+            position: sticky;
+            top: 0;
+            background: #919191;
+            z-index: 10;
+        }
+
+        #standingsTable th {
+            padding: 15px 12px;
             text-align: left;
+            font-weight: 300;
+            color: #ffffff;
+            border: 1px solid #e5e5e5;
+            font-size: 0.95rem;
+        }
+
+        #standingsTable td {
+            padding: 12px;
+            border: 1px solid #e5e5e5;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        #standingsTable tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        #standingsTable tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        #standingsTable tbody tr:nth-child(even):hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>The break is...</h1>
+        <h2 id="junior-break-header">Junior Break</h2>
+        <div id="junior-results" style="display: none;"></div>
+        <h2>Open Break</h2>
         <div id="results"></div>
+        
+        <div class="table-container">
+            <table id="standingsTable">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Speakers</th>
+                        <th>Break Category</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="standingsTableBody">
+                </tbody>
+            </table>
+        </div>
     </div>
     
     <script>
         // Fetch results when page loads
         window.onload = function() {
-            fetch('/api/results')
+            // Get junior break status from sessionStorage
+            const showJunior = sessionStorage.getItem('showJunior') === 'true';
+            
+            // First check if junior results should be displayed
+            fetch(`/api/jr-status?showJunior=${showJunior}`)
+                .then(response => response.json())
+                .then(jrStatus => {
+                    const juniorHeader = document.getElementById('junior-break-header');
+                    const juniorResults = document.getElementById('junior-results');
+                    if (!jrStatus.showJunior) {
+                        juniorHeader.style.display = 'none';
+                        juniorResults.style.display = 'none';
+                    } else {
+                        juniorResults.style.display = 'block';
+                        // Fetch junior results
+                        fetch(`/api/results?showJunior=${showJunior}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                juniorResults.innerHTML = `
+                                    <div class="results-columns">
+                                        <div class="column">
+                                            <h1>Best Case</h1>
+                                            <h2>${data.junior && data.junior[0] ? data.junior[0] : ''}</h2>
+                                            <div id="jr-best-case-content"></div>
+                                        </div>
+                                        <div class="column">
+                                            <h1>Worst Case</h1>
+                                            <h2>${data.junior && data.junior[1] ? data.junior[1] : ''}</h2>
+                                            <div id="jr-worst-case-content"></div>
+                                        </div>
+                                    </div>
+                                `;
+                            })
+                            .catch(error => {
+                                console.error('Error fetching junior results:', error);
+                            });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching junior status:', error);
+                });
+
+            fetch(`/api/results?showJunior=${showJunior}`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('results').innerHTML = `
-                        <p>Debate Format: ${data.debateFormat}</p>
-                        <p>Number of Rounds: ${data.numberOfRounds}</p>
+                        <div class="results-columns">
+                            <div class="column">
+                                <h1>Best Case</h1>
+                                <h2>${data.open && data.open[0] ? data.open[0] : ''}</h2>
+                                <div id="best-case-content"></div>
+                            </div>
+                            <div class="column">
+                                <h1>Worst Case</h1>
+                                <h2>${data.open && data.open[1] ? data.open[1] : ''}</h2>
+                                <div id="worst-case-content"></div>
+                            </div>
+                        </div>
                     `;
+                    
+                    // Load standings data for the table
+                    loadStandingsTable();
                 })
                 .catch(error => {
                     console.error('Error fetching results:', error);
                     document.getElementById('results').innerHTML = '<p>Error loading results</p>';
                 });
         };
+        
+        function loadStandingsTable() {
+            // Get tournament URL from session storage (set during the flow)
+            const tournamentUrl = sessionStorage.getItem('tournamentUrl');
+            if (!tournamentUrl) {
+                console.error('No tournament URL found in session storage');
+                return;
+            }
+            
+            // Get junior break status to determine row count
+            const showJunior = sessionStorage.getItem('showJunior') === 'true';
+            fetch(`/api/jr-status?showJunior=${showJunior}`)
+                .then(response => response.json())
+                .then(jrStatus => {
+                    // Fetch standings data
+                    fetch(`/api/standings?url=${encodeURIComponent(tournamentUrl)}`)
+                        .then(response => response.json())
+                        .then(standings => {
+                            populateStandingsTable(standings, jrStatus.showJunior);
+                            
+                            // Auto-scroll to selected team if available
+                            const selectedTeam = sessionStorage.getItem('selectedTeam');
+                            if (selectedTeam) {
+                                setTimeout(() => {
+                                    scrollToTeam(selectedTeam);
+                                }, 100);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error loading standings:', error);
+                        });
+                })
+                .catch(error => {
+                    console.error('Error fetching junior status for table:', error);
+                });
+        }
+        
+        function populateStandingsTable(standings, getJrBreak) {
+            const tableBody = document.getElementById('standingsTableBody');
+            const tableContainer = document.querySelector('.table-container');
+            tableBody.innerHTML = '';
+            
+            // Apply junior-mode class if junior results are being displayed
+            if (getJrBreak) {
+                tableContainer.classList.add('junior-mode');
+            } else {
+                tableContainer.classList.remove('junior-mode');
+            }
+            
+            // Show all teams - scrolling is handled by CSS
+            const rowsToShow = standings;
+            
+            rowsToShow.forEach(standing => {
+                const team = standing[0];
+                const points = standing[1];
+                
+                const row = document.createElement('tr');
+                
+                const teamNameCell = document.createElement('td');
+                teamNameCell.textContent = team ? team.reference : 'Unknown Team';
+                
+                const speakersCell = document.createElement('td');
+                if (team && team.speakers) {
+                    const speakerNames = team.speakers.map(speaker => speaker.name).join(', ');
+                    speakersCell.textContent = speakerNames;
+                } else {
+                    speakersCell.textContent = 'N/A';
+                }
+                
+                const breakCategoryCell = document.createElement('td');
+                if (team && team.isJunior !== undefined) {
+                    breakCategoryCell.textContent = team.isJunior ? 'Junior' : 'Open';
+                } else {
+                    breakCategoryCell.textContent = 'Open';
+                }
+                
+                const pointsCell = document.createElement('td');
+                pointsCell.textContent = points;
+                
+                row.appendChild(teamNameCell);
+                row.appendChild(speakersCell);
+                row.appendChild(breakCategoryCell);
+                row.appendChild(pointsCell);
+                
+                tableBody.appendChild(row);
+            });
+        }
+        
+        function scrollToTeam(teamName) {
+            const tableBody = document.getElementById('standingsTableBody');
+            const rows = tableBody.getElementsByTagName('tr');
+            
+            for (let i = 0; i < rows.length; i++) {
+                const teamNameCell = rows[i].getElementsByTagName('td')[0];
+                if (teamNameCell && teamNameCell.textContent === teamName) {
+                    const tableContainer = document.querySelector('.table-container');
+                    const headerHeight = document.querySelector('#standingsTable thead').offsetHeight;
+                    const targetScrollTop = rows[i].offsetTop - headerHeight;
+                    tableContainer.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+                    
+                    // Highlight the selected team row
+                    rows[i].style.backgroundColor = i % 2 === 0 ? '#ffffff' : '#fafafa';
+                    rows[i].style.border = '1px solid #e5e5e5';
+                    
+                    break;
+                }
+            }
+        }
     </script>
 </body>
 </html>

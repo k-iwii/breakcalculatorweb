@@ -183,8 +183,9 @@ public class StandingsProcessor {
 
                 @SuppressWarnings("unchecked")
                 List<List<Map<String, Object>>> teams = (List<List<Map<String, Object>>>)map.get("data");
-                // it could also be teams.get(0).size() - 3 (ex: autumnloo tabs)
-                roundsPassed = teams.get(0).size() - 2;
+                
+                if (roundsPassed == -1) findRoundsPassed(teams.get(0));
+                
                 ans = teams;
                 break;
             }
@@ -193,5 +194,21 @@ public class StandingsProcessor {
         }
         
         return ans;
+    }
+
+    private void findRoundsPassed(List<Map<String, Object>> teamInfo) {
+        if (teamInfo.isEmpty() || teamInfo.size() < 3) {
+            System.out.println("DEBUG: No rounds passed found in standings data.");
+            return;
+        }
+
+        int x = 1;
+        for (Map<String, Object> info : teamInfo) {
+            if (info.size() < 3)
+                x++;
+        }
+
+        // it could also be teams.get(0).size() - 3 (ex: autumnloo tabs)
+        roundsPassed = teamInfo.size() - x;
     }
 }

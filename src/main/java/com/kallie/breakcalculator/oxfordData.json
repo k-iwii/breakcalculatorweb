@@ -1,0 +1,5709 @@
+{
+  "head": [
+    { "key": "team", "tooltip": "Team", "icon": "users" },
+    { "key": "institution", "icon": "home", "tooltip": "Institution" },
+    { "key": "wins", "tooltip": "Wins", "icon": "bar-chart" },
+    { "key": "r0", "title": "R1" },
+    { "key": "r1", "title": "R2" }
+  ],
+  "data": [
+    [
+      {
+        "text": "Arencia",
+        "emoji": "\ud83d\udec0",
+        "sort": "Arencia",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Arencia",
+          "content": [
+            { "text": "Seunghun Lee, Brooke Lai, Jane Hahn, Connie Han" },
+            {
+              "text": "View Arencia's Record",
+              "link": "/2025/participants/team/259481/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Ecuador WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Iann Tobar, Alejandra Le\u00f3n, Kamille Pazos, Carlos Ubidia"
+            },
+            {
+              "text": "View Ecuador WSDC's Record",
+              "link": "/2025/participants/team/259994/"
+            }
+          ],
+          "title": "Won against Ecuador WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Keyspeak Sapphire",
+        "popover": {
+          "content": [
+            { "text": "Elaine Fan, Vivi Ni, Xinyu Wang, Shaohang Chen" },
+            {
+              "text": "View Keyspeak Sapphire's Record",
+              "link": "/2025/participants/team/259434/"
+            }
+          ],
+          "title": "Won against Keyspeak Sapphire"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Canada Louis Riel",
+        "emoji": "\ud83e\ude82",
+        "sort": "Canada Louis Riel",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Canada Louis Riel",
+          "content": [
+            { "text": "Ann Wang, Jinjou Wang, Kelvin Fan, Lucas Le, Sarah Li" },
+            {
+              "text": "View Canada Louis Riel's Record",
+              "link": "/2025/participants/team/259412/"
+            }
+          ]
+        }
+      },
+      { "text": "Canada WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Team Romania",
+        "popover": {
+          "content": [
+            {
+              "text": "Drago\u0219 Matei, Ionu\u021b Moldovan, David Bagacean, Sorin \u021aiclete, Daria Iancu"
+            },
+            {
+              "text": "View Team Romania's Record",
+              "link": "/2025/participants/team/259400/"
+            }
+          ],
+          "title": "Won against Team Romania"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Nomad Samsa",
+        "popover": {
+          "content": [
+            {
+              "text": "Alikhan Marat, Assem Issina, Akbota Smanova, Syrym Zhoyamergen, Bekzhan Kairzhanov"
+            },
+            {
+              "text": "View Nomad Samsa's Record",
+              "link": "/2025/participants/team/259477/"
+            }
+          ],
+          "title": "Won against Nomad Samsa"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Canada William Lyon Mackenzie",
+        "emoji": "\ud83c\udfbc",
+        "sort": "Canada William Lyon Mackenzie",
+        "class": "team-name",
+        "popover": {
+          "title": "Canada William Lyon Mackenzie",
+          "content": [
+            {
+              "text": "Afrukhta Siddique, Conan Li, Grace Liu, Hannah Li, Hannah Liu"
+            },
+            {
+              "text": "View Canada William Lyon Mackenzie's Record",
+              "link": "/2025/participants/team/259413/"
+            }
+          ]
+        }
+      },
+      { "text": "Canada WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs WSDC Vietnam",
+        "popover": {
+          "content": [
+            {
+              "text": "Binh-Minh Le, Nha-Uyen Vu, Duc-Minh Hoang, Anthony Ngoc-Minh Nguyen, Thien-Bao Nguyen-Huy"
+            },
+            {
+              "text": "View WSDC Vietnam's Record",
+              "link": "/2025/participants/team/259458/"
+            }
+          ],
+          "title": "Won against WSDC Vietnam"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Artis Academy CZL",
+        "popover": {
+          "content": [
+            { "text": "William Chen, Donnie Zhao, Felix Li" },
+            {
+              "text": "View Artis Academy CZL's Record",
+              "link": "/2025/participants/team/259406/"
+            }
+          ],
+          "title": "Won against Artis Academy CZL"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Cannibals bc we ate",
+        "emoji": "\ud83d\udecc",
+        "sort": "Cannibals bc we ate",
+        "class": "team-name",
+        "popover": {
+          "title": "Cannibals bc we ate",
+          "content": [
+            {
+              "text": "Haiyue Li (Hannah), Laila Ahmed, Kamogelo Malikane, Yishan Gao (Noelle)"
+            },
+            {
+              "text": "View Cannibals bc we ate's Record",
+              "link": "/2025/participants/team/259426/"
+            }
+          ]
+        }
+      },
+      { "text": "GE Elite" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Elmanika",
+        "popover": {
+          "content": [
+            { "text": "Emma Song, Mu En Li, Zitong Li" },
+            {
+              "text": "View Elmanika's Record",
+              "link": "/2025/participants/team/259454/"
+            }
+          ],
+          "title": "Won against Elmanika"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs KFDI francis light&#x27;s side quest",
+        "popover": {
+          "content": [
+            { "text": "Glenys, Owen Chong, Michelle Ting, Rayan Khor" },
+            {
+              "text": "View KFDI francis light&#x27;s side quest's Record",
+              "link": "/2025/participants/team/259437/"
+            }
+          ],
+          "title": "Won against KFDI francis light&#x27;s side quest"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Ethos Poseidon",
+        "emoji": "\ud83d\udc17",
+        "sort": "Ethos Poseidon",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ethos Poseidon",
+          "content": [
+            {
+              "text": "Serina Fan, Henglin Xu, Jasmine Wang, Connie Jin, Solomon Zu"
+            },
+            {
+              "text": "View Ethos Poseidon's Record",
+              "link": "/2025/participants/team/259421/"
+            }
+          ]
+        }
+      },
+      { "text": "Ethos Academy" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Jacky Shut Up",
+        "popover": {
+          "content": [
+            { "text": "Lucas Lu, Zixuan Hong, Jacky Zhao, Joyce Xu, Liz Li" },
+            {
+              "text": "View Jacky Shut Up's Record",
+              "link": "/2025/participants/team/259471/"
+            }
+          ],
+          "title": "Won against Jacky Shut Up"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs M(iracle)orocco WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Mohamed Isslam El Makaoui, Nicole Coleman, Noussayba Elouedghiri Idrissi, Safaa Hafdi"
+            },
+            {
+              "text": "View M(iracle)orocco WSDC's Record",
+              "link": "/2025/participants/team/260172/"
+            }
+          ],
+          "title": "Won against M(iracle)orocco WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Goobert",
+        "emoji": "\u26a1",
+        "sort": "Goobert",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Goobert",
+          "content": [
+            { "text": "Isolde Li, Zachary Li, Leo Guo" },
+            {
+              "text": "View Goobert's Record",
+              "link": "/2025/participants/team/259468/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs LL China&amp;Ireland",
+        "popover": {
+          "content": [
+            { "text": "Kingsley Guo, Guan Hui Lin, Eoghan Conroy, Lucas Liu" },
+            {
+              "text": "View LL China&amp;Ireland's Record",
+              "link": "/2025/participants/team/259439/"
+            }
+          ],
+          "title": "Won against LL China&amp;Ireland"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs New Zealand",
+        "popover": {
+          "content": [
+            {
+              "text": "Sebastian Heine-Sheldrake, Bruce Zhang, Sam Allan, Cerisa Gu, Isabella McKeefry"
+            },
+            {
+              "text": "View New Zealand's Record",
+              "link": "/2025/participants/team/259442/"
+            }
+          ],
+          "title": "Won against New Zealand"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Hong Kong Egg Tarts",
+        "emoji": "\ud83d\ude1c",
+        "sort": "Hong Kong Egg Tarts",
+        "class": "team-name",
+        "popover": {
+          "title": "Hong Kong Egg Tarts",
+          "content": [
+            { "text": "Jasmine Chen, Cyrus Leung, Valmik Dangayach" },
+            {
+              "text": "View Hong Kong Egg Tarts's Record",
+              "link": "/2025/participants/team/259469/"
+            }
+          ]
+        }
+      },
+      { "text": "Hong Kong WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs XOFOASOFAOSD",
+        "popover": {
+          "content": [
+            {
+              "text": "Piers Ko, John Chiu, Adrian Preston Wong, Samuel Ang Krishnan"
+            },
+            {
+              "text": "View XOFOASOFAOSD's Record",
+              "link": "/2025/participants/team/259476/"
+            }
+          ],
+          "title": "Won against XOFOASOFAOSD"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Ethos Athena",
+        "popover": {
+          "content": [
+            { "text": "Katherine Zhang, Vivian Sui, Valeria Zhao" },
+            {
+              "text": "View Ethos Athena's Record",
+              "link": "/2025/participants/team/259422/"
+            }
+          ],
+          "title": "Won against Ethos Athena"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Hong Kong WSDC",
+        "emoji": "\ud83c\udded\ud83c\uddf0",
+        "sort": "Hong Kong WSDC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Hong Kong WSDC",
+          "content": [
+            {
+              "text": "Jeanine Cheng, Lauren Tse, Jun Nam, Mollie Mei, Advik Sharma"
+            },
+            {
+              "text": "View Hong Kong WSDC's Record",
+              "link": "/2025/participants/team/259428/"
+            }
+          ]
+        }
+      },
+      { "text": "Hong Kong WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs \u03a3h priori",
+        "popover": {
+          "content": [
+            {
+              "text": "Jeffery Liu, Ella Feng, Vicky Zhu, Kathy Dong, Terrence Guo"
+            },
+            {
+              "text": "View \u03a3h priori's Record",
+              "link": "/2025/participants/team/259465/"
+            }
+          ],
+          "title": "Won against \u03a3h priori"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs ROGA Gold",
+        "popover": {
+          "content": [
+            {
+              "text": "Christina Yating Zhang, Louisa Chen, Sara Saiprasad, Ruhani Surana"
+            },
+            {
+              "text": "View ROGA Gold's Record",
+              "link": "/2025/participants/team/259988/"
+            }
+          ],
+          "title": "Won against ROGA Gold"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Hong Kong WSDC Dragon Boats",
+        "emoji": "\ud83d\udcd0",
+        "sort": "Hong Kong WSDC Dragon Boats",
+        "class": "team-name",
+        "popover": {
+          "title": "Hong Kong WSDC Dragon Boats",
+          "content": [
+            {
+              "text": "Moses Lai, Jimi Fitzpatrick, Tony Shu, Kaitlyn Liu, Lily Liang"
+            },
+            {
+              "text": "View Hong Kong WSDC Dragon Boats's Record",
+              "link": "/2025/participants/team/259986/"
+            }
+          ]
+        }
+      },
+      { "text": "Hong Kong WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Team England",
+        "popover": {
+          "content": [
+            { "text": "Valerie C, Aryaman S, Adrian S, Alvin S, Joshua M" },
+            {
+              "text": "View Team England's Record",
+              "link": "/2025/participants/team/259418/"
+            }
+          ],
+          "title": "Won against Team England"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Doremi",
+        "popover": {
+          "content": [
+            { "text": "Yin Ruoqing, Wu Peiyao, Lyu Yueran" },
+            {
+              "text": "View Doremi's Record",
+              "link": "/2025/participants/team/259453/"
+            }
+          ],
+          "title": "Won against Doremi"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Keyspeak Alchemy",
+        "emoji": "\ud83d\ude2d",
+        "sort": "Keyspeak Alchemy",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Keyspeak Alchemy",
+          "content": [
+            {
+              "text": "Emma Qiu, Lawrence Ma, Kevin Sun, Donny Cao, Grace Guo"
+            },
+            {
+              "text": "View Keyspeak Alchemy's Record",
+              "link": "/2025/participants/team/259433/"
+            }
+          ]
+        }
+      },
+      { "text": "Keyspeak" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Ethos Hermes",
+        "popover": {
+          "content": [
+            { "text": "Ema Sun, Cate Shumka, Jiyan Jane Fan" },
+            {
+              "text": "View Ethos Hermes's Record",
+              "link": "/2025/participants/team/259425/"
+            }
+          ],
+          "title": "Won against Ethos Hermes"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team IIS",
+        "popover": {
+          "content": [
+            { "text": "Rabaani Mehra, Abana Dhillon, Reeva Chopra" },
+            {
+              "text": "View Team IIS's Record",
+              "link": "/2025/participants/team/259993/"
+            }
+          ],
+          "title": "Won against Team IIS"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "ROGA White",
+        "emoji": "\ud83d\udc4d",
+        "sort": "ROGA White",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "ROGA White",
+          "content": [
+            { "text": "Christa Zhu, Bella Lent, Cindy You, Sylvia Wu" },
+            {
+              "text": "View ROGA White's Record",
+              "link": "/2025/participants/team/259991/"
+            }
+          ]
+        }
+      },
+      { "text": "ROGA" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs MNPH",
+        "popover": {
+          "content": [
+            {
+              "text": "Tr\u01b0\u01a1ng Kh\u00e1nh Ph\u01b0\u01a1ng, V\u00f5 Ph\u1ea1m Minh Ho\u00e0ng, H\u1ed3 \u0110\u1ee9c Minh, Ph\u1ea1m Kh\u00e1nh Nhi"
+            },
+            {
+              "text": "View MNPH's Record",
+              "link": "/2025/participants/team/259462/"
+            }
+          ],
+          "title": "Won against MNPH"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Armenia WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Anam McCartney, Ph\u1ea1m Tr\u1ea7n B\u1ea3o Ch\u00e2u, Patryk Stelmaszek, Ilinca Banu, Anastasiia Sukhonosova"
+            },
+            {
+              "text": "View Armenia WSDC's Record",
+              "link": "/2025/participants/team/259401/"
+            }
+          ],
+          "title": "Won against Armenia WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "South Africa Zuma",
+        "emoji": "\ud83e\udd40",
+        "sort": "South Africa Zuma",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "South Africa Zuma",
+          "content": [
+            {
+              "text": "Tshepiso Polo, Dimpho Ntsoane, Tshegofatso Molepo, Anjeli Ramatsui, Khathutshelo Mainganye"
+            },
+            {
+              "text": "View South Africa Zuma's Record",
+              "link": "/2025/participants/team/259450/"
+            }
+          ]
+        }
+      },
+      { "text": "South Africa WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs WSDC Indonesia Bang Jali",
+        "popover": {
+          "content": [
+            {
+              "text": "Raymond Arvin, Chelsea Cecillia Cang, Anzea Wirasasmita, Audrey Effendi"
+            },
+            {
+              "text": "View WSDC Indonesia Bang Jali's Record",
+              "link": "/2025/participants/team/259429/"
+            }
+          ],
+          "title": "Won against WSDC Indonesia Bang Jali"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Craiova Debate Society",
+        "popover": {
+          "content": [
+            {
+              "text": "B\u0103lun\u0103 Rare\u0219-Costin, Vi\u0219an Gabriela Teodora, Filip Mihnea Stefan, Saro\u0219i David, St\u0103nescu Mihai"
+            },
+            {
+              "text": "View Craiova Debate Society's Record",
+              "link": "/2025/participants/team/259470/"
+            }
+          ],
+          "title": "Won against Craiova Debate Society"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Sri Lanka",
+        "emoji": "\ud83c\uddf1\ud83c\uddf0",
+        "sort": "Sri Lanka",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Sri Lanka",
+          "content": [
+            {
+              "text": "Akein Bandara, Savith Wijesundara, Nimansa Jayasundera, Rudhesh Ram, Dihen Udumalagala"
+            },
+            {
+              "text": "View Sri Lanka's Record",
+              "link": "/2025/participants/team/259451/"
+            }
+          ]
+        }
+      },
+      { "text": "Sri Lanka WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs 5 Ontarioians",
+        "popover": {
+          "content": [
+            {
+              "text": "Keerti Joshi, Kallie Yang, Owen Yin, Nathan Yang, Laura Wang"
+            },
+            {
+              "text": "View 5 Ontarioians's Record",
+              "link": "/2025/participants/team/259473/"
+            }
+          ],
+          "title": "Won against 5 Ontarioians"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Gyarados",
+        "popover": {
+          "content": [
+            {
+              "text": "Elma Kalni\u0146a, Be\u0101te J\u0113kabsone, Reina Ro\u010d\u0101ne, Alise Skuja, Martins Magomedovs"
+            },
+            {
+              "text": "View Gyarados's Record",
+              "link": "/2025/participants/team/259438/"
+            }
+          ],
+          "title": "Won against Gyarados"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Croatia",
+        "emoji": "\ud83c\udded\ud83c\uddf7",
+        "sort": "Team Croatia",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Croatia",
+          "content": [
+            {
+              "text": "Domagoj Praljak, Mila Kre\u0161i\u0107, Nela Dami\u0107, Marin Bolan\u010da, Lana Sri\u0107a"
+            },
+            {
+              "text": "View Team Croatia's Record",
+              "link": "/2025/participants/team/259414/"
+            }
+          ]
+        }
+      },
+      { "text": "Croatian DS" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs SD Academy",
+        "popover": {
+          "content": [
+            { "text": "Amy Tang, Louise Jiang, Jenna Liu" },
+            {
+              "text": "View SD Academy's Record",
+              "link": "/2025/participants/team/259448/"
+            }
+          ],
+          "title": "Won against SD Academy"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs JFH Soar",
+        "popover": {
+          "content": [
+            { "text": "Joey Lin, Fiona Shen, Heather Dong" },
+            {
+              "text": "View JFH Soar's Record",
+              "link": "/2025/participants/team/259480/"
+            }
+          ],
+          "title": "Won against JFH Soar"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Czechia",
+        "emoji": "\ud83c\udde8\ud83c\uddff",
+        "sort": "Team Czechia",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Czechia",
+          "content": [
+            {
+              "text": "Jan Pozdn\u00edk, Kristi\u00e1n \u010cech, Kry\u0161tof Ol\u0161a, Petr Kosi\u010dka"
+            },
+            {
+              "text": "View Team Czechia's Record",
+              "link": "/2025/participants/team/259416/"
+            }
+          ]
+        }
+      },
+      { "text": "Czech DA" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs COG B",
+        "popover": {
+          "content": [
+            {
+              "text": "Niyati Aggarwal, Adhyaa Kulandaivel, Osheen Samra, Riti Jain"
+            },
+            {
+              "text": "View COG B's Record",
+              "link": "/2025/participants/team/259475/"
+            }
+          ],
+          "title": "Won against COG B"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Ethos Zeus",
+        "popover": {
+          "content": [
+            {
+              "text": "Jenelle Zhang, Elliana Sun, Amanda Zhao, Alan Li, Kai Yee Li"
+            },
+            {
+              "text": "View Ethos Zeus's Record",
+              "link": "/2025/participants/team/259420/"
+            }
+          ],
+          "title": "Won against Ethos Zeus"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Estonia",
+        "emoji": "\ud83c\uddea\ud83c\uddea",
+        "sort": "Team Estonia",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Estonia",
+          "content": [
+            {
+              "text": "Andreas Simson, Anni Sooman, Kaspar Noor, Lola Tiina S\u00e4rekanno, Richard K\u00e4sper"
+            },
+            {
+              "text": "View Team Estonia's Record",
+              "link": "/2025/participants/team/259419/"
+            }
+          ]
+        }
+      },
+      { "text": "Estonia DS" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Artis Academy LCSY",
+        "popover": {
+          "content": [
+            { "text": "Daisy Li, Grace Charlesworth, Joshua Sun, Emmie Yang" },
+            {
+              "text": "View Artis Academy LCSY's Record",
+              "link": "/2025/participants/team/259407/"
+            }
+          ],
+          "title": "Won against Artis Academy LCSY"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Swing",
+        "popover": {
+          "content": [
+            {
+              "text": "Eamon, Yi An, Nate, Weikai, Zi Lin, Han Wen, Daniel chew, Jayden, Yi Zenn, Qiaoyu"
+            },
+            {
+              "text": "View Swing's Record",
+              "link": "/2025/participants/team/260403/"
+            }
+          ],
+          "title": "Won against Swing"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Greece",
+        "emoji": "\ud83c\uddec\ud83c\uddf7",
+        "sort": "Team Greece",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Greece",
+          "content": [
+            {
+              "text": "Artemis Papastavrou, Kai Yuet Zhang, Ellie Kitinou, Marianna Argeiti"
+            },
+            {
+              "text": "View Team Greece's Record",
+              "link": "/2025/participants/team/259443/"
+            }
+          ]
+        }
+      },
+      { "text": "PFA" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs DGS Blob",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguyen Viet Bach, Nguyen Tuan Thanh, Nguyen Truong Giang"
+            },
+            {
+              "text": "View DGS Blob's Record",
+              "link": "/2025/participants/team/259417/"
+            }
+          ],
+          "title": "Won against DGS Blob"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Evermore",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguyen Bao Nghi (Cherrie), Nguyen Khanh An (Candy), Nguyen Manh Huy (Steve)"
+            },
+            {
+              "text": "View Evermore's Record",
+              "link": "/2025/participants/team/259479/"
+            }
+          ],
+          "title": "Won against Evermore"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team India WSDC",
+        "emoji": "\ud83e\udeb7",
+        "sort": "Team India WSDC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team India WSDC",
+          "content": [
+            {
+              "text": "Uday Vir Khosla, Avni Kaur Chadha, Manveer Pratap Rathore, Arnav Agarwal, Veda Kalra"
+            },
+            {
+              "text": "View Team India WSDC's Record",
+              "link": "/2025/participants/team/259430/"
+            }
+          ]
+        }
+      },
+      { "text": "ISDS" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Team Bulgaria",
+        "popover": {
+          "content": [
+            {
+              "text": "Kaloyan Kotzev, Valentin Katzarov, Marin Marinov, Adelina Galabinova"
+            },
+            {
+              "text": "View Team Bulgaria's Record",
+              "link": "/2025/participants/team/259411/"
+            }
+          ],
+          "title": "Won against Team Bulgaria"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Ethos Artemis",
+        "popover": {
+          "content": [
+            {
+              "text": "Brian Deng, Allen Ding, Ibrahim Hamada, Alex Zou, Harold Wang"
+            },
+            {
+              "text": "View Ethos Artemis's Record",
+              "link": "/2025/participants/team/259424/"
+            }
+          ],
+          "title": "Won against Ethos Artemis"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Qatar",
+        "emoji": "\ud83c\uddf6\ud83c\udde6",
+        "sort": "Team Qatar",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Qatar",
+          "content": [
+            {
+              "text": "Joude Ziani, Aisha Alasmakh, Ameera Al Ishaq, Alanoud Alkaabi, Aisha Al Dosari"
+            },
+            {
+              "text": "View Team Qatar's Record",
+              "link": "/2025/participants/team/259446/"
+            }
+          ]
+        }
+      },
+      { "text": "QatarDebate Centre" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Team Kenya",
+        "popover": {
+          "content": [
+            { "text": "Berachah Okumu, Adrian Kinyanjui, Kwame Kimani" },
+            {
+              "text": "View Team Kenya's Record",
+              "link": "/2025/participants/team/259432/"
+            }
+          ],
+          "title": "Won against Team Kenya"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Ethos Apollo",
+        "popover": {
+          "content": [
+            { "text": "Matthew Li, Emma Zhang, Sarah Gong, Aileen Jiang" },
+            {
+              "text": "View Ethos Apollo's Record",
+              "link": "/2025/participants/team/259423/"
+            }
+          ],
+          "title": "Won against Ethos Apollo"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Singapore",
+        "emoji": "\ud83c\uddf8\ud83c\uddec",
+        "sort": "Team Singapore",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Singapore",
+          "content": [
+            {
+              "text": "Rupa Kinkara, Ryan Yao Xin Cheng, Zhang XiaoYu, Huo Xi Cheng, Amelia Tay Juey Oon"
+            },
+            {
+              "text": "View Team Singapore's Record",
+              "link": "/2025/participants/team/259449/"
+            }
+          ]
+        }
+      },
+      { "text": "Singapore WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Artis Academy MHS",
+        "popover": {
+          "content": [
+            { "text": "Isabel Mi, Cyan Hu, Zoe Sun" },
+            {
+              "text": "View Artis Academy MHS's Record",
+              "link": "/2025/participants/team/259402/"
+            }
+          ],
+          "title": "Won against Artis Academy MHS"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs COG A",
+        "popover": {
+          "content": [
+            {
+              "text": "Eva Jain, Shivam Pinapatruni, Advik Sud, Viraaj Bansal"
+            },
+            {
+              "text": "View COG A's Record",
+              "link": "/2025/participants/team/259474/"
+            }
+          ],
+          "title": "Won against COG A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Team Thwabbit Team Team Team",
+        "emoji": "\ud83e\uddeb",
+        "sort": "Team Team Thwabbit Team Team Team",
+        "class": "team-name",
+        "popover": {
+          "title": "Team Team Thwabbit Team Team Team",
+          "content": [
+            {
+              "text": "Terrence Zhu, Sophie Li, Warren Sun, Yao Ming, Charlie Ni"
+            },
+            {
+              "text": "View Team Team Thwabbit Team Team Team's Record",
+              "link": "/2025/participants/team/259466/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Artis Academy CLW",
+        "popover": {
+          "content": [
+            { "text": "Jordan Chow, Yijia Li, Elaine Wu, Yiru Li" },
+            {
+              "text": "View Artis Academy CLW's Record",
+              "link": "/2025/participants/team/259408/"
+            }
+          ],
+          "title": "Won against Artis Academy CLW"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Atlantic Ivy 1",
+        "popover": {
+          "content": [
+            {
+              "text": "Aleesha Naeem, Yuhan jiang, Smayan Sethi, Isha Nair, Ziyus Guzder"
+            },
+            {
+              "text": "View Atlantic Ivy 1's Record",
+              "link": "/2025/participants/team/259998/"
+            }
+          ],
+          "title": "Won against Atlantic Ivy 1"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team UAE",
+        "emoji": "\ud83c\udde6\ud83c\uddea",
+        "sort": "Team UAE",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team UAE",
+          "content": [
+            {
+              "text": "Ved Kedia, Vedanth Aggarwal, Wiktoria Blazik, Arit Mukherjee, Zaina Akram"
+            },
+            {
+              "text": "View Team UAE's Record",
+              "link": "/2025/participants/team/259459/"
+            }
+          ]
+        }
+      },
+      { "text": "Vocalize" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs ROGA Silver",
+        "popover": {
+          "content": [
+            { "text": "Mike Gao, Alex Xu, Loka Qiu, Ruilin Xu" },
+            {
+              "text": "View ROGA Silver's Record",
+              "link": "/2025/participants/team/259989/"
+            }
+          ],
+          "title": "Won against ROGA Silver"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Brazil Development",
+        "popover": {
+          "content": [
+            {
+              "text": "Pen\u00e9lope Oliveira, Diogo Dib, Maria Clara Giglio, Mariana Magalh\u00e3es"
+            },
+            {
+              "text": "View Brazil Development's Record",
+              "link": "/2025/participants/team/259997/"
+            }
+          ],
+          "title": "Won against Brazil Development"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Vocalize A",
+        "emoji": "\ud83e\udd87",
+        "sort": "Vocalize A",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Vocalize A",
+          "content": [
+            {
+              "text": "Nidhi Francis, Shaurya Mathur, Ashish Satish, Sanaya Jagtap"
+            },
+            {
+              "text": "View Vocalize A's Record",
+              "link": "/2025/participants/team/259460/"
+            }
+          ]
+        }
+      },
+      { "text": "Vocalize" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs G2A",
+        "popover": {
+          "content": [
+            {
+              "text": "Tr\u1ea7n Tu\u1ec7 Lam (Alice), Nguy\u1ec5n Ng\u1ecdc V\u00e2n Kh\u00e1nh (Apple), \u0110\u1eb7ng Minh Qu\u00e2n (Garry)"
+            },
+            {
+              "text": "View G2A's Record",
+              "link": "/2025/participants/team/259461/"
+            }
+          ],
+          "title": "Won against G2A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Taivas Education",
+        "popover": {
+          "content": [
+            { "text": "Vedika Arora, Aryan Chandok, Ashmita Aghi" },
+            {
+              "text": "View Taivas Education's Record",
+              "link": "/2025/participants/team/260000/"
+            }
+          ],
+          "title": "Won against Taivas Education"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "WSDC LIThuania",
+        "emoji": "\ud83c\uddf1\ud83c\uddf9",
+        "sort": "WSDC LIThuania",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "WSDC LIThuania",
+          "content": [
+            {
+              "text": "Martyna Vaitkut\u0117, Dominykas Smaliukas, Kristijonas Ridzevi\u010dius, Milda Sofija Leonavi\u010di\u016bt\u0117, Jogaila Mitkus"
+            },
+            {
+              "text": "View WSDC LIThuania's Record",
+              "link": "/2025/participants/team/259440/"
+            }
+          ]
+        }
+      },
+      { "text": "Lithuania WSDC" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Artis Academy LLH",
+        "popover": {
+          "content": [
+            { "text": "Hannah Lu, Annabel Lu, Connie Huang" },
+            {
+              "text": "View Artis Academy LLH's Record",
+              "link": "/2025/participants/team/259404/"
+            }
+          ],
+          "title": "Won against Artis Academy LLH"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Brazil WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Antonio Luna, Renata Hamdar de Castilho, Vitor Cez\u00e1rio, Luiza Ribeiro, Luiz Arns"
+            },
+            {
+              "text": "View Brazil WSDC's Record",
+              "link": "/2025/participants/team/259987/"
+            }
+          ],
+          "title": "Won against Brazil WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "annie, children, and justin",
+        "emoji": "\ud83c\udfe5",
+        "sort": "annie, children, and justin",
+        "class": "team-name",
+        "popover": {
+          "title": "annie, children, and justin",
+          "content": [
+            { "text": "Annie Zhang, Kristen Yip, Haim Joshi, Justin Huang" },
+            {
+              "text": "View annie, children, and justin's Record",
+              "link": "/2025/participants/team/260400/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 2, "text": "2" },
+      {
+        "text": " vs Fried Fries",
+        "popover": {
+          "content": [
+            { "text": "Grace Huang, Yihan Ethan Wu, Zilin Ding, Haoling Shi" },
+            {
+              "text": "View Fried Fries's Record",
+              "link": "/2025/participants/team/259455/"
+            }
+          ],
+          "title": "Won against Fried Fries"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs TBC",
+        "popover": {
+          "content": [
+            {
+              "text": "Jiayue Chen (James), Luca Tsimogiannis, Luyi Yin (Louis), Liqian Yan (Eric)"
+            },
+            {
+              "text": "View TBC's Record",
+              "link": "/2025/participants/team/259427/"
+            }
+          ],
+          "title": "Won against TBC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "5 Ontarioians",
+        "emoji": "\ud83d\udee2",
+        "sort": "5 Ontarioians",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "5 Ontarioians",
+          "content": [
+            {
+              "text": "Keerti Joshi, Kallie Yang, Owen Yin, Nathan Yang, Laura Wang"
+            },
+            {
+              "text": "View 5 Ontarioians's Record",
+              "link": "/2025/participants/team/259473/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Sri Lanka",
+        "popover": {
+          "content": [
+            {
+              "text": "Akein Bandara, Savith Wijesundara, Nimansa Jayasundera, Rudhesh Ram, Dihen Udumalagala"
+            },
+            {
+              "text": "View Sri Lanka's Record",
+              "link": "/2025/participants/team/259451/"
+            }
+          ],
+          "title": "Lost to Sri Lanka"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs LL China&amp;Ireland",
+        "popover": {
+          "content": [
+            { "text": "Kingsley Guo, Guan Hui Lin, Eoghan Conroy, Lucas Liu" },
+            {
+              "text": "View LL China&amp;Ireland's Record",
+              "link": "/2025/participants/team/259439/"
+            }
+          ],
+          "title": "Won against LL China&amp;Ireland"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Armenia WSDC",
+        "emoji": "\ud83c\udde6\ud83c\uddf2",
+        "sort": "Armenia WSDC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Armenia WSDC",
+          "content": [
+            {
+              "text": "Anam McCartney, Ph\u1ea1m Tr\u1ea7n B\u1ea3o Ch\u00e2u, Patryk Stelmaszek, Ilinca Banu, Anastasiia Sukhonosova"
+            },
+            {
+              "text": "View Armenia WSDC's Record",
+              "link": "/2025/participants/team/259401/"
+            }
+          ]
+        }
+      },
+      { "text": "Armenia WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs ROGA Red",
+        "popover": {
+          "content": [
+            { "text": "Gloria Jeon, Jason Chen, Siya Rathi, Harjun Bindra" },
+            {
+              "text": "View ROGA Red's Record",
+              "link": "/2025/participants/team/259990/"
+            }
+          ],
+          "title": "Won against ROGA Red"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs ROGA White",
+        "popover": {
+          "content": [
+            { "text": "Christa Zhu, Bella Lent, Cindy You, Sylvia Wu" },
+            {
+              "text": "View ROGA White's Record",
+              "link": "/2025/participants/team/259991/"
+            }
+          ],
+          "title": "Lost to ROGA White"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy CZL",
+        "emoji": "\ud83d\udece",
+        "sort": "Artis Academy CZL",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Artis Academy CZL",
+          "content": [
+            { "text": "William Chen, Donnie Zhao, Felix Li" },
+            {
+              "text": "View Artis Academy CZL's Record",
+              "link": "/2025/participants/team/259406/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Wonkey Donkeys",
+        "popover": {
+          "content": [
+            { "text": "Chen Ruilin, Matthew Han Penghao, Wang Jinyi" },
+            {
+              "text": "View Wonkey Donkeys's Record",
+              "link": "/2025/participants/team/259467/"
+            }
+          ],
+          "title": "Won against Wonkey Donkeys"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Canada William Lyon Mackenzie",
+        "popover": {
+          "content": [
+            {
+              "text": "Afrukhta Siddique, Conan Li, Grace Liu, Hannah Li, Hannah Liu"
+            },
+            {
+              "text": "View Canada William Lyon Mackenzie's Record",
+              "link": "/2025/participants/team/259413/"
+            }
+          ],
+          "title": "Lost to Canada William Lyon Mackenzie"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy LLJF",
+        "emoji": "\ud83d\udea3",
+        "sort": "Artis Academy LLJF",
+        "class": "team-name",
+        "popover": {
+          "title": "Artis Academy LLJF",
+          "content": [
+            {
+              "text": "Austin Li, Zhihan(Austin) Lin, Owen Jiang, Anthony Fei"
+            },
+            {
+              "text": "View Artis Academy LLJF's Record",
+              "link": "/2025/participants/team/259405/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team IIS",
+        "popover": {
+          "content": [
+            { "text": "Rabaani Mehra, Abana Dhillon, Reeva Chopra" },
+            {
+              "text": "View Team IIS's Record",
+              "link": "/2025/participants/team/259993/"
+            }
+          ],
+          "title": "Lost to Team IIS"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs MNPH",
+        "popover": {
+          "content": [
+            {
+              "text": "Tr\u01b0\u01a1ng Kh\u00e1nh Ph\u01b0\u01a1ng, V\u00f5 Ph\u1ea1m Minh Ho\u00e0ng, H\u1ed3 \u0110\u1ee9c Minh, Ph\u1ea1m Kh\u00e1nh Nhi"
+            },
+            {
+              "text": "View MNPH's Record",
+              "link": "/2025/participants/team/259462/"
+            }
+          ],
+          "title": "Won against MNPH"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Atlantic Ivy 1",
+        "emoji": "\ud83e\udd12",
+        "sort": "Atlantic Ivy 1",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Atlantic Ivy 1",
+          "content": [
+            {
+              "text": "Aleesha Naeem, Yuhan jiang, Smayan Sethi, Isha Nair, Ziyus Guzder"
+            },
+            {
+              "text": "View Atlantic Ivy 1's Record",
+              "link": "/2025/participants/team/259998/"
+            }
+          ]
+        }
+      },
+      { "text": "Atlantic Ivy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs TSU",
+        "popover": {
+          "content": [
+            { "text": "Anaya Agarwal, Adhiraj singh Johar, Kieara Gupta" },
+            {
+              "text": "View TSU's Record",
+              "link": "/2025/participants/team/259456/"
+            }
+          ],
+          "title": "Won against TSU"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Team Thwabbit Team Team Team",
+        "popover": {
+          "content": [
+            {
+              "text": "Terrence Zhu, Sophie Li, Warren Sun, Yao Ming, Charlie Ni"
+            },
+            {
+              "text": "View Team Team Thwabbit Team Team Team's Record",
+              "link": "/2025/participants/team/259466/"
+            }
+          ],
+          "title": "Lost to Team Team Thwabbit Team Team Team"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "BNDS A",
+        "emoji": "\ud83e\uddc2",
+        "sort": "BNDS A",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "BNDS A",
+          "content": [
+            { "text": "Thomas Huang, Dora Chen, Yifeng Wang, Ryan Li" },
+            {
+              "text": "View BNDS A's Record",
+              "link": "/2025/participants/team/259410/"
+            }
+          ]
+        }
+      },
+      { "text": "BNDS" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Ethos Athena",
+        "popover": {
+          "content": [
+            { "text": "Katherine Zhang, Vivian Sui, Valeria Zhao" },
+            {
+              "text": "View Ethos Athena's Record",
+              "link": "/2025/participants/team/259422/"
+            }
+          ],
+          "title": "Lost to Ethos Athena"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Artis Academy CLW",
+        "popover": {
+          "content": [
+            { "text": "Jordan Chow, Yijia Li, Elaine Wu, Yiru Li" },
+            {
+              "text": "View Artis Academy CLW's Record",
+              "link": "/2025/participants/team/259408/"
+            }
+          ],
+          "title": "Won against Artis Academy CLW"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Brazil WSDC",
+        "emoji": "\ud83e\udece",
+        "sort": "Brazil WSDC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Brazil WSDC",
+          "content": [
+            {
+              "text": "Antonio Luna, Renata Hamdar de Castilho, Vitor Cez\u00e1rio, Luiza Ribeiro, Luiz Arns"
+            },
+            {
+              "text": "View Brazil WSDC's Record",
+              "link": "/2025/participants/team/259987/"
+            }
+          ]
+        }
+      },
+      { "text": "Brazil" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team Greece Juniors Souvlaki",
+        "popover": {
+          "content": [
+            { "text": "Spyros Roupas, Danae Tatsopoulou, Evita Politakou" },
+            {
+              "text": "View Team Greece Juniors Souvlaki's Record",
+              "link": "/2025/participants/team/259444/"
+            }
+          ],
+          "title": "Won against Team Greece Juniors Souvlaki"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs WSDC LIThuania",
+        "popover": {
+          "content": [
+            {
+              "text": "Martyna Vaitkut\u0117, Dominykas Smaliukas, Kristijonas Ridzevi\u010dius, Milda Sofija Leonavi\u010di\u016bt\u0117, Jogaila Mitkus"
+            },
+            {
+              "text": "View WSDC LIThuania's Record",
+              "link": "/2025/participants/team/259440/"
+            }
+          ],
+          "title": "Lost to WSDC LIThuania"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "COG A",
+        "emoji": "\ud83c\udf32",
+        "sort": "COG A",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "COG A",
+          "content": [
+            {
+              "text": "Eva Jain, Shivam Pinapatruni, Advik Sud, Viraaj Bansal"
+            },
+            {
+              "text": "View COG A's Record",
+              "link": "/2025/participants/team/259474/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs LMDS A",
+        "popover": {
+          "content": [
+            { "text": "Austin Shen, Guntas Bawa, Mekal Umair, Evan Wang" },
+            {
+              "text": "View LMDS A's Record",
+              "link": "/2025/participants/team/259441/"
+            }
+          ],
+          "title": "Won against LMDS A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Singapore",
+        "popover": {
+          "content": [
+            {
+              "text": "Rupa Kinkara, Ryan Yao Xin Cheng, Zhang XiaoYu, Huo Xi Cheng, Amelia Tay Juey Oon"
+            },
+            {
+              "text": "View Team Singapore's Record",
+              "link": "/2025/participants/team/259449/"
+            }
+          ],
+          "title": "Lost to Team Singapore"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Craiova Debate Society",
+        "emoji": "\ud83c\udfb3",
+        "sort": "Craiova Debate Society",
+        "class": "team-name",
+        "popover": {
+          "title": "Craiova Debate Society",
+          "content": [
+            {
+              "text": "B\u0103lun\u0103 Rare\u0219-Costin, Vi\u0219an Gabriela Teodora, Filip Mihnea Stefan, Saro\u0219i David, St\u0103nescu Mihai"
+            },
+            {
+              "text": "View Craiova Debate Society's Record",
+              "link": "/2025/participants/team/259470/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs vitamin d(ebate)",
+        "popover": {
+          "content": [
+            {
+              "text": "Maya Al-Asam, Victor Damureanu, Daria Vava, Stefania Negoiasa"
+            },
+            {
+              "text": "View vitamin d(ebate)'s Record",
+              "link": "/2025/participants/team/259478/"
+            }
+          ],
+          "title": "Won against vitamin d(ebate)"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs South Africa Zuma",
+        "popover": {
+          "content": [
+            {
+              "text": "Tshepiso Polo, Dimpho Ntsoane, Tshegofatso Molepo, Anjeli Ramatsui, Khathutshelo Mainganye"
+            },
+            {
+              "text": "View South Africa Zuma's Record",
+              "link": "/2025/participants/team/259450/"
+            }
+          ],
+          "title": "Lost to South Africa Zuma"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Doremi",
+        "emoji": "\ud83e\udda4",
+        "sort": "Doremi",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Doremi",
+          "content": [
+            { "text": "Yin Ruoqing, Wu Peiyao, Lyu Yueran" },
+            {
+              "text": "View Doremi's Record",
+              "link": "/2025/participants/team/259453/"
+            }
+          ]
+        }
+      },
+      { "text": "ThoughtTutor" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs KlNG",
+        "popover": {
+          "content": [
+            { "text": "Lisa Wenfei Tang, Kalan Xie, Norah Liu, Garid Bold" },
+            {
+              "text": "View KlNG's Record",
+              "link": "/2025/participants/team/259472/"
+            }
+          ],
+          "title": "Won against KlNG"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Hong Kong WSDC Dragon Boats",
+        "popover": {
+          "content": [
+            {
+              "text": "Moses Lai, Jimi Fitzpatrick, Tony Shu, Kaitlyn Liu, Lily Liang"
+            },
+            {
+              "text": "View Hong Kong WSDC Dragon Boats's Record",
+              "link": "/2025/participants/team/259986/"
+            }
+          ],
+          "title": "Lost to Hong Kong WSDC Dragon Boats"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Elmanika",
+        "emoji": "\ud83c\udfd6",
+        "sort": "Elmanika",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Elmanika",
+          "content": [
+            { "text": "Emma Song, Mu En Li, Zitong Li" },
+            {
+              "text": "View Elmanika's Record",
+              "link": "/2025/participants/team/259454/"
+            }
+          ]
+        }
+      },
+      { "text": "ThoughtTutor" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Cannibals bc we ate",
+        "popover": {
+          "content": [
+            {
+              "text": "Haiyue Li (Hannah), Laila Ahmed, Kamogelo Malikane, Yishan Gao (Noelle)"
+            },
+            {
+              "text": "View Cannibals bc we ate's Record",
+              "link": "/2025/participants/team/259426/"
+            }
+          ],
+          "title": "Lost to Cannibals bc we ate"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Shungite",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguy\u1ec5n \u0110\u0103ng Khoa, Nguy\u1ec5n Qu\u1ef3nh Anh, \u0110\u1eb7ng Quang Huy, Goh Nguyen Khanh Hui Yin"
+            },
+            {
+              "text": "View Shungite's Record",
+              "link": "/2025/participants/team/259464/"
+            }
+          ],
+          "title": "Won against Shungite"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Ethos Apollo",
+        "emoji": "\ud83e\udd5b",
+        "sort": "Ethos Apollo",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ethos Apollo",
+          "content": [
+            { "text": "Matthew Li, Emma Zhang, Sarah Gong, Aileen Jiang" },
+            {
+              "text": "View Ethos Apollo's Record",
+              "link": "/2025/participants/team/259423/"
+            }
+          ]
+        }
+      },
+      { "text": "Ethos Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team Austria",
+        "popover": {
+          "content": [
+            {
+              "text": "Elisa Cerda, Elena Brehm, Sofia Schuppler, Viktor Vojnoski, Mihail Zahariev"
+            },
+            {
+              "text": "View Team Austria's Record",
+              "link": "/2025/participants/team/259409/"
+            }
+          ],
+          "title": "Won against Team Austria"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Qatar",
+        "popover": {
+          "content": [
+            {
+              "text": "Joude Ziani, Aisha Alasmakh, Ameera Al Ishaq, Alanoud Alkaabi, Aisha Al Dosari"
+            },
+            {
+              "text": "View Team Qatar's Record",
+              "link": "/2025/participants/team/259446/"
+            }
+          ],
+          "title": "Lost to Team Qatar"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Ethos Artemis",
+        "emoji": "\ud83e\uddfd",
+        "sort": "Ethos Artemis",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ethos Artemis",
+          "content": [
+            {
+              "text": "Brian Deng, Allen Ding, Ibrahim Hamada, Alex Zou, Harold Wang"
+            },
+            {
+              "text": "View Ethos Artemis's Record",
+              "link": "/2025/participants/team/259424/"
+            }
+          ]
+        }
+      },
+      { "text": "Ethos Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs The Unicorns",
+        "popover": {
+          "content": [
+            {
+              "text": "D\u01b0\u01a1ng Minh Khoa (Ben), Ph\u1ea1m Nh\u1eadt Ho\u00e0ng (Ken), Ho\u00e0ng H\u1ea3i Nam (Jason)"
+            },
+            {
+              "text": "View The Unicorns's Record",
+              "link": "/2025/participants/team/259463/"
+            }
+          ],
+          "title": "Won against The Unicorns"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team India WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Uday Vir Khosla, Avni Kaur Chadha, Manveer Pratap Rathore, Arnav Agarwal, Veda Kalra"
+            },
+            {
+              "text": "View Team India WSDC's Record",
+              "link": "/2025/participants/team/259430/"
+            }
+          ],
+          "title": "Lost to Team India WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Ethos Athena",
+        "emoji": "\ud83d\udcc9",
+        "sort": "Ethos Athena",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ethos Athena",
+          "content": [
+            { "text": "Katherine Zhang, Vivian Sui, Valeria Zhao" },
+            {
+              "text": "View Ethos Athena's Record",
+              "link": "/2025/participants/team/259422/"
+            }
+          ]
+        }
+      },
+      { "text": "Ethos Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs BNDS A",
+        "popover": {
+          "content": [
+            { "text": "Thomas Huang, Dora Chen, Yifeng Wang, Ryan Li" },
+            {
+              "text": "View BNDS A's Record",
+              "link": "/2025/participants/team/259410/"
+            }
+          ],
+          "title": "Won against BNDS A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Hong Kong Egg Tarts",
+        "popover": {
+          "content": [
+            { "text": "Jasmine Chen, Cyrus Leung, Valmik Dangayach" },
+            {
+              "text": "View Hong Kong Egg Tarts's Record",
+              "link": "/2025/participants/team/259469/"
+            }
+          ],
+          "title": "Lost to Hong Kong Egg Tarts"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Ethos Hermes",
+        "emoji": "\ud83e\udd5e",
+        "sort": "Ethos Hermes",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ethos Hermes",
+          "content": [
+            { "text": "Ema Sun, Cate Shumka, Jiyan Jane Fan" },
+            {
+              "text": "View Ethos Hermes's Record",
+              "link": "/2025/participants/team/259425/"
+            }
+          ]
+        }
+      },
+      { "text": "Ethos Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Keyspeak Alchemy",
+        "popover": {
+          "content": [
+            {
+              "text": "Emma Qiu, Lawrence Ma, Kevin Sun, Donny Cao, Grace Guo"
+            },
+            {
+              "text": "View Keyspeak Alchemy's Record",
+              "link": "/2025/participants/team/259433/"
+            }
+          ],
+          "title": "Lost to Keyspeak Alchemy"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Keyspeak Aquamarine",
+        "popover": {
+          "content": [
+            {
+              "text": "Catherine Qin, Tony Cao, Missy Mou, Junqian Yan, Miranda Chen"
+            },
+            {
+              "text": "View Keyspeak Aquamarine's Record",
+              "link": "/2025/participants/team/259435/"
+            }
+          ],
+          "title": "Won against Keyspeak Aquamarine"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Ethos Zeus",
+        "emoji": "\ud83e\ude7a",
+        "sort": "Ethos Zeus",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ethos Zeus",
+          "content": [
+            {
+              "text": "Jenelle Zhang, Elliana Sun, Amanda Zhao, Alan Li, Kai Yee Li"
+            },
+            {
+              "text": "View Ethos Zeus's Record",
+              "link": "/2025/participants/team/259420/"
+            }
+          ]
+        }
+      },
+      { "text": "Ethos Academy" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs ROGA Black",
+        "popover": {
+          "content": [
+            { "text": "Olivia Jia, Yvonne Mo, Charlotte Zou" },
+            {
+              "text": "View ROGA Black's Record",
+              "link": "/2025/participants/team/259992/"
+            }
+          ],
+          "title": "Won against ROGA Black"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Czechia",
+        "popover": {
+          "content": [
+            {
+              "text": "Jan Pozdn\u00edk, Kristi\u00e1n \u010cech, Kry\u0161tof Ol\u0161a, Petr Kosi\u010dka"
+            },
+            {
+              "text": "View Team Czechia's Record",
+              "link": "/2025/participants/team/259416/"
+            }
+          ],
+          "title": "Lost to Team Czechia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Evermore",
+        "emoji": "\ud83e\udd99",
+        "sort": "Evermore",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Evermore",
+          "content": [
+            {
+              "text": "Nguyen Bao Nghi (Cherrie), Nguyen Khanh An (Candy), Nguyen Manh Huy (Steve)"
+            },
+            {
+              "text": "View Evermore's Record",
+              "link": "/2025/participants/team/259479/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Keyspeak Emerald",
+        "popover": {
+          "content": [
+            { "text": "Eva Cen, Coco Huang, Nancy Zhou, Skyler Chen" },
+            {
+              "text": "View Keyspeak Emerald's Record",
+              "link": "/2025/participants/team/259436/"
+            }
+          ],
+          "title": "Won against Keyspeak Emerald"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Greece",
+        "popover": {
+          "content": [
+            {
+              "text": "Artemis Papastavrou, Kai Yuet Zhang, Ellie Kitinou, Marianna Argeiti"
+            },
+            {
+              "text": "View Team Greece's Record",
+              "link": "/2025/participants/team/259443/"
+            }
+          ],
+          "title": "Lost to Team Greece"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Fried Fries",
+        "emoji": "\ud83e\uddc7",
+        "sort": "Fried Fries",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Fried Fries",
+          "content": [
+            { "text": "Grace Huang, Yihan Ethan Wu, Zilin Ding, Haoling Shi" },
+            {
+              "text": "View Fried Fries's Record",
+              "link": "/2025/participants/team/259455/"
+            }
+          ]
+        }
+      },
+      { "text": "ThoughtTutor" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs annie, children, and justin",
+        "popover": {
+          "content": [
+            { "text": "Annie Zhang, Kristen Yip, Haim Joshi, Justin Huang" },
+            {
+              "text": "View annie, children, and justin's Record",
+              "link": "/2025/participants/team/260400/"
+            }
+          ],
+          "title": "Lost to annie, children, and justin"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Artis Academy LCSY",
+        "popover": {
+          "content": [
+            { "text": "Daisy Li, Grace Charlesworth, Joshua Sun, Emmie Yang" },
+            {
+              "text": "View Artis Academy LCSY's Record",
+              "link": "/2025/participants/team/259407/"
+            }
+          ],
+          "title": "Won against Artis Academy LCSY"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "G2A",
+        "emoji": "\u26c8",
+        "sort": "G2A",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "G2A",
+          "content": [
+            {
+              "text": "Tr\u1ea7n Tu\u1ec7 Lam (Alice), Nguy\u1ec5n Ng\u1ecdc V\u00e2n Kh\u00e1nh (Apple), \u0110\u1eb7ng Minh Qu\u00e2n (Garry)"
+            },
+            {
+              "text": "View G2A's Record",
+              "link": "/2025/participants/team/259461/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Vocalize A",
+        "popover": {
+          "content": [
+            {
+              "text": "Nidhi Francis, Shaurya Mathur, Ashish Satish, Sanaya Jagtap"
+            },
+            {
+              "text": "View Vocalize A's Record",
+              "link": "/2025/participants/team/259460/"
+            }
+          ],
+          "title": "Lost to Vocalize A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Artis Academy WWZY",
+        "popover": {
+          "content": [
+            { "text": "Emily Wu, Bella Wei, Chuyuan Zhou, Annabelle Jiayi Yu" },
+            {
+              "text": "View Artis Academy WWZY's Record",
+              "link": "/2025/participants/team/259403/"
+            }
+          ],
+          "title": "Won against Artis Academy WWZY"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Gyarados",
+        "emoji": "\ud83e\udd91",
+        "sort": "Gyarados",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Gyarados",
+          "content": [
+            {
+              "text": "Elma Kalni\u0146a, Be\u0101te J\u0113kabsone, Reina Ro\u010d\u0101ne, Alise Skuja, Martins Magomedovs"
+            },
+            {
+              "text": "View Gyarados's Record",
+              "link": "/2025/participants/team/259438/"
+            }
+          ]
+        }
+      },
+      { "text": "Latvian DA" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs AMS",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguyen Hien Tam, Nguyen Vu Bao Tran, Nguyen Ha Anh Thu"
+            },
+            {
+              "text": "View AMS's Record",
+              "link": "/2025/participants/team/259457/"
+            }
+          ],
+          "title": "Won against AMS"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Sri Lanka",
+        "popover": {
+          "content": [
+            {
+              "text": "Akein Bandara, Savith Wijesundara, Nimansa Jayasundera, Rudhesh Ram, Dihen Udumalagala"
+            },
+            {
+              "text": "View Sri Lanka's Record",
+              "link": "/2025/participants/team/259451/"
+            }
+          ],
+          "title": "Lost to Sri Lanka"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "JFH Soar",
+        "emoji": "\ud83c\udfb9",
+        "sort": "JFH Soar",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "JFH Soar",
+          "content": [
+            { "text": "Joey Lin, Fiona Shen, Heather Dong" },
+            {
+              "text": "View JFH Soar's Record",
+              "link": "/2025/participants/team/259480/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs South Africa Malema",
+        "popover": {
+          "content": [
+            {
+              "text": "Brendan Hope, Francesca Lewitton, Ameer Loonat, Munei Mulaudzi, Jemma Tresling"
+            },
+            {
+              "text": "View South Africa Malema's Record",
+              "link": "/2025/participants/team/259447/"
+            }
+          ],
+          "title": "Won against South Africa Malema"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Croatia",
+        "popover": {
+          "content": [
+            {
+              "text": "Domagoj Praljak, Mila Kre\u0161i\u0107, Nela Dami\u0107, Marin Bolan\u010da, Lana Sri\u0107a"
+            },
+            {
+              "text": "View Team Croatia's Record",
+              "link": "/2025/participants/team/259414/"
+            }
+          ],
+          "title": "Lost to Team Croatia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Jacky Shut Up",
+        "emoji": "\ud83d\ude37",
+        "sort": "Jacky Shut Up",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Jacky Shut Up",
+          "content": [
+            { "text": "Lucas Lu, Zixuan Hong, Jacky Zhao, Joyce Xu, Liz Li" },
+            {
+              "text": "View Jacky Shut Up's Record",
+              "link": "/2025/participants/team/259471/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Ethos Poseidon",
+        "popover": {
+          "content": [
+            {
+              "text": "Serina Fan, Henglin Xu, Jasmine Wang, Connie Jin, Solomon Zu"
+            },
+            {
+              "text": "View Ethos Poseidon's Record",
+              "link": "/2025/participants/team/259421/"
+            }
+          ],
+          "title": "Lost to Ethos Poseidon"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs vitamin d(ebate)",
+        "popover": {
+          "content": [
+            {
+              "text": "Maya Al-Asam, Victor Damureanu, Daria Vava, Stefania Negoiasa"
+            },
+            {
+              "text": "View vitamin d(ebate)'s Record",
+              "link": "/2025/participants/team/259478/"
+            }
+          ],
+          "title": "Won against vitamin d(ebate)"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "KFDI francis light&#x27;s side quest",
+        "emoji": "\ud83e\udd67",
+        "sort": "KFDI francis light&#x27;s side quest",
+        "class": "team-name",
+        "popover": {
+          "title": "KFDI francis light&#x27;s side quest",
+          "content": [
+            { "text": "Glenys, Owen Chong, Michelle Ting, Rayan Khor" },
+            {
+              "text": "View KFDI francis light&#x27;s side quest's Record",
+              "link": "/2025/participants/team/259437/"
+            }
+          ]
+        }
+      },
+      { "text": "KFDI" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Shungite",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguy\u1ec5n \u0110\u0103ng Khoa, Nguy\u1ec5n Qu\u1ef3nh Anh, \u0110\u1eb7ng Quang Huy, Goh Nguyen Khanh Hui Yin"
+            },
+            {
+              "text": "View Shungite's Record",
+              "link": "/2025/participants/team/259464/"
+            }
+          ],
+          "title": "Won against Shungite"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Cannibals bc we ate",
+        "popover": {
+          "content": [
+            {
+              "text": "Haiyue Li (Hannah), Laila Ahmed, Kamogelo Malikane, Yishan Gao (Noelle)"
+            },
+            {
+              "text": "View Cannibals bc we ate's Record",
+              "link": "/2025/participants/team/259426/"
+            }
+          ],
+          "title": "Lost to Cannibals bc we ate"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Keyspeak Emerald",
+        "emoji": "\ud83d\uddd1",
+        "sort": "Keyspeak Emerald",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Keyspeak Emerald",
+          "content": [
+            { "text": "Eva Cen, Coco Huang, Nancy Zhou, Skyler Chen" },
+            {
+              "text": "View Keyspeak Emerald's Record",
+              "link": "/2025/participants/team/259436/"
+            }
+          ]
+        }
+      },
+      { "text": "Keyspeak" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Evermore",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguyen Bao Nghi (Cherrie), Nguyen Khanh An (Candy), Nguyen Manh Huy (Steve)"
+            },
+            {
+              "text": "View Evermore's Record",
+              "link": "/2025/participants/team/259479/"
+            }
+          ],
+          "title": "Lost to Evermore"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Brazil KM",
+        "popover": {
+          "content": [
+            {
+              "text": "Hamza Musa Hasan, Gabriel Antero, Davi Bonalumi, Sebastian Wilke"
+            },
+            {
+              "text": "View Brazil KM's Record",
+              "link": "/2025/participants/team/259995/"
+            }
+          ],
+          "title": "Won against Brazil KM"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Keyspeak Sapphire",
+        "emoji": "\ud83c\udfb6",
+        "sort": "Keyspeak Sapphire",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Keyspeak Sapphire",
+          "content": [
+            { "text": "Elaine Fan, Vivi Ni, Xinyu Wang, Shaohang Chen" },
+            {
+              "text": "View Keyspeak Sapphire's Record",
+              "link": "/2025/participants/team/259434/"
+            }
+          ]
+        }
+      },
+      { "text": "Keyspeak" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs CSFC",
+        "popover": {
+          "content": [
+            {
+              "text": "Hiya Ray, Kushi Shetty, Henry Lin, Yuxuan Wu, Braden Zhao-Upton"
+            },
+            {
+              "text": "View CSFC's Record",
+              "link": "/2025/participants/team/259415/"
+            }
+          ],
+          "title": "Won against CSFC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Arencia",
+        "popover": {
+          "content": [
+            { "text": "Seunghun Lee, Brooke Lai, Jane Hahn, Connie Han" },
+            {
+              "text": "View Arencia's Record",
+              "link": "/2025/participants/team/259481/"
+            }
+          ],
+          "title": "Lost to Arencia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "M(iracle)orocco WSDC",
+        "emoji": "\ud83c\uddf2\ud83c\udde6",
+        "sort": "M(iracle)orocco WSDC",
+        "class": "team-name",
+        "popover": {
+          "title": "M(iracle)orocco WSDC",
+          "content": [
+            {
+              "text": "Mohamed Isslam El Makaoui, Nicole Coleman, Noussayba Elouedghiri Idrissi, Safaa Hafdi"
+            },
+            {
+              "text": "View M(iracle)orocco WSDC's Record",
+              "link": "/2025/participants/team/260172/"
+            }
+          ]
+        }
+      },
+      { "text": "Morocco" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Brazil Development",
+        "popover": {
+          "content": [
+            {
+              "text": "Pen\u00e9lope Oliveira, Diogo Dib, Maria Clara Giglio, Mariana Magalh\u00e3es"
+            },
+            {
+              "text": "View Brazil Development's Record",
+              "link": "/2025/participants/team/259997/"
+            }
+          ],
+          "title": "Won against Brazil Development"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Ethos Poseidon",
+        "popover": {
+          "content": [
+            {
+              "text": "Serina Fan, Henglin Xu, Jasmine Wang, Connie Jin, Solomon Zu"
+            },
+            {
+              "text": "View Ethos Poseidon's Record",
+              "link": "/2025/participants/team/259421/"
+            }
+          ],
+          "title": "Lost to Ethos Poseidon"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "New Zealand",
+        "emoji": "\ud83c\uddf3\ud83c\uddff",
+        "sort": "New Zealand",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "New Zealand",
+          "content": [
+            {
+              "text": "Sebastian Heine-Sheldrake, Bruce Zhang, Sam Allan, Cerisa Gu, Isabella McKeefry"
+            },
+            {
+              "text": "View New Zealand's Record",
+              "link": "/2025/participants/team/259442/"
+            }
+          ]
+        }
+      },
+      { "text": "New Zealand WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Keyspeak Aquamarine",
+        "popover": {
+          "content": [
+            {
+              "text": "Catherine Qin, Tony Cao, Missy Mou, Junqian Yan, Miranda Chen"
+            },
+            {
+              "text": "View Keyspeak Aquamarine's Record",
+              "link": "/2025/participants/team/259435/"
+            }
+          ],
+          "title": "Won against Keyspeak Aquamarine"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Goobert",
+        "popover": {
+          "content": [
+            { "text": "Isolde Li, Zachary Li, Leo Guo" },
+            {
+              "text": "View Goobert's Record",
+              "link": "/2025/participants/team/259468/"
+            }
+          ],
+          "title": "Lost to Goobert"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Nomad Samsa",
+        "emoji": "\ud83e\udd4c",
+        "sort": "Nomad Samsa",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Nomad Samsa",
+          "content": [
+            {
+              "text": "Alikhan Marat, Assem Issina, Akbota Smanova, Syrym Zhoyamergen, Bekzhan Kairzhanov"
+            },
+            {
+              "text": "View Nomad Samsa's Record",
+              "link": "/2025/participants/team/259477/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Artis Academy WWZY",
+        "popover": {
+          "content": [
+            { "text": "Emily Wu, Bella Wei, Chuyuan Zhou, Annabelle Jiayi Yu" },
+            {
+              "text": "View Artis Academy WWZY's Record",
+              "link": "/2025/participants/team/259403/"
+            }
+          ],
+          "title": "Won against Artis Academy WWZY"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Canada Louis Riel",
+        "popover": {
+          "content": [
+            { "text": "Ann Wang, Jinjou Wang, Kelvin Fan, Lucas Le, Sarah Li" },
+            {
+              "text": "View Canada Louis Riel's Record",
+              "link": "/2025/participants/team/259412/"
+            }
+          ],
+          "title": "Lost to Canada Louis Riel"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "ROGA Gold",
+        "emoji": "\ud83d\ude48",
+        "sort": "ROGA Gold",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "ROGA Gold",
+          "content": [
+            {
+              "text": "Christina Yating Zhang, Louisa Chen, Sara Saiprasad, Ruhani Surana"
+            },
+            {
+              "text": "View ROGA Gold's Record",
+              "link": "/2025/participants/team/259988/"
+            }
+          ]
+        }
+      },
+      { "text": "ROGA" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Portugal JK",
+        "popover": {
+          "content": [
+            {
+              "text": "Katarina Menezes, Manuela Sirgado, Beatriz Amorim, Arthur Gutierrez"
+            },
+            {
+              "text": "View Portugal JK's Record",
+              "link": "/2025/participants/team/259996/"
+            }
+          ],
+          "title": "Won against Portugal JK"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Hong Kong WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Jeanine Cheng, Lauren Tse, Jun Nam, Mollie Mei, Advik Sharma"
+            },
+            {
+              "text": "View Hong Kong WSDC's Record",
+              "link": "/2025/participants/team/259428/"
+            }
+          ],
+          "title": "Lost to Hong Kong WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "ROGA Red",
+        "emoji": "\ud83d\udd77",
+        "sort": "ROGA Red",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "ROGA Red",
+          "content": [
+            { "text": "Gloria Jeon, Jason Chen, Siya Rathi, Harjun Bindra" },
+            {
+              "text": "View ROGA Red's Record",
+              "link": "/2025/participants/team/259990/"
+            }
+          ]
+        }
+      },
+      { "text": "ROGA" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Armenia WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Anam McCartney, Ph\u1ea1m Tr\u1ea7n B\u1ea3o Ch\u00e2u, Patryk Stelmaszek, Ilinca Banu, Anastasiia Sukhonosova"
+            },
+            {
+              "text": "View Armenia WSDC's Record",
+              "link": "/2025/participants/team/259401/"
+            }
+          ],
+          "title": "Lost to Armenia WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs KlNG",
+        "popover": {
+          "content": [
+            { "text": "Lisa Wenfei Tang, Kalan Xie, Norah Liu, Garid Bold" },
+            {
+              "text": "View KlNG's Record",
+              "link": "/2025/participants/team/259472/"
+            }
+          ],
+          "title": "Won against KlNG"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "ROGA Silver",
+        "emoji": "\ud83e\udd83",
+        "sort": "ROGA Silver",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "ROGA Silver",
+          "content": [
+            { "text": "Mike Gao, Alex Xu, Loka Qiu, Ruilin Xu" },
+            {
+              "text": "View ROGA Silver's Record",
+              "link": "/2025/participants/team/259989/"
+            }
+          ]
+        }
+      },
+      { "text": "ROGA" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team UAE",
+        "popover": {
+          "content": [
+            {
+              "text": "Ved Kedia, Vedanth Aggarwal, Wiktoria Blazik, Arit Mukherjee, Zaina Akram"
+            },
+            {
+              "text": "View Team UAE's Record",
+              "link": "/2025/participants/team/259459/"
+            }
+          ],
+          "title": "Lost to Team UAE"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs The Unicorns",
+        "popover": {
+          "content": [
+            {
+              "text": "D\u01b0\u01a1ng Minh Khoa (Ben), Ph\u1ea1m Nh\u1eadt Ho\u00e0ng (Ken), Ho\u00e0ng H\u1ea3i Nam (Jason)"
+            },
+            {
+              "text": "View The Unicorns's Record",
+              "link": "/2025/participants/team/259463/"
+            }
+          ],
+          "title": "Won against The Unicorns"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "South Africa Malema",
+        "emoji": "\ud83e\uddae",
+        "sort": "South Africa Malema",
+        "class": "team-name",
+        "popover": {
+          "title": "South Africa Malema",
+          "content": [
+            {
+              "text": "Brendan Hope, Francesca Lewitton, Ameer Loonat, Munei Mulaudzi, Jemma Tresling"
+            },
+            {
+              "text": "View South Africa Malema's Record",
+              "link": "/2025/participants/team/259447/"
+            }
+          ]
+        }
+      },
+      { "text": "SASDB" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs JFH Soar",
+        "popover": {
+          "content": [
+            { "text": "Joey Lin, Fiona Shen, Heather Dong" },
+            {
+              "text": "View JFH Soar's Record",
+              "link": "/2025/participants/team/259480/"
+            }
+          ],
+          "title": "Lost to JFH Soar"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs LMDS A",
+        "popover": {
+          "content": [
+            { "text": "Austin Shen, Guntas Bawa, Mekal Umair, Evan Wang" },
+            {
+              "text": "View LMDS A's Record",
+              "link": "/2025/participants/team/259441/"
+            }
+          ],
+          "title": "Won against LMDS A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Swing",
+        "emoji": "\ud83d\ude2e",
+        "sort": "Swing",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Swing",
+          "content": [
+            {
+              "text": "Eamon, Yi An, Nate, Weikai, Zi Lin, Han Wen, Daniel chew, Jayden, Yi Zenn, Qiaoyu"
+            },
+            {
+              "text": "View Swing's Record",
+              "link": "/2025/participants/team/260403/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team Greece Juniors Feta",
+        "popover": {
+          "content": [
+            {
+              "text": "Maria Petrolia, Lida Aikaterinari, Elena Dikaiou Evangelatou, Michalis Fotiadis"
+            },
+            {
+              "text": "View Team Greece Juniors Feta's Record",
+              "link": "/2025/participants/team/259445/"
+            }
+          ],
+          "title": "Won against Team Greece Juniors Feta"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Team Estonia",
+        "popover": {
+          "content": [
+            {
+              "text": "Andreas Simson, Anni Sooman, Kaspar Noor, Lola Tiina S\u00e4rekanno, Richard K\u00e4sper"
+            },
+            {
+              "text": "View Team Estonia's Record",
+              "link": "/2025/participants/team/259419/"
+            }
+          ],
+          "title": "Lost to Team Estonia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "TBC",
+        "emoji": "\ud83e\udda9",
+        "sort": "TBC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "TBC",
+          "content": [
+            {
+              "text": "Jiayue Chen (James), Luca Tsimogiannis, Luyi Yin (Louis), Liqian Yan (Eric)"
+            },
+            {
+              "text": "View TBC's Record",
+              "link": "/2025/participants/team/259427/"
+            }
+          ]
+        }
+      },
+      { "text": "GE Elite" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Brazil KM",
+        "popover": {
+          "content": [
+            {
+              "text": "Hamza Musa Hasan, Gabriel Antero, Davi Bonalumi, Sebastian Wilke"
+            },
+            {
+              "text": "View Brazil KM's Record",
+              "link": "/2025/participants/team/259995/"
+            }
+          ],
+          "title": "Won against Brazil KM"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs annie, children, and justin",
+        "popover": {
+          "content": [
+            { "text": "Annie Zhang, Kristen Yip, Haim Joshi, Justin Huang" },
+            {
+              "text": "View annie, children, and justin's Record",
+              "link": "/2025/participants/team/260400/"
+            }
+          ],
+          "title": "Lost to annie, children, and justin"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "TSU",
+        "emoji": "\ud83c\udf34",
+        "sort": "TSU",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "TSU",
+          "content": [
+            { "text": "Anaya Agarwal, Adhiraj singh Johar, Kieara Gupta" },
+            {
+              "text": "View TSU's Record",
+              "link": "/2025/participants/team/259456/"
+            }
+          ]
+        }
+      },
+      { "text": "TSU" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Atlantic Ivy 1",
+        "popover": {
+          "content": [
+            {
+              "text": "Aleesha Naeem, Yuhan jiang, Smayan Sethi, Isha Nair, Ziyus Guzder"
+            },
+            {
+              "text": "View Atlantic Ivy 1's Record",
+              "link": "/2025/participants/team/259998/"
+            }
+          ],
+          "title": "Lost to Atlantic Ivy 1"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs COG B",
+        "popover": {
+          "content": [
+            {
+              "text": "Niyati Aggarwal, Adhyaa Kulandaivel, Osheen Samra, Riti Jain"
+            },
+            {
+              "text": "View COG B's Record",
+              "link": "/2025/participants/team/259475/"
+            }
+          ],
+          "title": "Won against COG B"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Taivas Education",
+        "emoji": "\ud83d\udc56",
+        "sort": "Taivas Education",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Taivas Education",
+          "content": [
+            { "text": "Vedika Arora, Aryan Chandok, Ashmita Aghi" },
+            {
+              "text": "View Taivas Education's Record",
+              "link": "/2025/participants/team/260000/"
+            }
+          ]
+        }
+      },
+      { "text": "Taivas Education" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs THISWEE",
+        "popover": {
+          "content": [
+            { "text": "Winston Zuo, Eric Na, Ethan Zhou" },
+            {
+              "text": "View THISWEE's Record",
+              "link": "/2025/participants/team/259452/"
+            }
+          ],
+          "title": "Won against THISWEE"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Vocalize A",
+        "popover": {
+          "content": [
+            {
+              "text": "Nidhi Francis, Shaurya Mathur, Ashish Satish, Sanaya Jagtap"
+            },
+            {
+              "text": "View Vocalize A's Record",
+              "link": "/2025/participants/team/259460/"
+            }
+          ],
+          "title": "Lost to Vocalize A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Team Austria",
+        "emoji": "\ud83c\udde6\ud83c\uddf9",
+        "sort": "Team Austria",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Austria",
+          "content": [
+            {
+              "text": "Elisa Cerda, Elena Brehm, Sofia Schuppler, Viktor Vojnoski, Mihail Zahariev"
+            },
+            {
+              "text": "View Team Austria's Record",
+              "link": "/2025/participants/team/259409/"
+            }
+          ]
+        }
+      },
+      { "text": "Austria WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Ethos Apollo",
+        "popover": {
+          "content": [
+            { "text": "Matthew Li, Emma Zhang, Sarah Gong, Aileen Jiang" },
+            {
+              "text": "View Ethos Apollo's Record",
+              "link": "/2025/participants/team/259423/"
+            }
+          ],
+          "title": "Lost to Ethos Apollo"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Artis Academy LLH",
+        "popover": {
+          "content": [
+            { "text": "Hannah Lu, Annabel Lu, Connie Huang" },
+            {
+              "text": "View Artis Academy LLH's Record",
+              "link": "/2025/participants/team/259404/"
+            }
+          ],
+          "title": "Won against Artis Academy LLH"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Bulgaria",
+        "emoji": "\ud83c\udde7\ud83c\uddec",
+        "sort": "Team Bulgaria",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Bulgaria",
+          "content": [
+            {
+              "text": "Kaloyan Kotzev, Valentin Katzarov, Marin Marinov, Adelina Galabinova"
+            },
+            {
+              "text": "View Team Bulgaria's Record",
+              "link": "/2025/participants/team/259411/"
+            }
+          ]
+        }
+      },
+      { "text": "Bulgaria WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team India WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Uday Vir Khosla, Avni Kaur Chadha, Manveer Pratap Rathore, Arnav Agarwal, Veda Kalra"
+            },
+            {
+              "text": "View Team India WSDC's Record",
+              "link": "/2025/participants/team/259430/"
+            }
+          ],
+          "title": "Lost to Team India WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs ROGA Black",
+        "popover": {
+          "content": [
+            { "text": "Olivia Jia, Yvonne Mo, Charlotte Zou" },
+            {
+              "text": "View ROGA Black's Record",
+              "link": "/2025/participants/team/259992/"
+            }
+          ],
+          "title": "Won against ROGA Black"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team England",
+        "emoji": "\ud83e\udd81",
+        "sort": "Team England",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team England",
+          "content": [
+            { "text": "Valerie C, Aryaman S, Adrian S, Alvin S, Joshua M" },
+            {
+              "text": "View Team England's Record",
+              "link": "/2025/participants/team/259418/"
+            }
+          ]
+        }
+      },
+      { "text": "England WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Hong Kong WSDC Dragon Boats",
+        "popover": {
+          "content": [
+            {
+              "text": "Moses Lai, Jimi Fitzpatrick, Tony Shu, Kaitlyn Liu, Lily Liang"
+            },
+            {
+              "text": "View Hong Kong WSDC Dragon Boats's Record",
+              "link": "/2025/participants/team/259986/"
+            }
+          ],
+          "title": "Lost to Hong Kong WSDC Dragon Boats"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Ecuador WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Iann Tobar, Alejandra Le\u00f3n, Kamille Pazos, Carlos Ubidia"
+            },
+            {
+              "text": "View Ecuador WSDC's Record",
+              "link": "/2025/participants/team/259994/"
+            }
+          ],
+          "title": "Won against Ecuador WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Greece Juniors Feta",
+        "emoji": "\ud83e\udd39",
+        "sort": "Team Greece Juniors Feta",
+        "class": "team-name",
+        "popover": {
+          "title": "Team Greece Juniors Feta",
+          "content": [
+            {
+              "text": "Maria Petrolia, Lida Aikaterinari, Elena Dikaiou Evangelatou, Michalis Fotiadis"
+            },
+            {
+              "text": "View Team Greece Juniors Feta's Record",
+              "link": "/2025/participants/team/259445/"
+            }
+          ]
+        }
+      },
+      { "text": "PFA" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Swing",
+        "popover": {
+          "content": [
+            {
+              "text": "Eamon, Yi An, Nate, Weikai, Zi Lin, Han Wen, Daniel chew, Jayden, Yi Zenn, Qiaoyu"
+            },
+            {
+              "text": "View Swing's Record",
+              "link": "/2025/participants/team/260403/"
+            }
+          ],
+          "title": "Lost to Swing"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Artis Academy MHS",
+        "popover": {
+          "content": [
+            { "text": "Isabel Mi, Cyan Hu, Zoe Sun" },
+            {
+              "text": "View Artis Academy MHS's Record",
+              "link": "/2025/participants/team/259402/"
+            }
+          ],
+          "title": "Won against Artis Academy MHS"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Greece Juniors Souvlaki",
+        "emoji": "\ud83e\udde9",
+        "sort": "Team Greece Juniors Souvlaki",
+        "class": "team-name",
+        "popover": {
+          "title": "Team Greece Juniors Souvlaki",
+          "content": [
+            { "text": "Spyros Roupas, Danae Tatsopoulou, Evita Politakou" },
+            {
+              "text": "View Team Greece Juniors Souvlaki's Record",
+              "link": "/2025/participants/team/259444/"
+            }
+          ]
+        }
+      },
+      { "text": "PFA" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Brazil WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Antonio Luna, Renata Hamdar de Castilho, Vitor Cez\u00e1rio, Luiza Ribeiro, Luiz Arns"
+            },
+            {
+              "text": "View Brazil WSDC's Record",
+              "link": "/2025/participants/team/259987/"
+            }
+          ],
+          "title": "Lost to Brazil WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs CSFC",
+        "popover": {
+          "content": [
+            {
+              "text": "Hiya Ray, Kushi Shetty, Henry Lin, Yuxuan Wu, Braden Zhao-Upton"
+            },
+            {
+              "text": "View CSFC's Record",
+              "link": "/2025/participants/team/259415/"
+            }
+          ],
+          "title": "Won against CSFC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team IIS",
+        "emoji": "\ud83e\udee7",
+        "sort": "Team IIS",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team IIS",
+          "content": [
+            { "text": "Rabaani Mehra, Abana Dhillon, Reeva Chopra" },
+            {
+              "text": "View Team IIS's Record",
+              "link": "/2025/participants/team/259993/"
+            }
+          ]
+        }
+      },
+      { "text": "IIS" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Artis Academy LLJF",
+        "popover": {
+          "content": [
+            {
+              "text": "Austin Li, Zhihan(Austin) Lin, Owen Jiang, Anthony Fei"
+            },
+            {
+              "text": "View Artis Academy LLJF's Record",
+              "link": "/2025/participants/team/259405/"
+            }
+          ],
+          "title": "Won against Artis Academy LLJF"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      },
+      {
+        "text": " vs Keyspeak Alchemy",
+        "popover": {
+          "content": [
+            {
+              "text": "Emma Qiu, Lawrence Ma, Kevin Sun, Donny Cao, Grace Guo"
+            },
+            {
+              "text": "View Keyspeak Alchemy's Record",
+              "link": "/2025/participants/team/259433/"
+            }
+          ],
+          "title": "Lost to Keyspeak Alchemy"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Team Kenya",
+        "emoji": "\ud83c\uddf0\ud83c\uddea",
+        "sort": "Team Kenya",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Kenya",
+          "content": [
+            { "text": "Berachah Okumu, Adrian Kinyanjui, Kwame Kimani" },
+            {
+              "text": "View Team Kenya's Record",
+              "link": "/2025/participants/team/259432/"
+            }
+          ]
+        }
+      },
+      { "text": "Kenya WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Team Qatar",
+        "popover": {
+          "content": [
+            {
+              "text": "Joude Ziani, Aisha Alasmakh, Ameera Al Ishaq, Alanoud Alkaabi, Aisha Al Dosari"
+            },
+            {
+              "text": "View Team Qatar's Record",
+              "link": "/2025/participants/team/259446/"
+            }
+          ],
+          "title": "Lost to Team Qatar"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Portugal JK",
+        "popover": {
+          "content": [
+            {
+              "text": "Katarina Menezes, Manuela Sirgado, Beatriz Amorim, Arthur Gutierrez"
+            },
+            {
+              "text": "View Portugal JK's Record",
+              "link": "/2025/participants/team/259996/"
+            }
+          ],
+          "title": "Won against Portugal JK"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Team Romania",
+        "emoji": "\ud83c\uddf7\ud83c\uddf4",
+        "sort": "Team Romania",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Team Romania",
+          "content": [
+            {
+              "text": "Drago\u0219 Matei, Ionu\u021b Moldovan, David Bagacean, Sorin \u021aiclete, Daria Iancu"
+            },
+            {
+              "text": "View Team Romania's Record",
+              "link": "/2025/participants/team/259400/"
+            }
+          ]
+        }
+      },
+      { "text": "ARDOR" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Canada Louis Riel",
+        "popover": {
+          "content": [
+            { "text": "Ann Wang, Jinjou Wang, Kelvin Fan, Lucas Le, Sarah Li" },
+            {
+              "text": "View Canada Louis Riel's Record",
+              "link": "/2025/participants/team/259412/"
+            }
+          ],
+          "title": "Lost to Canada Louis Riel"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs THISWEE",
+        "popover": {
+          "content": [
+            { "text": "Winston Zuo, Eric Na, Ethan Zhou" },
+            {
+              "text": "View THISWEE's Record",
+              "link": "/2025/participants/team/259452/"
+            }
+          ],
+          "title": "Won against THISWEE"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "WSDC Indonesia Bang Jali",
+        "emoji": "\ud83c\uddee\ud83c\udde9",
+        "sort": "WSDC Indonesia Bang Jali",
+        "class": "team-name",
+        "popover": {
+          "title": "WSDC Indonesia Bang Jali",
+          "content": [
+            {
+              "text": "Raymond Arvin, Chelsea Cecillia Cang, Anzea Wirasasmita, Audrey Effendi"
+            },
+            {
+              "text": "View WSDC Indonesia Bang Jali's Record",
+              "link": "/2025/participants/team/259429/"
+            }
+          ]
+        }
+      },
+      { "text": "Indonesia WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs South Africa Zuma",
+        "popover": {
+          "content": [
+            {
+              "text": "Tshepiso Polo, Dimpho Ntsoane, Tshegofatso Molepo, Anjeli Ramatsui, Khathutshelo Mainganye"
+            },
+            {
+              "text": "View South Africa Zuma's Record",
+              "link": "/2025/participants/team/259450/"
+            }
+          ],
+          "title": "Lost to South Africa Zuma"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs AMS",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguyen Hien Tam, Nguyen Vu Bao Tran, Nguyen Ha Anh Thu"
+            },
+            {
+              "text": "View AMS's Record",
+              "link": "/2025/participants/team/259457/"
+            }
+          ],
+          "title": "Won against AMS"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "WSDC Vietnam",
+        "emoji": "\ud83c\uddfb\ud83c\uddf3",
+        "sort": "WSDC Vietnam",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "WSDC Vietnam",
+          "content": [
+            {
+              "text": "Binh-Minh Le, Nha-Uyen Vu, Duc-Minh Hoang, Anthony Ngoc-Minh Nguyen, Thien-Bao Nguyen-Huy"
+            },
+            {
+              "text": "View WSDC Vietnam's Record",
+              "link": "/2025/participants/team/259458/"
+            }
+          ]
+        }
+      },
+      { "text": "Vietnam WSDC" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Canada William Lyon Mackenzie",
+        "popover": {
+          "content": [
+            {
+              "text": "Afrukhta Siddique, Conan Li, Grace Liu, Hannah Li, Hannah Liu"
+            },
+            {
+              "text": "View Canada William Lyon Mackenzie's Record",
+              "link": "/2025/participants/team/259413/"
+            }
+          ],
+          "title": "Lost to Canada William Lyon Mackenzie"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs SD Academy",
+        "popover": {
+          "content": [
+            { "text": "Amy Tang, Louise Jiang, Jenna Liu" },
+            {
+              "text": "View SD Academy's Record",
+              "link": "/2025/participants/team/259448/"
+            }
+          ],
+          "title": "Won against SD Academy"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "Wonkey Donkeys",
+        "emoji": "\ud83e\udddd",
+        "sort": "Wonkey Donkeys",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Wonkey Donkeys",
+          "content": [
+            { "text": "Chen Ruilin, Matthew Han Penghao, Wang Jinyi" },
+            {
+              "text": "View Wonkey Donkeys's Record",
+              "link": "/2025/participants/team/259467/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Artis Academy CZL",
+        "popover": {
+          "content": [
+            { "text": "William Chen, Donnie Zhao, Felix Li" },
+            {
+              "text": "View Artis Academy CZL's Record",
+              "link": "/2025/participants/team/259406/"
+            }
+          ],
+          "title": "Lost to Artis Academy CZL"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs \u03a3h priori",
+        "popover": {
+          "content": [
+            {
+              "text": "Jeffery Liu, Ella Feng, Vicky Zhu, Kathy Dong, Terrence Guo"
+            },
+            {
+              "text": "View \u03a3h priori's Record",
+              "link": "/2025/participants/team/259465/"
+            }
+          ],
+          "title": "Won against \u03a3h priori"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "XOFOASOFAOSD",
+        "emoji": "\ud83d\udc43",
+        "sort": "XOFOASOFAOSD",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "XOFOASOFAOSD",
+          "content": [
+            {
+              "text": "Piers Ko, John Chiu, Adrian Preston Wong, Samuel Ang Krishnan"
+            },
+            {
+              "text": "View XOFOASOFAOSD's Record",
+              "link": "/2025/participants/team/259476/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 1, "text": "1" },
+      {
+        "text": " vs Hong Kong Egg Tarts",
+        "popover": {
+          "content": [
+            { "text": "Jasmine Chen, Cyrus Leung, Valmik Dangayach" },
+            {
+              "text": "View Hong Kong Egg Tarts's Record",
+              "link": "/2025/participants/team/259469/"
+            }
+          ],
+          "title": "Lost to Hong Kong Egg Tarts"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs DGS Blob",
+        "popover": {
+          "content": [
+            {
+              "text": "Nguyen Viet Bach, Nguyen Tuan Thanh, Nguyen Truong Giang"
+            },
+            {
+              "text": "View DGS Blob's Record",
+              "link": "/2025/participants/team/259417/"
+            }
+          ],
+          "title": "Won against DGS Blob"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-up",
+        "iconClass": "text-success result-icon",
+        "sort": 2
+      }
+    ],
+    [
+      {
+        "text": "AMS",
+        "emoji": "\ud83e\ude87",
+        "sort": "AMS",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "AMS",
+          "content": [
+            {
+              "text": "Nguyen Hien Tam, Nguyen Vu Bao Tran, Nguyen Ha Anh Thu"
+            },
+            {
+              "text": "View AMS's Record",
+              "link": "/2025/participants/team/259457/"
+            }
+          ]
+        }
+      },
+      { "text": "VADP" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Gyarados",
+        "popover": {
+          "content": [
+            {
+              "text": "Elma Kalni\u0146a, Be\u0101te J\u0113kabsone, Reina Ro\u010d\u0101ne, Alise Skuja, Martins Magomedovs"
+            },
+            {
+              "text": "View Gyarados's Record",
+              "link": "/2025/participants/team/259438/"
+            }
+          ],
+          "title": "Lost to Gyarados"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs WSDC Indonesia Bang Jali",
+        "popover": {
+          "content": [
+            {
+              "text": "Raymond Arvin, Chelsea Cecillia Cang, Anzea Wirasasmita, Audrey Effendi"
+            },
+            {
+              "text": "View WSDC Indonesia Bang Jali's Record",
+              "link": "/2025/participants/team/259429/"
+            }
+          ],
+          "title": "Lost to WSDC Indonesia Bang Jali"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy CLW",
+        "emoji": "\ud83c\udfba",
+        "sort": "Artis Academy CLW",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Artis Academy CLW",
+          "content": [
+            { "text": "Jordan Chow, Yijia Li, Elaine Wu, Yiru Li" },
+            {
+              "text": "View Artis Academy CLW's Record",
+              "link": "/2025/participants/team/259408/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Team Team Thwabbit Team Team Team",
+        "popover": {
+          "content": [
+            {
+              "text": "Terrence Zhu, Sophie Li, Warren Sun, Yao Ming, Charlie Ni"
+            },
+            {
+              "text": "View Team Team Thwabbit Team Team Team's Record",
+              "link": "/2025/participants/team/259466/"
+            }
+          ],
+          "title": "Lost to Team Team Thwabbit Team Team Team"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs BNDS A",
+        "popover": {
+          "content": [
+            { "text": "Thomas Huang, Dora Chen, Yifeng Wang, Ryan Li" },
+            {
+              "text": "View BNDS A's Record",
+              "link": "/2025/participants/team/259410/"
+            }
+          ],
+          "title": "Lost to BNDS A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy LCSY",
+        "emoji": "\ud83c\udf59",
+        "sort": "Artis Academy LCSY",
+        "class": "team-name",
+        "popover": {
+          "title": "Artis Academy LCSY",
+          "content": [
+            { "text": "Daisy Li, Grace Charlesworth, Joshua Sun, Emmie Yang" },
+            {
+              "text": "View Artis Academy LCSY's Record",
+              "link": "/2025/participants/team/259407/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Team Estonia",
+        "popover": {
+          "content": [
+            {
+              "text": "Andreas Simson, Anni Sooman, Kaspar Noor, Lola Tiina S\u00e4rekanno, Richard K\u00e4sper"
+            },
+            {
+              "text": "View Team Estonia's Record",
+              "link": "/2025/participants/team/259419/"
+            }
+          ],
+          "title": "Lost to Team Estonia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Fried Fries",
+        "popover": {
+          "content": [
+            { "text": "Grace Huang, Yihan Ethan Wu, Zilin Ding, Haoling Shi" },
+            {
+              "text": "View Fried Fries's Record",
+              "link": "/2025/participants/team/259455/"
+            }
+          ],
+          "title": "Lost to Fried Fries"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy LLH",
+        "emoji": "\ud83d\ude46",
+        "sort": "Artis Academy LLH",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Artis Academy LLH",
+          "content": [
+            { "text": "Hannah Lu, Annabel Lu, Connie Huang" },
+            {
+              "text": "View Artis Academy LLH's Record",
+              "link": "/2025/participants/team/259404/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs WSDC LIThuania",
+        "popover": {
+          "content": [
+            {
+              "text": "Martyna Vaitkut\u0117, Dominykas Smaliukas, Kristijonas Ridzevi\u010dius, Milda Sofija Leonavi\u010di\u016bt\u0117, Jogaila Mitkus"
+            },
+            {
+              "text": "View WSDC LIThuania's Record",
+              "link": "/2025/participants/team/259440/"
+            }
+          ],
+          "title": "Lost to WSDC LIThuania"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team Austria",
+        "popover": {
+          "content": [
+            {
+              "text": "Elisa Cerda, Elena Brehm, Sofia Schuppler, Viktor Vojnoski, Mihail Zahariev"
+            },
+            {
+              "text": "View Team Austria's Record",
+              "link": "/2025/participants/team/259409/"
+            }
+          ],
+          "title": "Lost to Team Austria"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy MHS",
+        "emoji": "\ud83e\udd13",
+        "sort": "Artis Academy MHS",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Artis Academy MHS",
+          "content": [
+            { "text": "Isabel Mi, Cyan Hu, Zoe Sun" },
+            {
+              "text": "View Artis Academy MHS's Record",
+              "link": "/2025/participants/team/259402/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Team Singapore",
+        "popover": {
+          "content": [
+            {
+              "text": "Rupa Kinkara, Ryan Yao Xin Cheng, Zhang XiaoYu, Huo Xi Cheng, Amelia Tay Juey Oon"
+            },
+            {
+              "text": "View Team Singapore's Record",
+              "link": "/2025/participants/team/259449/"
+            }
+          ],
+          "title": "Lost to Team Singapore"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team Greece Juniors Feta",
+        "popover": {
+          "content": [
+            {
+              "text": "Maria Petrolia, Lida Aikaterinari, Elena Dikaiou Evangelatou, Michalis Fotiadis"
+            },
+            {
+              "text": "View Team Greece Juniors Feta's Record",
+              "link": "/2025/participants/team/259445/"
+            }
+          ],
+          "title": "Lost to Team Greece Juniors Feta"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Artis Academy WWZY",
+        "emoji": "\ud83e\udef0",
+        "sort": "Artis Academy WWZY",
+        "class": "team-name",
+        "popover": {
+          "title": "Artis Academy WWZY",
+          "content": [
+            { "text": "Emily Wu, Bella Wei, Chuyuan Zhou, Annabelle Jiayi Yu" },
+            {
+              "text": "View Artis Academy WWZY's Record",
+              "link": "/2025/participants/team/259403/"
+            }
+          ]
+        }
+      },
+      { "text": "Artis Academy" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Nomad Samsa",
+        "popover": {
+          "content": [
+            {
+              "text": "Alikhan Marat, Assem Issina, Akbota Smanova, Syrym Zhoyamergen, Bekzhan Kairzhanov"
+            },
+            {
+              "text": "View Nomad Samsa's Record",
+              "link": "/2025/participants/team/259477/"
+            }
+          ],
+          "title": "Lost to Nomad Samsa"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs G2A",
+        "popover": {
+          "content": [
+            {
+              "text": "Tr\u1ea7n Tu\u1ec7 Lam (Alice), Nguy\u1ec5n Ng\u1ecdc V\u00e2n Kh\u00e1nh (Apple), \u0110\u1eb7ng Minh Qu\u00e2n (Garry)"
+            },
+            {
+              "text": "View G2A's Record",
+              "link": "/2025/participants/team/259461/"
+            }
+          ],
+          "title": "Lost to G2A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Atlantic Ivy Atlantic Ivy B",
+        "emoji": "\ud83e\ude98",
+        "sort": "Atlantic Ivy Atlantic Ivy B",
+        "class": "team-name",
+        "popover": {
+          "title": "Atlantic Ivy Atlantic Ivy B",
+          "content": [
+            { "text": "Mia Zheng, Flora Rughwani, xinyue ying" },
+            {
+              "text": "View Atlantic Ivy Atlantic Ivy B's Record",
+              "link": "/2025/participants/team/259999/"
+            }
+          ]
+        }
+      },
+      { "text": "Atlantic Ivy" },
+      { "sort": 0, "text": "0" },
+      { "text": "\u2014" },
+      { "text": "\u2014" }
+    ],
+    [
+      {
+        "text": "Brazil Development",
+        "emoji": "\ud83d\udc51",
+        "sort": "Brazil Development",
+        "class": "team-name",
+        "popover": {
+          "title": "Brazil Development",
+          "content": [
+            {
+              "text": "Pen\u00e9lope Oliveira, Diogo Dib, Maria Clara Giglio, Mariana Magalh\u00e3es"
+            },
+            {
+              "text": "View Brazil Development's Record",
+              "link": "/2025/participants/team/259997/"
+            }
+          ]
+        }
+      },
+      { "text": "Brazil" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs M(iracle)orocco WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Mohamed Isslam El Makaoui, Nicole Coleman, Noussayba Elouedghiri Idrissi, Safaa Hafdi"
+            },
+            {
+              "text": "View M(iracle)orocco WSDC's Record",
+              "link": "/2025/participants/team/260172/"
+            }
+          ],
+          "title": "Lost to M(iracle)orocco WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team UAE",
+        "popover": {
+          "content": [
+            {
+              "text": "Ved Kedia, Vedanth Aggarwal, Wiktoria Blazik, Arit Mukherjee, Zaina Akram"
+            },
+            {
+              "text": "View Team UAE's Record",
+              "link": "/2025/participants/team/259459/"
+            }
+          ],
+          "title": "Lost to Team UAE"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Brazil KM",
+        "emoji": "\ud83c\udfa7",
+        "sort": "Brazil KM",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Brazil KM",
+          "content": [
+            {
+              "text": "Hamza Musa Hasan, Gabriel Antero, Davi Bonalumi, Sebastian Wilke"
+            },
+            {
+              "text": "View Brazil KM's Record",
+              "link": "/2025/participants/team/259995/"
+            }
+          ]
+        }
+      },
+      { "text": "Brazil" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs TBC",
+        "popover": {
+          "content": [
+            {
+              "text": "Jiayue Chen (James), Luca Tsimogiannis, Luyi Yin (Louis), Liqian Yan (Eric)"
+            },
+            {
+              "text": "View TBC's Record",
+              "link": "/2025/participants/team/259427/"
+            }
+          ],
+          "title": "Lost to TBC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Keyspeak Emerald",
+        "popover": {
+          "content": [
+            { "text": "Eva Cen, Coco Huang, Nancy Zhou, Skyler Chen" },
+            {
+              "text": "View Keyspeak Emerald's Record",
+              "link": "/2025/participants/team/259436/"
+            }
+          ],
+          "title": "Lost to Keyspeak Emerald"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "COG B",
+        "emoji": "\ud83d\udcac",
+        "sort": "COG B",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "COG B",
+          "content": [
+            {
+              "text": "Niyati Aggarwal, Adhyaa Kulandaivel, Osheen Samra, Riti Jain"
+            },
+            {
+              "text": "View COG B's Record",
+              "link": "/2025/participants/team/259475/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Team Czechia",
+        "popover": {
+          "content": [
+            {
+              "text": "Jan Pozdn\u00edk, Kristi\u00e1n \u010cech, Kry\u0161tof Ol\u0161a, Petr Kosi\u010dka"
+            },
+            {
+              "text": "View Team Czechia's Record",
+              "link": "/2025/participants/team/259416/"
+            }
+          ],
+          "title": "Lost to Team Czechia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs TSU",
+        "popover": {
+          "content": [
+            { "text": "Anaya Agarwal, Adhiraj singh Johar, Kieara Gupta" },
+            {
+              "text": "View TSU's Record",
+              "link": "/2025/participants/team/259456/"
+            }
+          ],
+          "title": "Lost to TSU"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "CSFC",
+        "emoji": "\ud83d\udc44",
+        "sort": "CSFC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "CSFC",
+          "content": [
+            {
+              "text": "Hiya Ray, Kushi Shetty, Henry Lin, Yuxuan Wu, Braden Zhao-Upton"
+            },
+            {
+              "text": "View CSFC's Record",
+              "link": "/2025/participants/team/259415/"
+            }
+          ]
+        }
+      },
+      { "text": "CSFC" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Keyspeak Sapphire",
+        "popover": {
+          "content": [
+            { "text": "Elaine Fan, Vivi Ni, Xinyu Wang, Shaohang Chen" },
+            {
+              "text": "View Keyspeak Sapphire's Record",
+              "link": "/2025/participants/team/259434/"
+            }
+          ],
+          "title": "Lost to Keyspeak Sapphire"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team Greece Juniors Souvlaki",
+        "popover": {
+          "content": [
+            { "text": "Spyros Roupas, Danae Tatsopoulou, Evita Politakou" },
+            {
+              "text": "View Team Greece Juniors Souvlaki's Record",
+              "link": "/2025/participants/team/259444/"
+            }
+          ],
+          "title": "Lost to Team Greece Juniors Souvlaki"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "DGS Blob",
+        "emoji": "\ud83e\udd17",
+        "sort": "DGS Blob",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "DGS Blob",
+          "content": [
+            {
+              "text": "Nguyen Viet Bach, Nguyen Tuan Thanh, Nguyen Truong Giang"
+            },
+            {
+              "text": "View DGS Blob's Record",
+              "link": "/2025/participants/team/259417/"
+            }
+          ]
+        }
+      },
+      { "text": "DGS" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Team Greece",
+        "popover": {
+          "content": [
+            {
+              "text": "Artemis Papastavrou, Kai Yuet Zhang, Ellie Kitinou, Marianna Argeiti"
+            },
+            {
+              "text": "View Team Greece's Record",
+              "link": "/2025/participants/team/259443/"
+            }
+          ],
+          "title": "Lost to Team Greece"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs XOFOASOFAOSD",
+        "popover": {
+          "content": [
+            {
+              "text": "Piers Ko, John Chiu, Adrian Preston Wong, Samuel Ang Krishnan"
+            },
+            {
+              "text": "View XOFOASOFAOSD's Record",
+              "link": "/2025/participants/team/259476/"
+            }
+          ],
+          "title": "Lost to XOFOASOFAOSD"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Ecuador WSDC",
+        "emoji": "\ud83e\udebf",
+        "sort": "Ecuador WSDC",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Ecuador WSDC",
+          "content": [
+            {
+              "text": "Iann Tobar, Alejandra Le\u00f3n, Kamille Pazos, Carlos Ubidia"
+            },
+            {
+              "text": "View Ecuador WSDC's Record",
+              "link": "/2025/participants/team/259994/"
+            }
+          ]
+        }
+      },
+      { "text": "Ecuador WSDC" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Arencia",
+        "popover": {
+          "content": [
+            { "text": "Seunghun Lee, Brooke Lai, Jane Hahn, Connie Han" },
+            {
+              "text": "View Arencia's Record",
+              "link": "/2025/participants/team/259481/"
+            }
+          ],
+          "title": "Lost to Arencia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team England",
+        "popover": {
+          "content": [
+            { "text": "Valerie C, Aryaman S, Adrian S, Alvin S, Joshua M" },
+            {
+              "text": "View Team England's Record",
+              "link": "/2025/participants/team/259418/"
+            }
+          ],
+          "title": "Lost to Team England"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Keyspeak Aquamarine",
+        "emoji": "\ud83d\udc2e",
+        "sort": "Keyspeak Aquamarine",
+        "class": "team-name",
+        "popover": {
+          "title": "Keyspeak Aquamarine",
+          "content": [
+            {
+              "text": "Catherine Qin, Tony Cao, Missy Mou, Junqian Yan, Miranda Chen"
+            },
+            {
+              "text": "View Keyspeak Aquamarine's Record",
+              "link": "/2025/participants/team/259435/"
+            }
+          ]
+        }
+      },
+      { "text": "Keyspeak" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs New Zealand",
+        "popover": {
+          "content": [
+            {
+              "text": "Sebastian Heine-Sheldrake, Bruce Zhang, Sam Allan, Cerisa Gu, Isabella McKeefry"
+            },
+            {
+              "text": "View New Zealand's Record",
+              "link": "/2025/participants/team/259442/"
+            }
+          ],
+          "title": "Lost to New Zealand"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Ethos Hermes",
+        "popover": {
+          "content": [
+            { "text": "Ema Sun, Cate Shumka, Jiyan Jane Fan" },
+            {
+              "text": "View Ethos Hermes's Record",
+              "link": "/2025/participants/team/259425/"
+            }
+          ],
+          "title": "Lost to Ethos Hermes"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "KlNG",
+        "emoji": "\ud83d\udc40",
+        "sort": "KlNG",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "KlNG",
+          "content": [
+            { "text": "Lisa Wenfei Tang, Kalan Xie, Norah Liu, Garid Bold" },
+            {
+              "text": "View KlNG's Record",
+              "link": "/2025/participants/team/259472/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Doremi",
+        "popover": {
+          "content": [
+            { "text": "Yin Ruoqing, Wu Peiyao, Lyu Yueran" },
+            {
+              "text": "View Doremi's Record",
+              "link": "/2025/participants/team/259453/"
+            }
+          ],
+          "title": "Lost to Doremi"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs ROGA Red",
+        "popover": {
+          "content": [
+            { "text": "Gloria Jeon, Jason Chen, Siya Rathi, Harjun Bindra" },
+            {
+              "text": "View ROGA Red's Record",
+              "link": "/2025/participants/team/259990/"
+            }
+          ],
+          "title": "Lost to ROGA Red"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "LL China&amp;Ireland",
+        "emoji": "\ud83c\udf2e",
+        "sort": "LL China&amp;Ireland",
+        "class": "team-name",
+        "popover": {
+          "title": "LL China&amp;Ireland",
+          "content": [
+            { "text": "Kingsley Guo, Guan Hui Lin, Eoghan Conroy, Lucas Liu" },
+            {
+              "text": "View LL China&amp;Ireland's Record",
+              "link": "/2025/participants/team/259439/"
+            }
+          ]
+        }
+      },
+      { "text": "LearningLeaders" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Goobert",
+        "popover": {
+          "content": [
+            { "text": "Isolde Li, Zachary Li, Leo Guo" },
+            {
+              "text": "View Goobert's Record",
+              "link": "/2025/participants/team/259468/"
+            }
+          ],
+          "title": "Lost to Goobert"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs 5 Ontarioians",
+        "popover": {
+          "content": [
+            {
+              "text": "Keerti Joshi, Kallie Yang, Owen Yin, Nathan Yang, Laura Wang"
+            },
+            {
+              "text": "View 5 Ontarioians's Record",
+              "link": "/2025/participants/team/259473/"
+            }
+          ],
+          "title": "Lost to 5 Ontarioians"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "LMDS A",
+        "emoji": "\ud83d\udeb0",
+        "sort": "LMDS A",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "LMDS A",
+          "content": [
+            { "text": "Austin Shen, Guntas Bawa, Mekal Umair, Evan Wang" },
+            {
+              "text": "View LMDS A's Record",
+              "link": "/2025/participants/team/259441/"
+            }
+          ]
+        }
+      },
+      { "text": "LMDS" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs COG A",
+        "popover": {
+          "content": [
+            {
+              "text": "Eva Jain, Shivam Pinapatruni, Advik Sud, Viraaj Bansal"
+            },
+            {
+              "text": "View COG A's Record",
+              "link": "/2025/participants/team/259474/"
+            }
+          ],
+          "title": "Lost to COG A"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs South Africa Malema",
+        "popover": {
+          "content": [
+            {
+              "text": "Brendan Hope, Francesca Lewitton, Ameer Loonat, Munei Mulaudzi, Jemma Tresling"
+            },
+            {
+              "text": "View South Africa Malema's Record",
+              "link": "/2025/participants/team/259447/"
+            }
+          ],
+          "title": "Lost to South Africa Malema"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "MNPH",
+        "emoji": "\ud83c\udf47",
+        "sort": "MNPH",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "MNPH",
+          "content": [
+            {
+              "text": "Tr\u01b0\u01a1ng Kh\u00e1nh Ph\u01b0\u01a1ng, V\u00f5 Ph\u1ea1m Minh Ho\u00e0ng, H\u1ed3 \u0110\u1ee9c Minh, Ph\u1ea1m Kh\u00e1nh Nhi"
+            },
+            {
+              "text": "View MNPH's Record",
+              "link": "/2025/participants/team/259462/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs ROGA White",
+        "popover": {
+          "content": [
+            { "text": "Christa Zhu, Bella Lent, Cindy You, Sylvia Wu" },
+            {
+              "text": "View ROGA White's Record",
+              "link": "/2025/participants/team/259991/"
+            }
+          ],
+          "title": "Lost to ROGA White"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Artis Academy LLJF",
+        "popover": {
+          "content": [
+            {
+              "text": "Austin Li, Zhihan(Austin) Lin, Owen Jiang, Anthony Fei"
+            },
+            {
+              "text": "View Artis Academy LLJF's Record",
+              "link": "/2025/participants/team/259405/"
+            }
+          ],
+          "title": "Lost to Artis Academy LLJF"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Portugal JK",
+        "emoji": "\ud83e\udd54",
+        "sort": "Portugal JK",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Portugal JK",
+          "content": [
+            {
+              "text": "Katarina Menezes, Manuela Sirgado, Beatriz Amorim, Arthur Gutierrez"
+            },
+            {
+              "text": "View Portugal JK's Record",
+              "link": "/2025/participants/team/259996/"
+            }
+          ]
+        }
+      },
+      { "text": "Portugal" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs ROGA Gold",
+        "popover": {
+          "content": [
+            {
+              "text": "Christina Yating Zhang, Louisa Chen, Sara Saiprasad, Ruhani Surana"
+            },
+            {
+              "text": "View ROGA Gold's Record",
+              "link": "/2025/participants/team/259988/"
+            }
+          ],
+          "title": "Lost to ROGA Gold"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team Kenya",
+        "popover": {
+          "content": [
+            { "text": "Berachah Okumu, Adrian Kinyanjui, Kwame Kimani" },
+            {
+              "text": "View Team Kenya's Record",
+              "link": "/2025/participants/team/259432/"
+            }
+          ],
+          "title": "Lost to Team Kenya"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "ROGA Black",
+        "emoji": "\ud83e\udebc",
+        "sort": "ROGA Black",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "ROGA Black",
+          "content": [
+            { "text": "Olivia Jia, Yvonne Mo, Charlotte Zou" },
+            {
+              "text": "View ROGA Black's Record",
+              "link": "/2025/participants/team/259992/"
+            }
+          ]
+        }
+      },
+      { "text": "ROGA" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Ethos Zeus",
+        "popover": {
+          "content": [
+            {
+              "text": "Jenelle Zhang, Elliana Sun, Amanda Zhao, Alan Li, Kai Yee Li"
+            },
+            {
+              "text": "View Ethos Zeus's Record",
+              "link": "/2025/participants/team/259420/"
+            }
+          ],
+          "title": "Lost to Ethos Zeus"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team Bulgaria",
+        "popover": {
+          "content": [
+            {
+              "text": "Kaloyan Kotzev, Valentin Katzarov, Marin Marinov, Adelina Galabinova"
+            },
+            {
+              "text": "View Team Bulgaria's Record",
+              "link": "/2025/participants/team/259411/"
+            }
+          ],
+          "title": "Lost to Team Bulgaria"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "SD Academy",
+        "emoji": "\ud83d\udca1",
+        "sort": "SD Academy",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "SD Academy",
+          "content": [
+            { "text": "Amy Tang, Louise Jiang, Jenna Liu" },
+            {
+              "text": "View SD Academy's Record",
+              "link": "/2025/participants/team/259448/"
+            }
+          ]
+        }
+      },
+      { "text": "SD Academy" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Team Croatia",
+        "popover": {
+          "content": [
+            {
+              "text": "Domagoj Praljak, Mila Kre\u0161i\u0107, Nela Dami\u0107, Marin Bolan\u010da, Lana Sri\u0107a"
+            },
+            {
+              "text": "View Team Croatia's Record",
+              "link": "/2025/participants/team/259414/"
+            }
+          ],
+          "title": "Lost to Team Croatia"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs WSDC Vietnam",
+        "popover": {
+          "content": [
+            {
+              "text": "Binh-Minh Le, Nha-Uyen Vu, Duc-Minh Hoang, Anthony Ngoc-Minh Nguyen, Thien-Bao Nguyen-Huy"
+            },
+            {
+              "text": "View WSDC Vietnam's Record",
+              "link": "/2025/participants/team/259458/"
+            }
+          ],
+          "title": "Lost to WSDC Vietnam"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "Shungite",
+        "emoji": "\ud83e\ude90",
+        "sort": "Shungite",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Shungite",
+          "content": [
+            {
+              "text": "Nguy\u1ec5n \u0110\u0103ng Khoa, Nguy\u1ec5n Qu\u1ef3nh Anh, \u0110\u1eb7ng Quang Huy, Goh Nguyen Khanh Hui Yin"
+            },
+            {
+              "text": "View Shungite's Record",
+              "link": "/2025/participants/team/259464/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs KFDI francis light&#x27;s side quest",
+        "popover": {
+          "content": [
+            { "text": "Glenys, Owen Chong, Michelle Ting, Rayan Khor" },
+            {
+              "text": "View KFDI francis light&#x27;s side quest's Record",
+              "link": "/2025/participants/team/259437/"
+            }
+          ],
+          "title": "Lost to KFDI francis light&#x27;s side quest"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Elmanika",
+        "popover": {
+          "content": [
+            { "text": "Emma Song, Mu En Li, Zitong Li" },
+            {
+              "text": "View Elmanika's Record",
+              "link": "/2025/participants/team/259454/"
+            }
+          ],
+          "title": "Lost to Elmanika"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "THISWEE",
+        "emoji": "\ud83e\udd16",
+        "sort": "THISWEE",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "THISWEE",
+          "content": [
+            { "text": "Winston Zuo, Eric Na, Ethan Zhou" },
+            {
+              "text": "View THISWEE's Record",
+              "link": "/2025/participants/team/259452/"
+            }
+          ]
+        }
+      },
+      { "text": "ThoughtTutor" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Taivas Education",
+        "popover": {
+          "content": [
+            { "text": "Vedika Arora, Aryan Chandok, Ashmita Aghi" },
+            {
+              "text": "View Taivas Education's Record",
+              "link": "/2025/participants/team/260000/"
+            }
+          ],
+          "title": "Lost to Taivas Education"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Team Romania",
+        "popover": {
+          "content": [
+            {
+              "text": "Drago\u0219 Matei, Ionu\u021b Moldovan, David Bagacean, Sorin \u021aiclete, Daria Iancu"
+            },
+            {
+              "text": "View Team Romania's Record",
+              "link": "/2025/participants/team/259400/"
+            }
+          ],
+          "title": "Lost to Team Romania"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "The Unicorns",
+        "emoji": "\ud83e\ude93",
+        "sort": "The Unicorns",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "The Unicorns",
+          "content": [
+            {
+              "text": "D\u01b0\u01a1ng Minh Khoa (Ben), Ph\u1ea1m Nh\u1eadt Ho\u00e0ng (Ken), Ho\u00e0ng H\u1ea3i Nam (Jason)"
+            },
+            {
+              "text": "View The Unicorns's Record",
+              "link": "/2025/participants/team/259463/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Ethos Artemis",
+        "popover": {
+          "content": [
+            {
+              "text": "Brian Deng, Allen Ding, Ibrahim Hamada, Alex Zou, Harold Wang"
+            },
+            {
+              "text": "View Ethos Artemis's Record",
+              "link": "/2025/participants/team/259424/"
+            }
+          ],
+          "title": "Lost to Ethos Artemis"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs ROGA Silver",
+        "popover": {
+          "content": [
+            { "text": "Mike Gao, Alex Xu, Loka Qiu, Ruilin Xu" },
+            {
+              "text": "View ROGA Silver's Record",
+              "link": "/2025/participants/team/259989/"
+            }
+          ],
+          "title": "Lost to ROGA Silver"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "vitamin d(ebate)",
+        "emoji": "\ud83c\udfad",
+        "sort": "vitamin d(ebate)",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "vitamin d(ebate)",
+          "content": [
+            {
+              "text": "Maya Al-Asam, Victor Damureanu, Daria Vava, Stefania Negoiasa"
+            },
+            {
+              "text": "View vitamin d(ebate)'s Record",
+              "link": "/2025/participants/team/259478/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Craiova Debate Society",
+        "popover": {
+          "content": [
+            {
+              "text": "B\u0103lun\u0103 Rare\u0219-Costin, Vi\u0219an Gabriela Teodora, Filip Mihnea Stefan, Saro\u0219i David, St\u0103nescu Mihai"
+            },
+            {
+              "text": "View Craiova Debate Society's Record",
+              "link": "/2025/participants/team/259470/"
+            }
+          ],
+          "title": "Lost to Craiova Debate Society"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Jacky Shut Up",
+        "popover": {
+          "content": [
+            { "text": "Lucas Lu, Zixuan Hong, Jacky Zhao, Joyce Xu, Liz Li" },
+            {
+              "text": "View Jacky Shut Up's Record",
+              "link": "/2025/participants/team/259471/"
+            }
+          ],
+          "title": "Lost to Jacky Shut Up"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "\u03a3h priori",
+        "emoji": "\u2709\ufe0f",
+        "sort": "\u03a3h priori",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "\u03a3h priori",
+          "content": [
+            {
+              "text": "Jeffery Liu, Ella Feng, Vicky Zhu, Kathy Dong, Terrence Guo"
+            },
+            {
+              "text": "View \u03a3h priori's Record",
+              "link": "/2025/participants/team/259465/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      {
+        "text": " vs Hong Kong WSDC",
+        "popover": {
+          "content": [
+            {
+              "text": "Jeanine Cheng, Lauren Tse, Jun Nam, Mollie Mei, Advik Sharma"
+            },
+            {
+              "text": "View Hong Kong WSDC's Record",
+              "link": "/2025/participants/team/259428/"
+            }
+          ],
+          "title": "Lost to Hong Kong WSDC"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      },
+      {
+        "text": " vs Wonkey Donkeys",
+        "popover": {
+          "content": [
+            { "text": "Chen Ruilin, Matthew Han Penghao, Wang Jinyi" },
+            {
+              "text": "View Wonkey Donkeys's Record",
+              "link": "/2025/participants/team/259467/"
+            }
+          ],
+          "title": "Lost to Wonkey Donkeys"
+        },
+        "class": "no-wrap",
+        "icon": "chevron-down",
+        "iconClass": "text-danger result-icon",
+        "sort": 1
+      }
+    ],
+    [
+      {
+        "text": "\u03a9bservers",
+        "emoji": "\ud83d\udc4f",
+        "sort": "\u03a9bservers",
+        "class": "team-name no-wrap",
+        "popover": {
+          "title": "Observers (Administrative Category)",
+          "content": [
+            {
+              "text": "[Obs.] Georgica Manoila, [Obs.] Karl\u012bna Jansone, [Obs.] Kallina Basli, [Obs.] Liudas Vinkleris, [Obs.] Ryan Rayner, [Obs.] Enshia Li, [Obs.] Arsalan Ghaemi, [Obs.] Marilena Hadjicosta, [Obs.] Robert Ciugolia, [Obs.] Marina Koji\u0107, [Obs.] Tengku Omar, [Obs.] Siow Xuan Ting, [Obs.] Melissa Connolly, [Obs.] Sajid Khandaker, [Obs.] Njuguna Macharia, [Obs.] Rushdoon Ahmed, [Obs.] Susan Clements, [Obs.] Henry Xu, [Obs.] Bobo Wong, [Obs.] Ivan Velentey, [Obs.] Markus Laanoja, [Obs.] Altynay Zamanbekova, [Obs.] Eric Kazadi, [Obs.] Matt Hazell, [Obs.] Kuhan Karttikeyn, [Obs.] Thivagar, [Obs.] Ahsan Muhyuddin, [Obs.] Jaed Bengzon, [Obs.] Lia Denise Tan, [Obs.] Hexuan Huang, [Obs.] Samar Pratap Singh, [Obs.] Jess Peixoto, [Obs.] Arsalan Ghaemi, [Obs.] Sachin Tissera, [Obs.] Kavindra Senaratna, [Obs.] El Mehdi Idrissi Guenouni, [Obs.] Erica Liu, [Obs.] Jade Wang, Guilherme Pereira"
+            },
+            {
+              "text": "View \u03a9bservers's Record",
+              "link": "/2025/participants/team/259482/"
+            }
+          ]
+        }
+      },
+      { "text": "\u2014" },
+      { "sort": 0, "text": "0" },
+      { "text": "\u2014" },
+      { "text": "\u2014" }
+    ]
+  ],
+  "title": "",
+  "subtitle": "",
+  "empty_title": "No Data Available",
+  "class": "",
+  "sort_key": "",
+  "sort_order": "desc"
+}

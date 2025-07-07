@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/api") // Base path for all endpoints in this controller
@@ -36,6 +35,7 @@ public class ServerController {
             teams = standingsProcessor.getNumTeams();
             jrTeams = standingsProcessor.getNumJrTeams();
             roundsPassed = standingsProcessor.getRoundsPassed();
+
             
             for (Object[] team : teamResults)
                 currentStandings.add(team);
@@ -87,7 +87,7 @@ public class ServerController {
             case "junior-finals":
                 jrBreak = 4; break;
             default:
-                jrBreak = 0; // No junior break
+                jrBreak = 0;
         }
 
         if (this.format.equals("ws")) {
@@ -98,8 +98,15 @@ public class ServerController {
         return "Tournament details saved successfully";
     }
     
+    @GetMapping("/jr-status")
+    public Map<String, Boolean> getJrStatus(@RequestParam(required = false, defaultValue = "false") boolean showJunior) {
+        Map<String, Boolean> status = new HashMap<>();
+        status.put("showJunior", showJunior);
+        return status;
+    }
+
     @GetMapping("/results")
-    public Map<String, Object> getResults() {
+    public Map<String, List<String>> getResults(@RequestParam(required = false, defaultValue = "false") boolean showJunior) {
         int[][] startingPoints = new int[teams][2]; // [0] = points, [1] = junior status
         for (int i = 0; i < teams; i++) {
             Object[] teamResults = currentStandings.get(i);
@@ -108,6 +115,8 @@ public class ServerController {
             startingPoints[i][0] = points;
             startingPoints[i][1] = t.isJunior() ? 1 : 0; // 1 for junior, 0 for open
         }
+        
+        Map<String, List<String>> breakResults = new HashMap<>();
 
         if (format.equals("bp")){
             while (teams % 4 != 0) teams++; // add swings; if mid-tourney, swings will enter as 0-pt teams
@@ -120,7 +129,7 @@ public class ServerController {
                     startingPoints[i][0] = 0;
             }
                 
-            sim.beginSim(startingPoints);
+            breakResults = sim.beginSim(startingPoints, showJunior);
         } else if (format.equals("ws")) {
             if (teams % 2 != 0) teams++; // add swings
 
@@ -131,15 +140,9 @@ public class ServerController {
                 for (int i = 0; i < teams; i++)
                     startingPoints[i][0] = 0;
             }
-            sim.beginSim(startingPoints);
+            breakResults = sim.beginSim(startingPoints, showJunior);
         }
 
-        Map<String, Object> results = new HashMap<>();
-        results.put("debateFormat", this.format);
-        results.put("numberOfRounds", this.totalRounds);
-
-        
-        
-        return results;
+        return breakResults;
     }
 }

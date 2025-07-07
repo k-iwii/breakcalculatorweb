@@ -26,7 +26,7 @@ public class WSDCSimulator {
     int[] maxOpenFrac = new int[2], maxJrFrac = new int[2];
     int[][] minArr = new int[teams][2], maxArr = new int[teams][2];
 
-	public void beginSim(int[][] startingPoints) {
+	public Map<String, List<String>> beginSim(int[][] startingPoints, boolean showJunior) {
         sortDescending(startingPoints);
 
         for (int i = 0; i < simulationRuns; i++) {
@@ -34,7 +34,7 @@ public class WSDCSimulator {
             int[][] sim = simTourney(Arrays.stream(startingPoints).map(a -> Arrays.copyOf(a, a.length)).toArray(int[][]::new));
 
             //UPDATE JR
-            if (jrTeams > 0) {
+            if (showJunior) {
                 if (roundsLeft == 5) {
                     handleBestCase(sim);
                     handleWorstCase(sim);
@@ -47,15 +47,29 @@ public class WSDCSimulator {
             handleOpen(sim);
         }
 
-        System.out.println(" --- OPEN BREAK ---");
-        System.out.println("Best case: " + minOpenFrac[0] + "/" + minOpenFrac[1] + " open teams on " + minOpen + " break.");
-        System.out.println("Worst case: " + maxOpenFrac[0] + "/" + maxOpenFrac[1] + " open teams on " + maxOpen + " break.");
+        Map<String, List<String>> breakResults = new HashMap<>();
+        breakResults.put("open", List.of(
+            ("All open teams on " + (minOpen + 1) + " will break.<br>" + minOpenFrac[0] + "/" + minOpenFrac[1] + " open teams on " + minOpen + " break."), // best case
+            ("All open teams on " + (maxOpen + 1) + " will break.<br>" + maxOpenFrac[0] + "/" + maxOpenFrac[1] + " open teams on " + maxOpen + " break.") // worst case
+        ));
 
-        if (jrTeams > 0) {
+        System.out.println(" --- OPEN BREAK ---");
+        System.out.println(breakResults.get("open").get(0));
+        System.out.println(breakResults.get("open").get(1));
+
+        if (showJunior) {
+            
+            breakResults.put("junior", List.of(
+                ("All junior teams on " + (minJr + 1) + " will break.<br>" + minJrFrac[0] + "/" + minJrFrac[1] + " junior teams on " + minJr + " break."), // best case
+                ("All junior teams on " + (maxJr + 1) + " will break.<br>" + maxJrFrac[0] + "/" + maxJrFrac[1] + " junior teams on " + maxJr + " break.") // worst case
+            ));
+            
             System.out.println("\n --- JUNIOR BREAK ---");
-            System.out.println("Best case: " + minJrFrac[0] + "/" + minJrFrac[1] + " junior teams on " + minJr + " break.");
-            System.out.println("Worst case: " + maxJrFrac[0] + "/" + maxJrFrac[1] + " junior teams on " + maxJr + " break.");
+            System.out.println(breakResults.get("junior").get(0));
+            System.out.println(breakResults.get("junior").get(1));
         }
+
+        return breakResults;
     }
 
     public int[][] simTourney(int[][] sim) {

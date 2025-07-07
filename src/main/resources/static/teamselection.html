@@ -194,6 +194,17 @@
                 .then(response => response.json())
                 .then(data => {
                     populateStandingsTable(data);
+                    
+                    // Determine if there are junior teams and store in sessionStorage
+                    let hasJuniorTeams = false;
+                    for (let standing of data) {
+                        const team = standing[0];
+                        if (team && team.junior) {
+                            hasJuniorTeams = true;
+                            break;
+                        }
+                    }
+                    sessionStorage.setItem('showJunior', hasJuniorTeams.toString());
                 })
                 .catch(error => {
                     console.error('Error loading standings:', error);
@@ -250,6 +261,22 @@
                         document.getElementById('teamSearch').value = team ? team.reference : '';
                     }
                 });
+
+                row.addEventListener('dblclick', function() {
+                    // Save selected team to sessionStorage
+                    sessionStorage.setItem('selectedTeam', team ? team.reference : '');
+                    
+                    // Remove selection from all rows first
+                    const allRows = document.querySelectorAll('#standingsTable tbody tr');
+                    allRows.forEach(r => r.classList.remove('selected'));
+                    
+                    // Select the clicked team
+                    row.classList.add('selected');
+                    document.getElementById('teamSearch').value = team ? team.reference : '';
+                    
+                    // Proceed to next page
+                    window.location.href = '/tourneydetails.html';
+                });
                 
                 tableBody.appendChild(row);
             });
@@ -285,12 +312,14 @@
         }
         
         
-        // Load standings when page loads (you'll need to provide the tournament URL)
-        // For now, this is a placeholder - you'll need to get the tournament URL from somewhere
+        // Load standings when page loads
         const urlParams = new URLSearchParams(window.location.search);
         const tournamentUrl = urlParams.get('url');
-        if (tournamentUrl)
+        if (tournamentUrl) {
+            // Store tournament URL in session storage for later use
+            sessionStorage.setItem('tournamentUrl', tournamentUrl);
             loadStandings(tournamentUrl);
+        }
     </script>
 </body>
 </html>
