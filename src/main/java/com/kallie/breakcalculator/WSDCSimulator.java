@@ -20,13 +20,24 @@ public class WSDCSimulator {
         this.simulationRuns = simulationRuns;
     }
 
-    int maxOpen = 0, maxJr = 0;
-    int minOpen = Integer.MAX_VALUE, minJr = Integer.MAX_VALUE;
+    public static int maxOpen = 0, maxJr = 0;
+    public static int minOpen = Integer.MAX_VALUE, minJr = Integer.MAX_VALUE;
     int[] minOpenFrac = new int[2], minJrFrac = new int[2];
     int[] maxOpenFrac = new int[2], maxJrFrac = new int[2];
     int[][] minArr = new int[teams][2], maxArr = new int[teams][2];
 
 	public Map<String, List<String>> beginSim(int[][] startingPoints, boolean showJunior) {
+        maxOpen = 0;
+        maxJr = 0;
+        minOpen = Integer.MAX_VALUE;
+        minJr = Integer.MAX_VALUE;
+        minOpenFrac = new int[2];
+        minJrFrac = new int[2];
+        maxOpenFrac = new int[2];
+        maxJrFrac = new int[2];
+        minArr = new int[teams][2];
+        maxArr = new int[teams][2];
+        
         sortDescending(startingPoints);
 
         for (int i = 0; i < simulationRuns; i++) {

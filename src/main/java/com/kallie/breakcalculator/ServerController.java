@@ -28,6 +28,8 @@ public class ServerController {
         System.out.println("DEBUG: Received GET request to /api/standings");
         System.out.println("DEBUG: URL parameter: " + url);
         
+        currentStandings.clear();
+        
         try {
             StandingsProcessor standingsProcessor = new StandingsProcessor(url);
             Object[][] teamResults = standingsProcessor.getCurrentStandings();
@@ -103,6 +105,53 @@ public class ServerController {
         Map<String, Boolean> status = new HashMap<>();
         status.put("showJunior", showJunior);
         return status;
+    }
+
+    @GetMapping("/row-colour")
+    public String[] findRowColour(@RequestParam(required = false) String breakType,
+                                 @RequestParam(required = false) String caseType) {
+        System.out.println("DEBUG: findRowColour called for breakType: " + breakType + ", caseType: " + caseType);
+        
+        int len = roundsPassed;
+        if (format.equals("bp"))
+            len *= 3;
+        
+        String[] pointColours = new String[len];
+        int guaranteedBreak = 0;
+        if (breakType.equals("open") && caseType.equals("best"))
+            guaranteedBreak = BPSimulator.minOpen + 1; // +1 because of 0-indexing
+        else if (breakType.equals("open") && caseType.equals("worst"))
+            guaranteedBreak = BPSimulator.maxOpen + 1;
+        else if (breakType.equals("junior") && caseType.equals("best"))
+            guaranteedBreak = WSDCSimulator.minJr + 1;
+        else if (breakType.equals("junior") && caseType.equals("worst"))
+            guaranteedBreak = WSDCSimulator.maxJr + 1;
+
+        for (int i = 0; i < len; i++) {
+            if (i >= guaranteedBreak)
+                pointColours[i] = "#CDF8FC"; // blue
+            else if (i + roundsLeft >= guaranteedBreak || i >= guaranteedBreak - 1)
+                pointColours[i] = "#CDFCD7"; // green
+            else if (i + roundsLeft * 2 >= guaranteedBreak || i + roundsLeft >= guaranteedBreak - 1)
+                pointColours[i] = "#E4FCCD"; // light green
+            else if (i + roundsLeft * 3 >= guaranteedBreak || i + roundsLeft * 2 >= guaranteedBreak - 1)
+                pointColours[i] = "#FBF4CB"; // orange
+            else
+                pointColours[i] = "#FBDDCB"; // red
+        }
+        
+        return pointColours;
+    }
+
+    @GetMapping("/team-colour")
+    public String getTeamColour(@RequestParam String breakType,
+                               @RequestParam String caseType,
+                               @RequestParam int teamPoints) {
+        String[] pointColours = findRowColour(breakType, caseType);
+        if (teamPoints >= 0 && teamPoints < pointColours.length) {
+            return pointColours[teamPoints];
+        }
+        return "";
     }
 
     @GetMapping("/results")

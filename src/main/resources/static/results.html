@@ -70,6 +70,22 @@
             margin-bottom: 0px;
             font-weight: 500;
             font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .column h1:hover {
+            color: #555555;
+        }
+
+        .column.selected h1 {
+            color: #999999;
+            font-weight: 600;
+        }
+
+        .column.selected {
+            background-color: #f8f9fa;
+            border-radius: 8px;
         }
 
         .column h2 {
@@ -139,6 +155,10 @@
         #standingsTable tbody tr:nth-child(even):hover {
             background-color: #f0f0f0;
         }
+
+        #standingsTable tbody tr.selected-team:hover {
+            background-color: #f8f9fa;
+        }
     </style>
 </head>
 <body>
@@ -189,17 +209,22 @@
                                 juniorResults.innerHTML = `
                                     <div class="results-columns">
                                         <div class="column">
-                                            <h1>Best Case</h1>
+                                            <h1 onclick="handleColumnClick('junior', 'best')">Best Case</h1>
                                             <h2>${data.junior && data.junior[0] ? data.junior[0] : ''}</h2>
                                             <div id="jr-best-case-content"></div>
                                         </div>
                                         <div class="column">
-                                            <h1>Worst Case</h1>
+                                            <h1 onclick="handleColumnClick('junior', 'worst')">Worst Case</h1>
                                             <h2>${data.junior && data.junior[1] ? data.junior[1] : ''}</h2>
                                             <div id="jr-worst-case-content"></div>
                                         </div>
                                     </div>
                                 `;
+                                
+                                // Select default column for junior results too
+                                setTimeout(() => {
+                                    selectDefaultColumn();
+                                }, 100);
                             })
                             .catch(error => {
                                 console.error('Error fetching junior results:', error);
@@ -216,12 +241,12 @@
                     document.getElementById('results').innerHTML = `
                         <div class="results-columns">
                             <div class="column">
-                                <h1>Best Case</h1>
+                                <h1 onclick="handleColumnClick('open', 'best')">Best Case</h1>
                                 <h2>${data.open && data.open[0] ? data.open[0] : ''}</h2>
                                 <div id="best-case-content"></div>
                             </div>
                             <div class="column">
-                                <h1>Worst Case</h1>
+                                <h1 onclick="handleColumnClick('open', 'worst')">Worst Case</h1>
                                 <h2>${data.open && data.open[1] ? data.open[1] : ''}</h2>
                                 <div id="worst-case-content"></div>
                             </div>
@@ -230,6 +255,11 @@
                     
                     // Load standings data for the table
                     loadStandingsTable();
+                    
+                    // Select default column after content is loaded
+                    setTimeout(() => {
+                        selectDefaultColumn();
+                    }, 100);
                 })
                 .catch(error => {
                     console.error('Error fetching results:', error);
@@ -295,7 +325,8 @@
                 const row = document.createElement('tr');
                 
                 const teamNameCell = document.createElement('td');
-                teamNameCell.textContent = team ? team.reference : 'Unknown Team';
+                const teamName = team ? team.reference : 'Unknown Team';
+                teamNameCell.textContent = teamName;
                 
                 const speakersCell = document.createElement('td');
                 if (team && team.speakers) {
@@ -314,6 +345,10 @@
                 
                 const pointsCell = document.createElement('td');
                 pointsCell.textContent = points;
+                
+                // Store team points for later use in row coloring
+                row.setAttribute('data-points', points);
+                row.setAttribute('data-team-name', teamName);
                 
                 row.appendChild(teamNameCell);
                 row.appendChild(speakersCell);
@@ -337,10 +372,136 @@
                     tableContainer.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
                     
                     // Highlight the selected team row
-                    rows[i].style.backgroundColor = i % 2 === 0 ? '#ffffff' : '#fafafa';
-                    rows[i].style.border = '1px solid #e5e5e5';
+                    rows[i].classList.add('selected-team');
                     
                     break;
+                }
+            }
+        }
+        
+        let selectedColumn = null;
+        let pointColours = [];
+
+        function handleColumnClick(breakType, caseType) {
+            console.log(`${breakType} break ${caseType} case clicked`);
+            
+            // Remove selected class from all columns
+            document.querySelectorAll('.column').forEach(col => {
+                col.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked column
+            event.target.parentElement.classList.add('selected');
+            selectedColumn = {breakType, caseType};
+            
+            // Fetch point colours for this selection and refresh row colors
+            fetchColoursAndRefresh();
+        }
+
+        function selectDefaultColumn() {
+            const selectedTeam = sessionStorage.getItem('selectedTeam');
+            const showJunior = sessionStorage.getItem('showJunior') === 'true';
+            
+            if (!selectedTeam) {
+                // Default to open break best case if no team selected
+                selectColumn('open', 'best');
+                return;
+            }
+            
+            // Check if selected team is junior by fetching team data
+            const tournamentUrl = sessionStorage.getItem('tournamentUrl');
+            if (tournamentUrl) {
+                fetch(`/api/standings?url=${encodeURIComponent(tournamentUrl)}`)
+                    .then(response => response.json())
+                    .then(standings => {
+                        const teamData = standings.find(standing => {
+                            const team = standing[0];
+                            return team && team.reference === selectedTeam;
+                        });
+                        
+                        if (teamData && teamData[0] && teamData[0].isJunior && showJunior) {
+                            selectColumn('junior', 'best');
+                        } else {
+                            selectColumn('open', 'best');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching team data:', error);
+                        selectColumn('open', 'best');
+                    });
+            } else {
+                selectColumn('open', 'best');
+            }
+        }
+
+        function selectColumn(breakType, caseType) {
+            // Remove selected class from all columns
+            document.querySelectorAll('.column').forEach(col => {
+                col.classList.remove('selected');
+            });
+            
+            // Find and select the appropriate column
+            const columns = document.querySelectorAll('.column');
+            columns.forEach(col => {
+                const h1 = col.querySelector('h1');
+                if (h1) {
+                    const onclick = h1.getAttribute('onclick');
+                    if (onclick && onclick.includes(`'${breakType}', '${caseType}'`)) {
+                        col.classList.add('selected');
+                        selectedColumn = {breakType, caseType};
+                    }
+                }
+            });
+            
+            // Fetch point colours for default selection and refresh row colors
+            fetchColoursAndRefresh();
+        }
+
+        function fetchColoursAndRefresh() {
+            if (!selectedColumn) return;
+            
+            const params = new URLSearchParams();
+            params.append('breakType', selectedColumn.breakType);
+            params.append('caseType', selectedColumn.caseType);
+            
+            fetch(`/api/row-colour?${params.toString()}`)
+                .then(response => response.json())
+                .then(colours => {
+                    pointColours = colours;
+                    refreshRowColors();
+                })
+                .catch(error => {
+                    console.error('Error fetching point colours:', error);
+                });
+        }
+
+        function refreshRowColors() {
+            if (!selectedColumn || pointColours.length === 0) return;
+            
+            const tableBody = document.getElementById('standingsTableBody');
+            const rows = tableBody.getElementsByTagName('tr');
+            
+            // Update colors for all rows using cached pointColours
+            for (let i = 0; i < rows.length; i++) {
+                updateRowColor(rows[i]);
+            }
+        }
+
+        function updateRowColor(row) {
+            const teamPoints = parseInt(row.getAttribute('data-points'));
+            if (isNaN(teamPoints) || !selectedColumn || pointColours.length === 0) {
+                console.error('No valid team points found for row, no column selected, or no point colours available');
+                return;
+            }
+            
+            // Reset to default background first
+            row.style.backgroundColor = '';
+            
+            // Use cached pointColours array instead of making API call
+            if (teamPoints >= 0 && teamPoints < pointColours.length) {
+                const color = pointColours[teamPoints];
+                if (color && color.trim()) {
+                    row.style.backgroundColor = color;
                 }
             }
         }
