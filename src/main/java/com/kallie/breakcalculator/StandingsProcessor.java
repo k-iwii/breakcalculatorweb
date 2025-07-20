@@ -70,7 +70,8 @@ public class StandingsProcessor {
         }
     }
     
-    private HashMap<String, Team> findTeams() {
+    // create a map <team display names, Team objects>
+    private HashMap<String, Team> findTeams(List<List<Map<String, Object>>> standingsData) {
         String urlString = serverUrl + "api/v1/tournaments/" + tournamentSlug + "/teams";
         System.out.println("DEBUG: Fetching teams from: " + urlString);
 
@@ -79,7 +80,6 @@ public class StandingsProcessor {
         try {
             ObjectMapper mapper = new ObjectMapper();
             mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
             String response = urlToString(urlString);
             
             // Check if response is an HTTP error code
@@ -93,10 +93,12 @@ public class StandingsProcessor {
             
             Team[] teamArray = mapper.readValue(response, Team[].class);
             System.out.println("DEBUG: Found " + teamArray.length + " teams");
+
+            displayNameType(standingsData, teamArray);
             
             for (Team team : teamArray) {
                 teams.add(team);
-                teamMap.put(team.getReference(), team);
+                teamMap.put(team.getDisplayName(), team);
                 if (team.isJunior())
                     jrTeams.add(team);
             }
@@ -108,12 +110,40 @@ public class StandingsProcessor {
 
         return teamMap;
     }
+
+    // populate the displayName field of each Team object based on whether reference or shortName is used in standings
+    public void displayNameType(List<List<Map<String, Object>>> standingsData, Team[] teamArray) {
+        // get the display name of the first team listed in standings
+        String firstTeamName = StringEscapeUtils.unescapeHtml4(standingsData.get(0).get(0).get("text").toString());
+
+        // check if this name is a reference or shortName
+        boolean isReference = false;
+        for (Team team : teamArray) {
+            if (team.getReference() != null && team.getReference().equalsIgnoreCase(firstTeamName)) {
+                isReference = true;
+                break;
+            } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(firstTeamName)) {
+                isReference = false;
+                break;
+            }
+        }
+
+        // set the displayName for each team
+        for (Team team : teamArray) {
+            if (isReference) {
+                team.setDisplayName(team.getReference());
+            } else {
+                team.setDisplayName(team.getShortName());
+            }
+        }
+    }
     
+    // create a 2D array [Team object][points]
     public Object[][] getCurrentStandings() {
         List<List<Map<String, Object>>> standingsData = readStandings();
         List<Object[]> currentStandings = new ArrayList<>();
 
-        HashMap<String, Team> teamMap = findTeams();
+        HashMap<String, Team> teamMap = findTeams(standingsData);
         
         for (List<Map<String, Object>> teamData : standingsData) {
             // get team name
@@ -125,8 +155,7 @@ public class StandingsProcessor {
                 // If exact match not found, try to find by checking if the displayed name contains the team reference
                 String capName = teamName.toUpperCase();
                 for (Team team : teams) {
-                    if (capName.contains(team.getReference().toUpperCase())
-                        || capName.contains(team.getShortName().toUpperCase())) {
+                    if (capName.contains(team.getDisplayName().toUpperCase())) {
                         teamObject = team;
                         break;
                     }
@@ -150,6 +179,7 @@ public class StandingsProcessor {
         return currentStandings.toArray(new Object[0][]);
     }
     
+    // retrieve the current standings from the tournament calicotab page
     private List<List<Map<String, Object>>> readStandings() {
         String urlString = serverUrl + tournamentSlug + "/tab/current-standings/";
         List<List<Map<String, Object>>> ans = new ArrayList<>();
@@ -196,6 +226,7 @@ public class StandingsProcessor {
         return ans;
     }
 
+    // find the number of rounds passed based on the standings data
     private void findRoundsPassed(List<Map<String, Object>> teamInfo) {
         if (teamInfo.isEmpty() || teamInfo.size() < 3) {
             System.out.println("DEBUG: No rounds passed found in standings data.");
@@ -208,7 +239,6 @@ public class StandingsProcessor {
                 x++;
         }
 
-        // it could also be teams.get(0).size() - 3 (ex: autumnloo tabs)
         roundsPassed = teamInfo.size() - x;
     }
 }

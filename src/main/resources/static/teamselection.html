@@ -222,7 +222,7 @@
                 const row = document.createElement('tr');
                 
                 const teamNameCell = document.createElement('td');
-                teamNameCell.textContent = team ? team.reference : 'Unknown Team';
+                teamNameCell.textContent = team ? team.displayName : 'Unknown Team';
                 
                 const speakersCell = document.createElement('td');
                 if (team && team.speakers) {
@@ -258,13 +258,13 @@
                         
                         // Select the clicked team
                         row.classList.add('selected');
-                        document.getElementById('teamSearch').value = team ? team.reference : '';
+                        document.getElementById('teamSearch').value = team ? team.displayName : '';
                     }
                 });
 
                 row.addEventListener('dblclick', function() {
                     // Save selected team to sessionStorage
-                    sessionStorage.setItem('selectedTeam', team ? team.reference : '');
+                    sessionStorage.setItem('selectedTeam', team ? team.displayName : '');
                     
                     // Remove selection from all rows first
                     const allRows = document.querySelectorAll('#standingsTable tbody tr');
@@ -272,7 +272,7 @@
                     
                     // Select the clicked team
                     row.classList.add('selected');
-                    document.getElementById('teamSearch').value = team ? team.reference : '';
+                    document.getElementById('teamSearch').value = team ? team.displayName : '';
                     
                     // Proceed to next page
                     window.location.href = '/tourneydetails.html';

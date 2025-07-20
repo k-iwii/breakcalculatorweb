@@ -325,7 +325,7 @@
                 const row = document.createElement('tr');
                 
                 const teamNameCell = document.createElement('td');
-                const teamName = team ? team.reference : 'Unknown Team';
+                const teamName = team ? team.displayName : 'Unknown Team';
                 teamNameCell.textContent = teamName;
                 
                 const speakersCell = document.createElement('td');
@@ -416,7 +416,7 @@
                     .then(standings => {
                         const teamData = standings.find(standing => {
                             const team = standing[0];
-                            return team && team.reference === selectedTeam;
+                            return team && team.displayName === selectedTeam;
                         });
                         
                         if (teamData && teamData[0] && teamData[0].isJunior && showJunior) {

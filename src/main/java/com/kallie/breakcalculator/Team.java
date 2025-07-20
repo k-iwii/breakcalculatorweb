@@ -6,6 +6,7 @@ public class Team {
     private int id;
     private String reference;
     private String shortName;
+    private String displayName;
     private String url;
     private boolean isJunior;
     /*@JsonProperty("break_categories")
@@ -38,6 +39,14 @@ public class Team {
     @JsonProperty("short_name")
     public void setShortName(String shortName) {
         this.shortName = shortName;
+    }
+
+    public String getDisplayName() {
+        return displayName != null ? displayName : (reference != null ? reference : shortName);
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getUrl() {
