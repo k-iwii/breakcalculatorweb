@@ -22,11 +22,18 @@ public class ServerController {
     private int teams, jrTeams;
 
     private List<Object[]> currentStandings = new ArrayList<>();
+    private String lastFetchedUrl = "";
     
     @GetMapping("/standings")
     public List<Object[]> getStandings(@RequestParam String url) {
         System.out.println("DEBUG: Received GET request to /api/standings");
         System.out.println("DEBUG: URL parameter: " + url);
+        
+        // Check if we already have standings for this URL
+        if (!currentStandings.isEmpty() && url.equals(lastFetchedUrl)) {
+            System.out.println("DEBUG: Returning cached standings for URL: " + url);
+            return currentStandings;
+        }
         
         currentStandings.clear();
         
@@ -41,6 +48,9 @@ public class ServerController {
             
             for (Object[] team : teamResults)
                 currentStandings.add(team);
+            
+            // Cache the URL for future requests
+            lastFetchedUrl = url;
             return currentStandings;
         } catch (Exception e) {
             System.out.println("DEBUG: Error occurred: " + e.getMessage());
@@ -117,15 +127,7 @@ public class ServerController {
             len *= 3;
         
         String[] pointColours = new String[len];
-        int guaranteedBreak = 0;
-        if (breakType.equals("open") && caseType.equals("best"))
-            guaranteedBreak = BPSimulator.minOpen + 1; // +1 because of 0-indexing
-        else if (breakType.equals("open") && caseType.equals("worst"))
-            guaranteedBreak = BPSimulator.maxOpen + 1;
-        else if (breakType.equals("junior") && caseType.equals("best"))
-            guaranteedBreak = WSDCSimulator.minJr + 1;
-        else if (breakType.equals("junior") && caseType.equals("worst"))
-            guaranteedBreak = WSDCSimulator.maxJr + 1;
+        int guaranteedBreak = getGuaranteedBreak(breakType, caseType);
 
         for (int i = 0; i < len; i++) {
             if (i >= guaranteedBreak)
@@ -143,6 +145,30 @@ public class ServerController {
         return pointColours;
     }
 
+    public int getGuaranteedBreak(String breakType, String caseType) {
+        if (format.equals("bp")) {
+            if (breakType.equals("open") && caseType.equals("best"))
+                return BPSimulator.minOpen + 1; // +1 because of 0-indexing
+            else if (breakType.equals("open") && caseType.equals("worst"))
+                return BPSimulator.maxOpen + 1;
+            else if (breakType.equals("junior") && caseType.equals("best"))
+                return BPSimulator.minJr + 1;
+            else if (breakType.equals("junior") && caseType.equals("worst"))
+                return BPSimulator.maxJr + 1;
+        } else if (format.equals("ws")) {
+            if (breakType.equals("open") && caseType.equals("best"))
+                return WSDCSimulator.minOpen + 1; // +1 because of 0-indexing
+            else if (breakType.equals("open") && caseType.equals("worst"))
+                return WSDCSimulator.maxOpen + 1;
+            else if (breakType.equals("junior") && caseType.equals("best"))
+                return WSDCSimulator.minJr + 1;
+            else if (breakType.equals("junior") && caseType.equals("worst"))
+                return WSDCSimulator.maxJr + 1;
+        }
+        
+        return -1; // Invalid break type or case type
+    }
+
     @GetMapping("/team-colour")
     public String getTeamColour(@RequestParam String breakType,
                                @RequestParam String caseType,
@@ -156,39 +182,31 @@ public class ServerController {
 
     @GetMapping("/results")
     public Map<String, List<String>> getResults(@RequestParam(required = false, defaultValue = "false") boolean showJunior) {
+        if (format.equals("bp"))
+            while (teams % 4 != 0) teams++;
+        else if (format.equals("ws"))
+            while (teams % 2 != 0) teams++;
+        
         int[][] startingPoints = new int[teams][2]; // [0] = points, [1] = junior status
-        for (int i = 0; i < teams; i++) {
+        for (int i = 0; i < currentStandings.size() && i < teams; i++) {
             Object[] teamResults = currentStandings.get(i);
             Team t = (Team) teamResults[0];
             int points = (int) teamResults[1];
-            startingPoints[i][0] = points;
+
             startingPoints[i][1] = t.isJunior() ? 1 : 0; // 1 for junior, 0 for open
+
+            // if mid-tourney, use points from standings
+            if (roundsLeft != totalRounds)
+                startingPoints[i][0] = points;
         }
         
         Map<String, List<String>> breakResults = new HashMap<>();
 
         if (format.equals("bp")){
-            while (teams % 4 != 0) teams++; // add swings; if mid-tourney, swings will enter as 0-pt teams
-
-            BPSimulator sim = new BPSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);
-
-            if (roundsLeft == totalRounds) {
-                // reset all scores, only keep jr status
-                for (int i = 0; i < teams; i++)
-                    startingPoints[i][0] = 0;
-            }
-                
+            BPSimulator sim = new BPSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);    
             breakResults = sim.beginSim(startingPoints, showJunior);
         } else if (format.equals("ws")) {
-            if (teams % 2 != 0) teams++; // add swings
-
             WSDCSimulator sim = new WSDCSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);
-
-            if (roundsLeft == totalRounds) {
-                // reset all scores, only keep jr status
-                for (int i = 0; i < teams; i++)
-                    startingPoints[i][0] = 0;
-            }
             breakResults = sim.beginSim(startingPoints, showJunior);
         }
 

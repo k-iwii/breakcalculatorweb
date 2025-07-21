@@ -188,6 +188,9 @@
     <script>
         // Fetch results when page loads
         window.onload = function() {
+            // Clear the table immediately when page loads to reset previous data
+            document.getElementById('standingsTableBody').innerHTML = '';
+            
             // Get junior break status from sessionStorage
             const showJunior = sessionStorage.getItem('showJunior') === 'true';
             
@@ -483,10 +486,27 @@
             
             // Update colors for all rows using cached pointColours
             for (let i = 0; i < rows.length; i++) {
-                updateRowColor(rows[i]);
+                //updateRowColor(rows[i]);
+
+                const teamPoints = parseInt(rows[i].getAttribute('data-points'));
+                if (isNaN(teamPoints) || !selectedColumn || pointColours.length === 0) {
+                    console.error('No valid team points found for row, no column selected, or no point colours available');
+                    return;
+                }
+                
+                // Reset to default background first
+                rows[i].style.backgroundColor = '';
+                
+                // Use cached pointColours array instead of making API call
+                if (teamPoints >= 0 && teamPoints < pointColours.length) {
+                    const color = pointColours[teamPoints];
+                    if (color && color.trim()) {
+                        rows[i].style.backgroundColor = color;
+                    }
+                }
             }
         }
-
+/*
         function updateRowColor(row) {
             const teamPoints = parseInt(row.getAttribute('data-points'));
             if (isNaN(teamPoints) || !selectedColumn || pointColours.length === 0) {
@@ -504,7 +524,7 @@
                     row.style.backgroundColor = color;
                 }
             }
-        }
+        }*/
     </script>
 </body>
 </html>

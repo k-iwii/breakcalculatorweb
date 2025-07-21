@@ -13,7 +13,7 @@ public class BPSimulator {
     public static int minOpen = Integer.MAX_VALUE, minJr = Integer.MAX_VALUE;
     int[] minOpenFrac = new int[2], minJrFrac = new int[2];
     int[] maxOpenFrac = new int[2], maxJrFrac = new int[2];
-    int[][] minArr = new int[teams][2], maxArr = new int[teams][2];
+    int[][] minArr, maxArr;
 	
 	static int[][] permutations = {
 		{0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1}, {0, 3, 1, 2}, {0, 3, 2, 1}, //0-5
@@ -93,7 +93,7 @@ public class BPSimulator {
             for (int room = 0; room < teams; room += 4) {
                 int rand = (int) (Math.random() * 24);
 
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 4 && room + i < teams; i++)
                     sim[room + i][0] += permutations[rand][i];
             }
             
