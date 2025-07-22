@@ -96,7 +96,7 @@ public class StandingsPageProcessor {
     }
     
 
-    // return a 2D array [Team object][points]
+    // returns a 2D array [Team object][points]
     public Object[][] processStandingsPage(List<List<Map<String, Object>>> standingsData) {
         List<Object[]> currentStandings = new ArrayList<>();
 
