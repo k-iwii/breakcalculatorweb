@@ -20,23 +20,10 @@ import org.jsoup.select.Elements;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class StandingsProcessor {
+public class StandingsPageProcessor {
     private String serverUrl, tournamentSlug;
     private List<Team> teams = new ArrayList<>(), jrTeams = new ArrayList<>();
     private int roundsPassed = -1;
-
-    public StandingsProcessor(String url) {
-        System.out.println("DEBUG: StandingsProcessor constructor called with URL: " + url);
-        String[] tournamentUrl = url.split("/");
-        if (tournamentUrl.length < 4) {
-            System.out.println("ERROR: Invalid URL format. Expected format: protocol://domain/tournament-slug");
-            return;
-        }
-        this.serverUrl = tournamentUrl[0] + "//" + tournamentUrl[2] + "/";
-        this.tournamentSlug = tournamentUrl[3];
-        System.out.println("DEBUG: Server URL: " + this.serverUrl);
-        System.out.println("DEBUG: Tournament slug: " + this.tournamentSlug);
-    }
 
     public int getNumTeams() {
         return teams.size();
@@ -46,48 +33,13 @@ public class StandingsProcessor {
         return jrTeams.size();
     }
 
-    public int getRoundsPassed() {
-        return roundsPassed;
+    public StandingsPageProcessor(String serverUrl, String tournamentSlug) {
+        this.serverUrl = serverUrl;
+        this.tournamentSlug = tournamentSlug;
+        System.out.println("DEBUG: Server URL: " + this.serverUrl);
+        System.out.println("DEBUG: Tournament slug: " + this.tournamentSlug);
     }
 
-    public Object[][] getCurrentStandings() {
-        List<List<Map<String, Object>>> standingsData = readStandings();
-
-        // this is triggered when the tournament has already ended & the standings page is now hidden
-        if (standingsData.isEmpty()) {
-            //instead of doing this, make it find the same information from the teams webpage
-            Team[] teamArray = findTeams();
-
-            Object[][] emptyStandings = new Object[teams.size()][2];
-
-            for (int i = 0; i < teams.size(); i++) {
-                emptyStandings[i][0] = teamArray[i];
-                emptyStandings[i][1] = 0; // no points
-            }
-
-            return emptyStandings;
-        }
-
-        return processStandings(standingsData);
-    }
-    
-    private String urlToString(String urlString) throws IOException {
-        System.out.println("DEBUG: Making HTTP request to: " + urlString);
-        URL url = new URL(urlString);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setRequestMethod("GET");
-        conn.connect();
-
-        int responseCode = conn.getResponseCode();
-        System.out.println("DEBUG: HTTP response code: " + responseCode);
-        if (responseCode != 200) {
-            return responseCode + "";
-        }
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
-            return reader.lines().collect(Collectors.joining());
-        }
-    }
-    
     // create a map <team display names, Team objects>
     private Team[] findTeams() {
         String urlString = serverUrl + "api/v1/tournaments/" + tournamentSlug + "/teams";
@@ -125,36 +77,27 @@ public class StandingsProcessor {
 
         return teamArray;
     }
+    
+    private String urlToString(String urlString) throws IOException {
+        System.out.println("DEBUG: Making HTTP request to: " + urlString);
+        URL url = new URL(urlString);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.connect();
 
-    // populate the displayName field of each Team object based on whether reference or shortName is used in standings
-    public void displayNameType(List<List<Map<String, Object>>> standingsData, Team[] teamArray) {
-        // get the display name of the first team listed in standings
-        String firstTeamName = StringEscapeUtils.unescapeHtml4(standingsData.get(0).get(0).get("text").toString());
-
-        // check if this name is a reference or shortName
-        boolean isReference = false;
-        for (Team team : teamArray) {
-            if (team.getReference() != null && team.getReference().equalsIgnoreCase(firstTeamName)) {
-                isReference = true;
-                break;
-            } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(firstTeamName)) {
-                isReference = false;
-                break;
-            }
+        int responseCode = conn.getResponseCode();
+        System.out.println("DEBUG: HTTP response code: " + responseCode);
+        if (responseCode != 200) {
+            return responseCode + "";
         }
-
-        // set the displayName for each team
-        for (Team team : teamArray) {
-            if (isReference) {
-                team.setDisplayName(team.getReference());
-            } else {
-                team.setDisplayName(team.getShortName());
-            }
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
+            return reader.lines().collect(Collectors.joining());
         }
     }
     
-    // create a 2D array [Team object][points]
-    public Object[][] processStandings(List<List<Map<String, Object>>> standingsData) {
+
+    // return a 2D array [Team object][points]
+    public Object[][] processStandingsPage(List<List<Map<String, Object>>> standingsData) {
         List<Object[]> currentStandings = new ArrayList<>();
 
         // create a <name, Team> map for quick lookup
@@ -197,9 +140,37 @@ public class StandingsProcessor {
         
         return currentStandings.toArray(new Object[0][]);
     }
+
+    // populate the displayName field of each Team object based on whether reference or shortName is used in standings
+    public void displayNameType(List<List<Map<String, Object>>> standingsData, Team[] teamArray) {
+        // get the display name of the first team listed in standings
+        String firstTeamName = StringEscapeUtils.unescapeHtml4(standingsData.get(0).get(0).get("text").toString());
+
+        // check if this name is a reference or shortName
+        boolean isReference = false;
+        for (Team team : teamArray) {
+            if (team.getReference() != null && team.getReference().equalsIgnoreCase(firstTeamName)) {
+                isReference = true;
+                break;
+            } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(firstTeamName)) {
+                isReference = false;
+                break;
+            }
+        }
+
+        // set the displayName for each team
+        for (Team team : teamArray) {
+            if (isReference) {
+                team.setDisplayName(team.getReference());
+            } else {
+                team.setDisplayName(team.getShortName());
+            }
+        }
+    }
+
     
     // retrieve the current standings from the tournament calicotab page
-    private List<List<Map<String, Object>>> readStandings() {
+    public List<List<Map<String, Object>>> readStandingsPage() {
         String urlString = serverUrl + tournamentSlug + "/tab/current-standings/";
         List<List<Map<String, Object>>> ans = new ArrayList<>();
 
@@ -259,5 +230,9 @@ public class StandingsProcessor {
         }
 
         roundsPassed = teamInfo.size() - x;
+    }
+
+    public int getRoundsPassed() { 
+        return roundsPassed;
     }
 }

@@ -38,12 +38,12 @@ public class ServerController {
         currentStandings.clear();
         
         try {
-            StandingsProcessor standingsProcessor = new StandingsProcessor(url);
-            Object[][] teamResults = standingsProcessor.getCurrentStandings();
+            CalicotabDataFetcher dataFetcher = new CalicotabDataFetcher(url);
+            Object[][] teamResults = dataFetcher.getCurrentStandings();
 
-            teams = standingsProcessor.getNumTeams();
-            jrTeams = standingsProcessor.getNumJrTeams();
-            roundsPassed = standingsProcessor.getRoundsPassed();
+            teams = dataFetcher.getNumTeams();
+            jrTeams = dataFetcher.getNumJrTeams();
+            roundsPassed = dataFetcher.getRoundsPassed();
 
             
             for (Object[] team : teamResults)
