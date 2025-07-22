@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.apache.commons.text.StringEscapeUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -19,14 +20,23 @@ import org.jsoup.select.Elements;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.apache.commons.text.StringEscapeUtils;
-
 public class StandingsProcessor {
-    private String serverUrl;
-    private String tournamentSlug;
+    private String serverUrl, tournamentSlug;
+    private List<Team> teams = new ArrayList<>(), jrTeams = new ArrayList<>();
     private int roundsPassed = -1;
-    private List<Team> teams = new ArrayList<>();
-    private List<Team> jrTeams = new ArrayList<>();
+
+    public StandingsProcessor(String url) {
+        System.out.println("DEBUG: StandingsProcessor constructor called with URL: " + url);
+        String[] tournamentUrl = url.split("/");
+        if (tournamentUrl.length < 4) {
+            System.out.println("ERROR: Invalid URL format. Expected format: protocol://domain/tournament-slug");
+            return;
+        }
+        this.serverUrl = tournamentUrl[0] + "//" + tournamentUrl[2] + "/";
+        this.tournamentSlug = tournamentUrl[3];
+        System.out.println("DEBUG: Server URL: " + this.serverUrl);
+        System.out.println("DEBUG: Tournament slug: " + this.tournamentSlug);
+    }
 
     public int getNumTeams() {
         return teams.size();
@@ -40,17 +50,25 @@ public class StandingsProcessor {
         return roundsPassed;
     }
 
-    public StandingsProcessor(String url) {
-        System.out.println("DEBUG: StandingsProcessor constructor called with URL: " + url);
-        String[] tournamentUrl = url.split("/");
-        if (tournamentUrl.length < 4) {
-            System.out.println("ERROR: Invalid URL format. Expected format: protocol://domain/tournament-slug");
-            return;
+    public Object[][] getCurrentStandings() {
+        List<List<Map<String, Object>>> standingsData = readStandings();
+
+        // this is triggered when the tournament has already ended & the standings page is now hidden
+        if (standingsData.isEmpty()) {
+            //instead of doing this, make it find the same information from the teams webpage
+            Team[] teamArray = findTeams();
+
+            Object[][] emptyStandings = new Object[teams.size()][2];
+
+            for (int i = 0; i < teams.size(); i++) {
+                emptyStandings[i][0] = teamArray[i];
+                emptyStandings[i][1] = 0; // no points
+            }
+
+            return emptyStandings;
         }
-        this.serverUrl = tournamentUrl[0] + "//" + tournamentUrl[2] + "/";
-        this.tournamentSlug = tournamentUrl[3];
-        System.out.println("DEBUG: Server URL: " + this.serverUrl);
-        System.out.println("DEBUG: Tournament slug: " + this.tournamentSlug);
+
+        return processStandings(standingsData);
     }
     
     private String urlToString(String urlString) throws IOException {
@@ -71,11 +89,11 @@ public class StandingsProcessor {
     }
     
     // create a map <team display names, Team objects>
-    private HashMap<String, Team> findTeams(List<List<Map<String, Object>>> standingsData) {
+    private Team[] findTeams() {
         String urlString = serverUrl + "api/v1/tournaments/" + tournamentSlug + "/teams";
         System.out.println("DEBUG: Fetching teams from: " + urlString);
 
-        HashMap<String, Team> teamMap = new HashMap<>();
+        Team[] teamArray = new Team[0];
 
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -86,19 +104,16 @@ public class StandingsProcessor {
             try {
                 Integer.parseInt(response);
                 System.out.println("DEBUG: API returned error code: " + response);
-                return new HashMap<String, Team>(); // Exit if we got an error code instead of JSON
+                return new Team[0]; // Exit if we got an error code instead of JSON
             } catch (NumberFormatException e) {
                 // Response is not a number, proceed with JSON parsing
             }
             
-            Team[] teamArray = mapper.readValue(response, Team[].class);
+            teamArray = mapper.readValue(response, Team[].class);
             System.out.println("DEBUG: Found " + teamArray.length + " teams");
-
-            displayNameType(standingsData, teamArray);
             
             for (Team team : teamArray) {
                 teams.add(team);
-                teamMap.put(team.getDisplayName(), team);
                 if (team.isJunior())
                     jrTeams.add(team);
             }
@@ -108,7 +123,7 @@ public class StandingsProcessor {
             e.printStackTrace();
         }
 
-        return teamMap;
+        return teamArray;
     }
 
     // populate the displayName field of each Team object based on whether reference or shortName is used in standings
@@ -139,11 +154,15 @@ public class StandingsProcessor {
     }
     
     // create a 2D array [Team object][points]
-    public Object[][] getCurrentStandings() {
-        List<List<Map<String, Object>>> standingsData = readStandings();
+    public Object[][] processStandings(List<List<Map<String, Object>>> standingsData) {
         List<Object[]> currentStandings = new ArrayList<>();
 
-        HashMap<String, Team> teamMap = findTeams(standingsData);
+        // create a <name, Team> map for quick lookup
+        HashMap<String, Team> teamMap = new HashMap<>();
+        Team[] teamArray = findTeams();
+        displayNameType(standingsData, teamArray);
+        for (Team team : teamArray) 
+            teamMap.put(team.getDisplayName(), team);
         
         for (List<Map<String, Object>> teamData : standingsData) {
             // get team name
