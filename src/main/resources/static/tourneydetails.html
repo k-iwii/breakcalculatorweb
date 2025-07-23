@@ -36,7 +36,7 @@
       }
 
       h2 {
-        font-size: 20pt;
+        font-size: 18pt;
         color: #000000;
         font-weight: 500;
         margin-top: 10px;
@@ -62,7 +62,11 @@
   <body>
     <div class="container">
       <h1>Tournament details</h1>
-      <h2>Debate Format</h2>
+      <div style="margin-top: -5px; margin-bottom: 15px;">
+        <span style="color: #cc0000; font-size: 12pt;">*</span>
+        <span style="color: #cc0000; font-size: 10pt; font-family: 'Montserrat', sans-serif; font-weight: 300; margin-left: 3px;">Required</span>
+      </div>
+      <h2>Debate Format <span style="color: #cc0000;">*</span></h2>
       <div style="display: flex; gap: 30px; margin-bottom: 10px">
         <label
           style="
@@ -99,7 +103,7 @@
           World Schools
         </label>
       </div>
-      <h2>Number of Debate Rounds</h2>
+      <h2>Number of Debate Rounds <span style="color: #cc0000;">*</span></h2>
       <input
         type="text"
         maxlength="2"
@@ -123,7 +127,7 @@
           font-style: italic;
         }
       </style>
-      <h2>First Open Elimination Round</h2>
+      <h2>First Open Elimination Round <span style="color: #cc0000;">*</span></h2>
       <select
         id="openElimRound"
         style="
@@ -194,7 +198,12 @@
           const jrElimRound = document.getElementById('jrElimRound').value;
           
           if (!format || !totalRounds || openElimRound === '--') {
-            alert('Please fill in all required fields');
+            let missingFields = [];
+            if (!format) missingFields.push('Debate Format');
+            if (!totalRounds) missingFields.push('Number of Debate Rounds');
+            if (openElimRound === '--') missingFields.push('First Open Elimination Round');
+            
+            alert('Please fill in the following required field(s):\n• ' + missingFields.join('\n• '));
             return;
           }
           
