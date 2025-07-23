@@ -143,18 +143,23 @@ public class StandingsPageProcessor {
 
     // populate the displayName field of each Team object based on whether reference or shortName is used in standings
     public void displayNameType(List<List<Map<String, Object>>> standingsData, Team[] teamArray) {
-        // get the display name of the first team listed in standings
-        String firstTeamName = StringEscapeUtils.unescapeHtml4(standingsData.get(0).get(0).get("text").toString());
-
-        // check if this name is a reference or shortName
         boolean isReference = false;
-        for (Team team : teamArray) {
-            if (team.getReference() != null && team.getReference().equalsIgnoreCase(firstTeamName)) {
-                isReference = true;
-                break;
-            } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(firstTeamName)) {
-                isReference = false;
-                break;
+        for (int i = 0; i < teamArray.length; i++) {
+            if (teamArray[i].getReference().equals(teamArray[i].getShortName()))
+                continue;
+            
+            String teamName = StringEscapeUtils.unescapeHtml4(standingsData.get(i).get(0).get("text").toString());
+
+            // check if this name is a reference or shortName
+            // prob have to loop again b/c api and standings list teams in diff orders
+            for (Team team : teamArray) {
+                if (team.getReference() != null && team.getReference().equalsIgnoreCase(teamName)) {
+                    isReference = true;
+                    break;
+                } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(teamName)) {
+                    isReference = false;
+                    break;
+                }
             }
         }
 
