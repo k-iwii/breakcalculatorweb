@@ -7,6 +7,46 @@
     <title>Debate Break Calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+        .navbar {
+            background: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: padding 0.3s ease;
+        }
+        
+        .navbar.shrunk {
+            padding: 10px 0;
+        }
+        
+        .navbar h1 {
+            font-size: 50pt;
+            color: #bdbdbd;
+            margin-bottom: 0px;
+            padding: 0px 80px;
+            margin-left: 50px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+            transition: font-size 0.3s ease, margin-top 0.3s ease;
+        }
+        
+        .navbar.shrunk h1 {
+            font-size: 30pt;
+            margin-top: 0;
+        }
+        
         .container {
             background: white;
             padding: 0px 80px;
@@ -18,9 +58,12 @@
             justify-content: flex-start;
             align-items: center;
             font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            transition: padding-top 0.3s ease;
         }
 
-        h1 {
+
+        .container h1 {
             font-size: 50pt;
             color: #bdbdbd;
             margin-top: 80px;
@@ -31,6 +74,15 @@
             letter-spacing: -1px;
             font-family: 'Montserrat', sans-serif;
             align-self: flex-start;
+            transition: all 0.3s ease;
+            z-index: 100;
+            display: none;
+        }
+
+        .container h1.shrunk {
+            font-size: 28pt;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         h2 {
@@ -43,7 +95,7 @@
             line-height: 1.2;
             letter-spacing: -1px;
             font-family: 'Montserrat', sans-serif;
-            text-align: center;
+            text-align: left;
         }
 
         .results-columns {
@@ -52,7 +104,7 @@
             border:#000000;
             gap: 100px;
             width: 100%;
-            text-align: center;
+            text-align: left;
         }
 
         .column {
@@ -100,19 +152,15 @@
 
         .table-container {
             margin-top: 30px;
+            margin-bottom: 100px;
             width: 95%;
-            height: auto;
-            max-height: 400px;
+            height: 350px;
+            max-height: 350px;
             overflow-y: auto;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             background: white;
             align-self: flex-start;
-        }
-
-        .table-container.junior-mode {
-            height: 180px;
-            max-height: 180px;
         }
 
         #standingsTable {
@@ -162,8 +210,10 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="navbar">
         <h1>The break is...</h1>
+    </div>
+    <div class="container">
         <h2 id="junior-break-header">Junior Break</h2>
         <div id="junior-results" style="display: none;"></div>
         <h2>Open Break</h2>
@@ -186,6 +236,21 @@
     </div>
     
     <script>
+        // Navbar shrinking on scroll - simplified to prevent jittering
+        const navbar = document.querySelector('.navbar');
+        const shrinkThreshold = 100; // Fixed position where navbar shrinks
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Simple threshold-based approach to prevent jittering
+            if (scrollTop > shrinkThreshold) {
+                navbar.classList.add('shrunk');
+            } else {
+                navbar.classList.remove('shrunk');
+            }
+        });
+
         // Fetch results when page loads
         window.onload = function() {
             // Clear the table immediately when page loads to reset previous data
@@ -310,13 +375,6 @@
             const tableBody = document.getElementById('standingsTableBody');
             const tableContainer = document.querySelector('.table-container');
             tableBody.innerHTML = '';
-            
-            // Apply junior-mode class if junior results are being displayed
-            if (getJrBreak) {
-                tableContainer.classList.add('junior-mode');
-            } else {
-                tableContainer.classList.remove('junior-mode');
-            }
             
             // Show all teams - scrolling is handled by CSS
             const rowsToShow = standings;

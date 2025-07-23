@@ -18,7 +18,7 @@ public class ServerController {
     
     static final int simulationRuns = 100000;
     private String format;
-    private int totalRounds, roundsLeft, roundsPassed;
+    private int totalRounds, roundsToSim, roundsPassed, roundsLeft; // roundsToSim = totalRounds when tourney has ended; roundsLeft = 0
     private int openBreak, jrBreak;
     private int teams, jrTeams;
 
@@ -46,7 +46,6 @@ public class ServerController {
             jrTeams = dataFetcher.getNumJrTeams();
             roundsPassed = dataFetcher.getRoundsPassed();
 
-            
             for (Object[] team : teamResults)
                 currentStandings.add(team);
             
@@ -71,9 +70,11 @@ public class ServerController {
         this.totalRounds = totalRounds;
 
         if (roundsPassed == -1 || roundsPassed >= totalRounds) // roundsPassed wrong
-            roundsLeft = totalRounds;
+            roundsToSim = totalRounds;
         else
-            roundsLeft = totalRounds - roundsPassed;
+            roundsToSim = totalRounds - roundsPassed;
+
+        roundsLeft = Math.max(0, totalRounds - roundsPassed);
 
         switch (openElimRound.toLowerCase()) {
             case "partial-double-octofinals":
@@ -127,10 +128,10 @@ public class ServerController {
         if (format.equals("bp"))
             len *= 3;
         
-        String[] pointColours = new String[len];
+        String[] pointColours = new String[len + 1];
         int guaranteedBreak = getGuaranteedBreak(breakType, caseType);
 
-        for (int i = 0; i < len; i++) {
+        for (int i = 0; i <= len; i++) {
             if (i >= guaranteedBreak)
                 pointColours[i] = "#CDF8FC"; // blue
             else if (i + roundsLeft >= guaranteedBreak || i >= guaranteedBreak - 1)
@@ -197,17 +198,17 @@ public class ServerController {
             startingPoints[i][1] = t.isJunior() ? 1 : 0; // 1 for junior, 0 for open
 
             // if mid-tourney, use points from standings
-            if (roundsLeft != totalRounds)
+            if (roundsToSim != totalRounds)
                 startingPoints[i][0] = points;
         }
         
         Map<String, List<String>> breakResults = new HashMap<>();
 
         if (format.equals("bp")){
-            BPSimulator sim = new BPSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);    
+            BPSimulator sim = new BPSimulator(teams, jrTeams, openBreak, jrBreak, roundsToSim, simulationRuns);    
             breakResults = sim.beginSim(startingPoints, showJunior);
         } else if (format.equals("ws")) {
-            WSDCSimulator sim = new WSDCSimulator(teams, jrTeams, openBreak, jrBreak, roundsLeft, simulationRuns);
+            WSDCSimulator sim = new WSDCSimulator(teams, jrTeams, openBreak, jrBreak, roundsToSim, simulationRuns);
             breakResults = sim.beginSim(startingPoints, showJunior);
         }
 

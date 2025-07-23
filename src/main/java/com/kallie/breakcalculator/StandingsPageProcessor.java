@@ -164,8 +164,9 @@ public class StandingsPageProcessor {
         }
 
         // set the displayName for each team
+        // if the reference is longer than 45 characters, use the shortName instead
         for (Team team : teamArray) {
-            if (isReference) {
+            if (isReference && team.getReference() != null && team.getReference().length() <= 45) {
                 team.setDisplayName(team.getReference());
             } else {
                 team.setDisplayName(team.getShortName());
