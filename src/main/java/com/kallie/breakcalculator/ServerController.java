@@ -114,9 +114,7 @@ public class ServerController {
     
     @GetMapping("/jr-status")
     public Map<String, Boolean> getJrStatus(@RequestParam(required = false, defaultValue = "false") boolean showJunior) {
-        Map<String, Boolean> status = new HashMap<>();
-        status.put("showJunior", showJunior);
-        return status;
+        return Map.of("showJunior", showJunior);
     }
 
     @GetMapping("/row-colour")

@@ -95,7 +95,7 @@
             line-height: 1.2;
             letter-spacing: -1px;
             font-family: 'Montserrat', sans-serif;
-            text-align: left;
+            text-align: center;
         }
 
         .results-columns {
@@ -104,7 +104,7 @@
             border:#000000;
             gap: 100px;
             width: 100%;
-            text-align: left;
+            text-align: center;
         }
 
         .column {
@@ -115,7 +115,8 @@
             padding: 5px;
         }
 
-        .column h1 {
+        /* Column headings.. They're just called h3 because h1 didnt work */
+        .column h3 {
             margin-top: 0px;
             font-size: 14pt;
             color: #000000;
@@ -125,12 +126,12 @@
             cursor: pointer;
             transition: color 0.3s ease;
         }
-
-        .column h1:hover {
+        
+        .column h3:hover {
             color: #555555;
         }
 
-        .column.selected h1 {
+        .column h3.selected {
             color: #999999;
             font-weight: 600;
         }
@@ -238,7 +239,7 @@
     <script>
         // Navbar shrinking on scroll - improved logic to prevent feedback loops
         const navbar = document.querySelector('.navbar');
-        const shrinkThreshold = 100;
+        const shrinkThreshold = 30;
         
         window.addEventListener('scroll', function() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -256,11 +257,13 @@
 
         // Fetch results when page loads
         window.onload = function() {
+            console.log('DEBUG: Page loaded, starting to fetch results');
             // Clear the table immediately when page loads to reset previous data
             document.getElementById('standingsTableBody').innerHTML = '';
             
             // Get junior break status from sessionStorage
             const showJunior = sessionStorage.getItem('showJunior') === 'true';
+            console.log('DEBUG: showJunior from sessionStorage:', showJunior);
             
             // First check if junior results should be displayed
             fetch(`/api/jr-status?showJunior=${showJunior}`)
@@ -280,12 +283,12 @@
                                 juniorResults.innerHTML = `
                                     <div class="results-columns">
                                         <div class="column">
-                                            <h1 onclick="handleColumnClick('junior', 'best')">Best Case</h1>
+                                            <h3 onclick="handleColumnClick('junior', 'best')">Best Case</h3>
                                             <h2>${data.junior && data.junior[0] ? data.junior[0] : ''}</h2>
                                             <div id="jr-best-case-content"></div>
                                         </div>
                                         <div class="column">
-                                            <h1 onclick="handleColumnClick('junior', 'worst')">Worst Case</h1>
+                                            <h3 onclick="handleColumnClick('junior', 'worst')">Worst Case</h3>
                                             <h2>${data.junior && data.junior[1] ? data.junior[1] : ''}</h2>
                                             <div id="jr-worst-case-content"></div>
                                         </div>
@@ -309,20 +312,32 @@
             fetch(`/api/results?showJunior=${showJunior}`)
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('results').innerHTML = `
+                    console.log('DEBUG: Full results data received:', data);
+                    console.log('DEBUG: data.open exists:', !!data.open);
+                    console.log('DEBUG: data.open content:', data.open);
+                    console.log('DEBUG: data.open[0]:', data.open && data.open[0]);
+                    console.log('DEBUG: data.open[1]:', data.open && data.open[1]);
+                    
+                    const resultsHTML = `
                         <div class="results-columns">
                             <div class="column">
-                                <h1 onclick="handleColumnClick('open', 'best')">Best Case</h1>
+                                <h3 onclick="handleColumnClick('open', 'best')">Best Case</h3>
                                 <h2>${data.open && data.open[0] ? data.open[0] : ''}</h2>
                                 <div id="best-case-content"></div>
                             </div>
                             <div class="column">
-                                <h1 onclick="handleColumnClick('open', 'worst')">Worst Case</h1>
+                                <h3 onclick="handleColumnClick('open', 'worst')">Worst Case</h3>
                                 <h2>${data.open && data.open[1] ? data.open[1] : ''}</h2>
                                 <div id="worst-case-content"></div>
                             </div>
                         </div>
                     `;
+                    
+                    console.log('DEBUG: About to set innerHTML for results div');
+                    console.log('DEBUG: Generated HTML:', resultsHTML);
+                    document.getElementById('results').innerHTML = resultsHTML;
+                    console.log('DEBUG: innerHTML set successfully');
+                    console.log('DEBUG: Current results div content:', document.getElementById('results').innerHTML);
                     
                     // Load standings data for the table
                     loadStandingsTable();
@@ -334,6 +349,7 @@
                 })
                 .catch(error => {
                     console.error('Error fetching results:', error);
+                    console.log('DEBUG: Error occurred while fetching results');
                     document.getElementById('results').innerHTML = '<p>Error loading results</p>';
                 });
         };
@@ -386,6 +402,9 @@
                 const team = standing[0];
                 const points = standing[1];
                 
+                // Debug line: show team name and break category
+                console.log(`Team: ${team ? team.displayName : 'Unknown Team'}, Break Category: ${team.junior ? 'Junior' : 'Open'}`);
+                
                 const row = document.createElement('tr');
                 
                 const teamNameCell = document.createElement('td');
@@ -401,8 +420,8 @@
                 }
                 
                 const breakCategoryCell = document.createElement('td');
-                if (team && team.isJunior !== undefined) {
-                    breakCategoryCell.textContent = team.isJunior ? 'Junior' : 'Open';
+                if (team && team.junior !== undefined) {
+                    breakCategoryCell.textContent = team.junior ? 'Junior' : 'Open';
                 } else {
                     breakCategoryCell.textContent = 'Open';
                 }
@@ -507,9 +526,9 @@
             // Find and select the appropriate column
             const columns = document.querySelectorAll('.column');
             columns.forEach(col => {
-                const h1 = col.querySelector('h1');
-                if (h1) {
-                    const onclick = h1.getAttribute('onclick');
+                const h3 = col.querySelector('h3');
+                if (h3) {
+                    const onclick = h3.getAttribute('onclick');
                     if (onclick && onclick.includes(`'${breakType}', '${caseType}'`)) {
                         col.classList.add('selected');
                         selectedColumn = {breakType, caseType};
