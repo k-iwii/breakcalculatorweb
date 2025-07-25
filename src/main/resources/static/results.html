@@ -62,7 +62,6 @@
             transition: padding-top 0.3s ease;
         }
 
-
         .container h1 {
             font-size: 50pt;
             color: #bdbdbd;
@@ -115,6 +114,19 @@
             padding: 5px;
         }
 
+        /* Clickable container for header and text */
+        .column-clickable {
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 10px;
+            border-radius: 6px;
+            margin: -10px;
+        }
+        
+        .column-clickable:hover {
+            background-color: #f5f5f5;
+        }
+        
         /* Column headings.. They're just called h3 because h1 didnt work */
         .column h3 {
             margin-top: 0px;
@@ -123,11 +135,10 @@
             margin-bottom: 0px;
             font-weight: 500;
             font-family: 'Montserrat', sans-serif;
-            cursor: pointer;
             transition: color 0.3s ease;
         }
         
-        .column h3:hover {
+        .column-clickable:hover h3 {
             color: #555555;
         }
 
@@ -155,8 +166,8 @@
             margin-top: 30px;
             margin-bottom: 100px;
             width: 95%;
-            height: 350px;
-            max-height: 350px;
+            height: 500px;
+            max-height: 500px;
             overflow-y: auto;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
@@ -178,7 +189,7 @@
         }
 
         #standingsTable th {
-            padding: 15px 12px;
+            padding: 12px 12px;
             text-align: left;
             font-weight: 300;
             color: #ffffff;
@@ -283,13 +294,17 @@
                                 juniorResults.innerHTML = `
                                     <div class="results-columns">
                                         <div class="column">
-                                            <h3 onclick="handleColumnClick('junior', 'best')">Best Case</h3>
-                                            <h2>${data.junior && data.junior[0] ? data.junior[0] : ''}</h2>
+                                            <div class="column-clickable" onclick="handleColumnClick('junior', 'best')">
+                                                <h3>Best Case</h3>
+                                                <h2>${data.junior && data.junior[0] ? data.junior[0] : ''}</h2>
+                                            </div>
                                             <div id="jr-best-case-content"></div>
                                         </div>
                                         <div class="column">
-                                            <h3 onclick="handleColumnClick('junior', 'worst')">Worst Case</h3>
-                                            <h2>${data.junior && data.junior[1] ? data.junior[1] : ''}</h2>
+                                            <div class="column-clickable" onclick="handleColumnClick('junior', 'worst')">
+                                                <h3>Worst Case</h3>
+                                                <h2>${data.junior && data.junior[1] ? data.junior[1] : ''}</h2>
+                                            </div>
                                             <div id="jr-worst-case-content"></div>
                                         </div>
                                     </div>
@@ -321,13 +336,17 @@
                     const resultsHTML = `
                         <div class="results-columns">
                             <div class="column">
-                                <h3 onclick="handleColumnClick('open', 'best')">Best Case</h3>
-                                <h2>${data.open && data.open[0] ? data.open[0] : ''}</h2>
+                                <div class="column-clickable" onclick="handleColumnClick('open', 'best')">
+                                    <h3>Best Case</h3>
+                                    <h2>${data.open && data.open[0] ? data.open[0] : ''}</h2>
+                                </div>
                                 <div id="best-case-content"></div>
                             </div>
                             <div class="column">
-                                <h3 onclick="handleColumnClick('open', 'worst')">Worst Case</h3>
-                                <h2>${data.open && data.open[1] ? data.open[1] : ''}</h2>
+                                <div class="column-clickable" onclick="handleColumnClick('open', 'worst')">
+                                    <h3>Worst Case</h3>
+                                    <h2>${data.open && data.open[1] ? data.open[1] : ''}</h2>
+                                </div>
                                 <div id="worst-case-content"></div>
                             </div>
                         </div>
@@ -473,8 +492,14 @@
                 col.classList.remove('selected');
             });
             
-            // Add selected class to clicked column
-            event.target.parentElement.classList.add('selected');
+            // Add selected class to clicked column (find the parent column)
+            let columnElement = event.target;
+            while (columnElement && !columnElement.classList.contains('column')) {
+                columnElement = columnElement.parentElement;
+            }
+            if (columnElement) {
+                columnElement.classList.add('selected');
+            }
             selectedColumn = {breakType, caseType};
             
             // Fetch point colours for this selection and refresh row colors
@@ -486,8 +511,8 @@
             const showJunior = sessionStorage.getItem('showJunior') === 'true';
             
             if (!selectedTeam) {
-                // Default to open break best case if no team selected
-                selectColumn('open', 'best');
+                // Default to open break worst case if no team selected
+                selectColumn('open', 'worst');
                 return;
             }
             
@@ -503,17 +528,17 @@
                         });
                         
                         if (teamData && teamData[0] && teamData[0].isJunior && showJunior) {
-                            selectColumn('junior', 'best');
+                            selectColumn('junior', 'worst');
                         } else {
-                            selectColumn('open', 'best');
+                            selectColumn('open', 'worst');
                         }
                     })
                     .catch(error => {
                         console.error('Error fetching team data:', error);
-                        selectColumn('open', 'best');
+                        selectColumn('open', 'worst');
                     });
             } else {
-                selectColumn('open', 'best');
+                selectColumn('open', 'worst');
             }
         }
 
@@ -526,9 +551,9 @@
             // Find and select the appropriate column
             const columns = document.querySelectorAll('.column');
             columns.forEach(col => {
-                const h3 = col.querySelector('h3');
-                if (h3) {
-                    const onclick = h3.getAttribute('onclick');
+                const clickable = col.querySelector('.column-clickable');
+                if (clickable) {
+                    const onclick = clickable.getAttribute('onclick');
                     if (onclick && onclick.includes(`'${breakType}', '${caseType}'`)) {
                         col.classList.add('selected');
                         selectedColumn = {breakType, caseType};

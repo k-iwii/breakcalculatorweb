@@ -113,16 +113,6 @@ public class StandingsPageProcessor {
 
             // find the Team object that matches this team name
             Team teamObject = teamMap.get(teamName);
-            if (teamObject == null) {
-                // If exact match not found, try to find by checking if the displayed name contains the team reference
-                String capName = teamName.toUpperCase();
-                for (Team team : teams) {
-                    if (capName.contains(team.getDisplayName().toUpperCase())) {
-                        teamObject = team;
-                        break;
-                    }
-                }
-            }
 
             // get points
             int teamPoints = 0;
@@ -145,21 +135,22 @@ public class StandingsPageProcessor {
     public void displayNameType(List<List<Map<String, Object>>> standingsData, Team[] teamArray) {
         boolean isReference = false;
         for (int i = 0; i < teamArray.length; i++) {
-            if (teamArray[i].getReference().equals(teamArray[i].getShortName()))
-                continue;
-            
-            String teamName = StringEscapeUtils.unescapeHtml4(standingsData.get(i).get(0).get("text").toString());
+            if (!teamArray[i].getReference().equals(teamArray[i].getShortName())) {
+                String teamName = StringEscapeUtils.unescapeHtml4(standingsData.get(i).get(0).get("text").toString());
 
-            // check if this name is a reference or shortName
-            // prob have to loop again b/c api and standings list teams in diff orders
-            for (Team team : teamArray) {
-                if (team.getReference() != null && team.getReference().equalsIgnoreCase(teamName)) {
-                    isReference = true;
-                    break;
-                } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(teamName)) {
-                    isReference = false;
-                    break;
+                // check if this name is a reference or shortName
+                // prob have to loop again b/c api and standings list teams in diff orders
+                for (Team team : teamArray) {
+                    if (team.getReference() != null && team.getReference().equalsIgnoreCase(teamName)) {
+                        isReference = true;
+                        break;
+                    } else if (team.getShortName() != null && team.getShortName().equalsIgnoreCase(teamName)) {
+                        isReference = false;
+                        break;
+                    }
                 }
+
+                break;
             }
         }
 

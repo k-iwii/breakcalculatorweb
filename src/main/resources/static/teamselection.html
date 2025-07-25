@@ -163,7 +163,7 @@
     <div class="container">
         <h1>Which team are you?</h1>
         <div class="search-bar">
-                <input type="text" id="teamSearch" placeholder="Search for a team..." autocomplete="off" onkeypress="handleKeyPress(event)">
+                <input type="text" id="teamSearch" placeholder="Search for a team or speaker..." autocomplete="off" onkeypress="handleKeyPress(event)">
                 <button class="search-button" onclick="handleSubmit()"><img src="SearchIcon.png" alt="Search"></button>
         </div>
         
@@ -291,9 +291,14 @@
             
             for (let i = 0; i < rows.length; i++) {
                 const teamNameCell = rows[i].getElementsByTagName('td')[0];
-                if (teamNameCell) {
+                const speakersCell = rows[i].getElementsByTagName('td')[1];
+                
+                if (teamNameCell && speakersCell) {
                     const teamName = teamNameCell.textContent.toLowerCase();
-                    if (teamName.includes(searchValue.toLowerCase())) {
+                    const speakerNames = speakersCell.textContent.toLowerCase();
+                    
+                    if (teamName.includes(searchValue.toLowerCase()) || 
+                        speakerNames.includes(searchValue.toLowerCase())) {
                         const tableContainer = document.querySelector('.table-container');
                         const headerHeight = document.querySelector('#standingsTable thead').offsetHeight;
                         const rowHeight = rows[i].offsetHeight;

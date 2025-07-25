@@ -29,7 +29,7 @@ public class Speaker {
     }
 
     public String getName() {
-        return name;
+        return name != null ? name : "Redacted";
     }
 
     public void setName(String name) {

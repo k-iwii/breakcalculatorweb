@@ -24,7 +24,7 @@ public class Team {
     }
 
     public String getReference() {
-        return reference;
+        return reference != null ? reference : "Redacted";
     }
 
     @JsonProperty("reference")
@@ -33,7 +33,7 @@ public class Team {
     }
 
     public String getShortName() {
-        return shortName;
+        return shortName != null ? shortName : "Redacted";
     }
 
     @JsonProperty("short_name")
