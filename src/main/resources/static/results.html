@@ -17,7 +17,7 @@
         
         .navbar {
             background: white;
-            padding: 20px 0;
+            padding: 2vh 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -25,15 +25,15 @@
         }
         
         .navbar.shrunk {
-            padding: 10px 0;
+            padding: 1vh 0;
         }
         
         .navbar h1 {
-            font-size: 50pt;
+            font-size: clamp(3rem, 8vw, 8rem);
             color: #bdbdbd;
-            margin-bottom: 0px;
-            padding: 0px 80px;
-            margin-left: 50px;
+            margin-bottom: 0;
+            padding: 0 clamp(2rem, 8vw, 5rem);
+            margin-left: clamp(1.5rem, 5vw, 3rem);
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -1px;
@@ -43,16 +43,16 @@
         }
         
         .navbar.shrunk h1 {
-            font-size: 30pt;
+            font-size: clamp(2rem, 4.8vw, 5rem);
             margin-top: 0;
         }
         
         .container {
             background: white;
-            padding: 0px 80px;
+            padding: 0 8vw;
             text-align: left;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin-left: 5vw;
+            margin-right: 5vw;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -63,10 +63,10 @@
         }
 
         .container h1 {
-            font-size: 50pt;
+            font-size: clamp(3rem, 8vw, 8rem);
             color: #bdbdbd;
-            margin-top: 80px;
-            margin-bottom: 15px;
+            margin-top: clamp(4rem, 8vh, 6rem);
+            margin-bottom: clamp(1rem, 1.5vh, 1.5rem);
             /*margin-left: 100px;*/
             font-weight: 700;
             line-height: 1.2;
@@ -79,16 +79,16 @@
         }
 
         .container h1.shrunk {
-            font-size: 28pt;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            font-size: clamp(2rem, 4.5vw, 4.5rem);
+            margin-top: clamp(0.5rem, 1vh, 1rem);
+            margin-bottom: clamp(0.5rem, 1vh, 1rem);
         }
 
         h2 {
-            font-size: 18pt;
+            font-size: clamp(1.5rem, 2.2vw, 2.5rem);
             color: #000000;
-            margin-top: 15px;
-            margin-bottom: 5px;
+            margin-top: clamp(1rem, 1.5vh, 1.5rem);
+            margin-bottom: clamp(0.3rem, 0.5vh, 0.5rem);
             /*margin-left: 100px;*/
             font-weight: 600;
             line-height: 1.2;
@@ -98,29 +98,29 @@
         }
 
         .results-columns {
-            margin-top: 5px;
+            margin-top: 0.5vh;
             display: flex;
             border:#000000;
-            gap: 100px;
+            gap: 10vw;
             width: 100%;
             text-align: center;
         }
 
         .column {
-            margin-top: 5px;
+            margin-top: 0.5vh;
             flex: 1;
             /*background: #f8f9fa;*/
-            min-width: 400px;
-            padding: 5px;
+            min-width: 40vw;
+            padding: 0.5vh;
         }
 
         /* Clickable container for header and text */
         .column-clickable {
             cursor: pointer;
             transition: background-color 0.3s ease;
-            padding: 10px;
-            border-radius: 6px;
-            margin: -10px;
+            padding: 1vh;
+            border-radius: 0.6vw;
+            margin: -1vh;
         }
         
         .column-clickable:hover {
@@ -129,10 +129,10 @@
         
         /* Column headings.. They're just called h3 because h1 didnt work */
         .column h3 {
-            margin-top: 0px;
-            font-size: 14pt;
+            margin-top: 0;
+            font-size: clamp(1.2rem, 1.7vw, 2rem);
             color: #000000;
-            margin-bottom: 0px;
+            margin-bottom: 0;
             font-weight: 500;
             font-family: 'Montserrat', sans-serif;
             transition: color 0.3s ease;
@@ -149,28 +149,28 @@
 
         .column.selected {
             background-color: #f8f9fa;
-            border-radius: 8px;
+            border-radius: 0.8vw;
         }
 
         .column h2 {
-            font-size: 14pt;
+            font-size: clamp(1.2rem, 1.7vw, 2rem);
             color: #919191;
-            margin-top: 0px;
-            margin-bottom: 5px;
+            margin-top: 0;
+            margin-bottom: clamp(0.3rem, 0.5vh, 0.5rem);
             font-weight: 400;
             font-family: 'Montserrat', sans-serif;
-            letter-spacing: 0.2px;
+            letter-spacing: clamp(0.01rem, 0.02vw, 0.03rem);
         }
 
         .table-container {
-            margin-top: 30px;
-            margin-bottom: 100px;
+            margin-top: 3vh;
+            margin-bottom: 10vh;
             width: 95%;
-            height: 500px;
-            max-height: 500px;
+            height: 50vh;
+            max-height: 50vh;
             overflow-y: auto;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 0.8vw;
             background: white;
             align-self: flex-start;
         }
@@ -189,18 +189,18 @@
         }
 
         #standingsTable th {
-            padding: 12px 12px;
+            padding: clamp(0.8rem, 1.2vh, 1.2rem) clamp(0.8rem, 1.2vw, 1.2rem);
             text-align: left;
             font-weight: 300;
             color: #ffffff;
             border: 1px solid #e5e5e5;
-            font-size: 0.95rem;
+            font-size: clamp(0.9rem, 1.2vw, 1.4rem);
         }
 
         #standingsTable td {
-            padding: 12px;
+            padding: clamp(0.8rem, 1.2vh, 1.2rem) clamp(0.8rem, 1.2vw, 1.2rem);
             border: 1px solid #e5e5e5;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.1vw, 1.3rem);
             color: #555;
         }
 
@@ -218,6 +218,69 @@
 
         #standingsTable tbody tr.selected-team:hover {
             background-color: #f8f9fa;
+        }
+
+        @media (max-width: 600px) {
+            .navbar h1 {
+                font-size: 12vw;
+                padding: 0 5vw;
+                margin-left: 3vw;
+            }
+            
+            .navbar.shrunk h1 {
+                font-size: 8vw;
+            }
+            
+            .container {
+                padding: 0 5vw;
+                margin-left: 3vw;
+                margin-right: 3vw;
+            }
+            
+            .container h1 {
+                font-size: 12vw;
+            }
+            
+            .container h1.shrunk {
+                font-size: 8vw;
+            }
+            
+            h2 {
+                font-size: 4vw;
+            }
+            
+            .results-columns {
+                gap: 5vw;
+                flex-direction: column;
+            }
+            
+            .column {
+                min-width: auto;
+                margin-bottom: 2vh;
+            }
+            
+            .column h3 {
+                font-size: 3.5vw;
+            }
+            
+            .column h2 {
+                font-size: 3.5vw;
+            }
+            
+            .table-container {
+                height: 60vh;
+                border-radius: 2vw;
+            }
+            
+            #standingsTable th {
+                font-size: 2.5vw;
+                padding: 2vh 2vw;
+            }
+            
+            #standingsTable td {
+                font-size: 2.2vw;
+                padding: 1.8vh 2vw;
+            }
         }
     </style>
 </head>

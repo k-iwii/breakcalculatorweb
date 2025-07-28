@@ -12,10 +12,10 @@
     <style>
       .container {
         background: white;
-        padding: 0px 80px;
+        padding: 0 8vw;
         text-align: left;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 5vw;
+        margin-right: 5vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -24,10 +24,10 @@
       }
 
       h1 {
-        font-size: 50pt;
+        font-size: clamp(3rem, 8vw, 8rem);
         color: #bdbdbd;
-        margin-top: 80px;
-        margin-bottom: 10px;
+        margin-top: clamp(4rem, 8vh, 6rem);
+        margin-bottom: clamp(0.5rem, 1vh, 1rem);
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -1px;
@@ -36,11 +36,11 @@
       }
 
       h2 {
-        font-size: 18pt;
+        font-size: clamp(1.5rem, 2.2vw, 2.5rem);
         color: #000000;
         font-weight: 500;
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin-top: clamp(0.5rem, 1vh, 1rem);
+        margin-bottom: clamp(1rem, 1.5vh, 1.5rem);
         line-height: 1.2;
         letter-spacing: -1px;
         font-family: "Montserrat", sans-serif;
@@ -48,32 +48,70 @@
       }
 
       h3 {
-        font-size: 12pt;
+        font-size: clamp(1rem, 1.5vw, 1.8rem);
         color: #000000;
         font-weight: 300;
-        margin-top: 10px;
+        margin-top: clamp(0.5rem, 1vh, 1rem);
         line-height: 1.2;
         letter-spacing: -1px;
         font-family: "Montserrat", sans-serif;
         text-align: left;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 12vw;
+        }
+        
+        h2 {
+          font-size: 4vw;
+        }
+        
+        h3 {
+          font-size: 3vw;
+        }
+        
+        .container {
+          padding: 0 5vw;
+          margin-left: 3vw;
+          margin-right: 3vw;
+        }
+        
+        .required-text {
+          font-size: 2.5vw;
+        }
+        
+        .required-asterisk {
+          font-size: 3vw;
+        }
+        
+        input[type="text"], select {
+          font-size: 3vw;
+          padding: 1.5vh 2vw;
+        }
+        
+        button {
+          font-size: 3.5vw;
+          padding: 2vh 4vw;
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Tournament details</h1>
-      <div style="margin-top: -5px; margin-bottom: 15px;">
-        <span style="color: #cc0000; font-size: 12pt;">*</span>
-        <span style="color: #cc0000; font-size: 10pt; font-family: 'Montserrat', sans-serif; font-weight: 300; margin-left: 3px;">Required</span>
+      <div style="margin-top: -0.5vh; margin-bottom: 1.5vh;">
+        <span class="required-asterisk" style="color: #cc0000; font-size: clamp(1rem, 1.5vw, 1.8rem);">*</span>
+        <span class="required-text" style="color: #cc0000; font-size: clamp(0.8rem, 1.2vw, 1.4rem); font-family: 'Montserrat', sans-serif; font-weight: 300; margin-left: clamp(0.2rem, 0.3vw, 0.4rem);">Required</span>
       </div>
       <h2>Debate Format <span style="color: #cc0000;">*</span></h2>
-      <div style="display: flex; gap: 30px; margin-bottom: 10px">
+      <div style="display: flex; gap: 3vw; margin-bottom: 1vh">
         <label
           style="
             display: flex;
             align-items: center;
             font-family: 'Montserrat', sans-serif;
-            font-size: 12pt;
+            font-size: clamp(1rem, 1.5vw, 1.8rem);
             font-weight: 300;
           "
         >
@@ -81,7 +119,7 @@
             type="radio"
             name="format"
             value="bp"
-            style="margin-right: 8px"
+            style="margin-right: clamp(0.5rem, 0.8vw, 1rem)"
           />
           British Parliamentary
         </label>
@@ -90,7 +128,7 @@
             display: flex;
             align-items: center;
             font-family: 'Montserrat', sans-serif;
-            font-size: 12pt;
+            font-size: clamp(1rem, 1.5vw, 1.8rem);
             font-weight: 300;
           "
         >
@@ -98,7 +136,7 @@
             type="radio"
             name="format"
             value="ws"
-            style="margin-right: 8px"
+            style="margin-right: clamp(0.5rem, 0.8vw, 1rem)"
           />
           World Schools
         </label>
@@ -115,9 +153,9 @@
           font-weight: 300;
           color: #000000;
           border: 1px solid #ccc;
-          padding: 8px;
-          margin-bottom: 10px;
-          width: 15px;
+          padding: clamp(0.5rem, 0.8vh, 0.8rem) clamp(0.6rem, 1vw, 1rem);
+          margin-bottom: clamp(0.5rem, 1vh, 1rem);
+          width: clamp(1rem, 1.5vw, 1.8rem);
           text-align: left;
         "
       />
@@ -136,8 +174,8 @@
           font-weight: 300;
           color: #000000;
           border: 1px solid #ccc;
-          padding: 8px;
-          margin-bottom: 10px;
+          padding: clamp(0.5rem, 0.8vh, 0.8rem) clamp(0.6rem, 1vw, 1rem);
+          margin-bottom: 1vh;
           background-color: white;
         "
       >
@@ -157,8 +195,8 @@
           font-weight: 300;
           color: #000000;
           border: 1px solid #ccc;
-          padding: 8px;
-          margin-bottom: 15px;
+          padding: clamp(0.5rem, 0.8vh, 0.8rem) clamp(0.6rem, 1vw, 1rem);
+          margin-bottom: 1.5vh;
           background-color: white;
         "
       >
@@ -176,12 +214,12 @@
           background-color: #919191;
           color: white;
           border: none;
-          padding: 15px 30px;
-          font-size: 14pt;
+          padding: clamp(1rem, 1.5vh, 1.5rem) clamp(2rem, 3vw, 3rem);
+          font-size: clamp(1.2rem, 1.7vw, 2rem);
           font-family: 'Montserrat', sans-serif;
           font-weight: 400;
           cursor: pointer;
-          margin-top: 20px;
+          margin-top: 2vh;
           transition: all 0.3s ease;
         "
         onmouseover="this.style.transform='translateY(-2px)'"

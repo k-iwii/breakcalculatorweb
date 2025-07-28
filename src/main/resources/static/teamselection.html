@@ -9,10 +9,10 @@
     <style>
         .container {
             background: white;
-            padding: 0px 80px;
+            padding: 0 5rem;
             text-align: left;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin-left: 3.125rem;
+            margin-right: 3.125rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -21,10 +21,10 @@
         }
 
         h1 {
-            font-size: 50pt;
+            font-size: clamp(2rem, 6vw, 6rem);
             color: #bdbdbd;
-            margin-top: 80px;
-            margin-bottom: 30px;
+            margin-top: 5rem;
+            margin-bottom: 1.875rem;
             /*margin-left: 100px;*/
             font-weight: 700;
             line-height: 1.2;
@@ -34,17 +34,17 @@
         }
 
         .search-bar {
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-top: 0.625rem;
+            margin-bottom: 0.625rem;
             width: 95%;
             display: flex;
-            gap: 0px;
+            gap: 0;
             align-items: flex-start;
         }
 
         input[type="text"], input[type="number"], select {
             flex: 1;
-            padding: 15px 20px;
+            padding: 0.9375rem 1.25rem;
             font-size: 1.1rem;
             border: none;
             outline: none;
@@ -57,6 +57,7 @@
 
         input[type="text"]::placeholder {
             font-style: italic;
+            font-size: clamp(1rem, 1.6vw, 1.2rem);
         }
 
         input[type="text"]:focus, input[type="number"]:focus, select:focus {
@@ -70,7 +71,7 @@
             background: #919191;
             color: white;
             border: none;
-            padding: 15px 15px;
+            padding: 0.9375rem 0.9375rem;
             font-size: 1.2rem;
             border-radius: 0px;
             cursor: pointer;
@@ -83,8 +84,8 @@
         }
 
         .search-button img {
-            width: 20px;
-            height: 20px;
+            width: 1.25rem;
+            height: 1.25rem;
         }
 
         .search-button:hover {
@@ -97,12 +98,12 @@
         }
 
         .table-container {
-            margin-top: 10px;
+            margin-top: 0.625rem;
             width: 95%;
-            height: 400px;
+            height: clamp(20rem, 55vh, 30rem); /*400px*/
             overflow-y: auto;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 0.5rem;
             background: white;
         }
 
@@ -120,7 +121,7 @@
         }
 
         #standingsTable th {
-            padding: 15px 12px;
+            padding: 0.9375rem 0.75rem;
             text-align: left;
             font-weight: 300;
             color: #ffffff;
@@ -129,7 +130,7 @@
         }
 
         #standingsTable td {
-            padding: 12px;
+            padding: 0.75rem;
             border: 1px solid #e5e5e5;
             font-size: 0.9rem;
             color: #555;

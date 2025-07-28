@@ -8,9 +8,9 @@
     <style>
         .container {
             background: white;
-            padding: 0px 80px;
+            padding: 0px clamp(2rem, 8vw, 5rem);
             text-align: left;
-            margin-left: 50px;
+            margin-left: clamp(1.5rem, 5vw, 3rem);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -18,10 +18,10 @@
         }
 
         h1 {
-            font-size: 80pt;
+            font-size: clamp(3rem, 8vw, 8rem);
             color: #bdbdbd;
             margin: 0;
-            margin-bottom: 30px;
+            margin-bottom: clamp(1.5rem, 3vw, 3rem);
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -1px;
@@ -30,37 +30,37 @@
         }
 
         h2 {
-            font-size: 35pt;
+            font-size: clamp(1.5rem, 3.5vw, 3.5rem);
             color: #bdbdbd;
             margin-bottom: 0;
-            margin-top: 120px;
+            margin-top: clamp(4rem, 12vw, 10rem);
             font-weight: 700;
             text-align: left;
             font-family: 'Montserrat', sans-serif;
         }
 
         h3 {
-            font-size: 22;
+            font-size: clamp(1rem, 2.2vw, 2rem);
             color: #000000;
-            margin-bottom: 10px;
+            margin-bottom: clamp(0.5rem, 1vw, 1rem);
             font-weight: 500;
             text-align: left;
             font-family: 'Montserrat', sans-serif;
         }
 
         .input-group {
-            margin-top: 10px;
-            margin-bottom: 20px;
-            width: 55%;
+            margin-top: 0.625rem;
+            margin-bottom: 1.25rem;
+            width: 65%;
             display: flex;
-            gap: 0px;
+            gap: 0;
             align-items: flex-start;
         }
 
         input[type="text"], input[type="number"], select {
             flex: 1;
-            padding: 15px 20px;
-            font-size: 1.1rem;
+            padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.25rem);
+            font-size: clamp(0.9rem, 1.8vw, 1.4rem);
             border: none;
             outline: none;
             transition: all 0.3s ease;
@@ -85,8 +85,8 @@
             background: #919191;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2rem;
+            padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.2rem, 2.5vw, 1.6rem);
+            font-size: clamp(1rem, 2vw, 1.6rem);
             border-radius: 0px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -104,14 +104,31 @@
         }
 
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5rem;
+        @media (max-width: 768px) {
+            .container {
+                padding: clamp(1rem, 4vw, 2.5rem) clamp(1rem, 4vw, 1.5rem);
+                margin-left: clamp(1rem, 3vw, 1.25rem);
             }
             
+            .input-group {
+                width: 90%;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .container {
-                padding: 40px 25px;
-                margin: 20px;
+                padding: 1rem;
+                margin-left: 0.5rem;
+            }
+            
+            .input-group {
+                width: 95%;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .go-button {
+                width: 100%;
             }
         }
     </style>
@@ -119,7 +136,7 @@
 <body>
     <div class="container">
         <h2>Kallie's</h2>
-        <h1>Debate Break Calculator</h1>
+        <h1>Debate Break<br>Calculator</h1>
         <h3>Enter tournament details to begin...</h3>
         
         <div class="input-group">
