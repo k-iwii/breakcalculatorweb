@@ -17,7 +17,7 @@
         
         .navbar {
             background: white;
-            padding: 2vh 0;
+            padding: 1.25rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -25,34 +25,34 @@
         }
         
         .navbar.shrunk {
-            padding: 1vh 0;
+            padding: 0.625rem 0;
         }
         
         .navbar h1 {
-            font-size: clamp(3rem, 8vw, 8rem);
+            font-size: clamp(2rem, 6vw, 6rem);
             color: #bdbdbd;
             margin-bottom: 0;
-            padding: 0 clamp(2rem, 8vw, 5rem);
-            margin-left: clamp(1.5rem, 5vw, 3rem);
+            padding: 0 5rem;
+            margin-left: 3.125rem;
             font-weight: 700;
             line-height: 1.2;
-            letter-spacing: -1px;
+            letter-spacing: -0.0625rem;
             font-family: 'Montserrat', sans-serif;
             text-align: left;
             transition: font-size 0.3s ease, margin-top 0.3s ease;
         }
         
         .navbar.shrunk h1 {
-            font-size: clamp(2rem, 4.8vw, 5rem);
+            font-size: 2.5rem;
             margin-top: 0;
         }
         
         .container {
             background: white;
-            padding: 0 8vw;
+            padding: 0 5rem;
             text-align: left;
-            margin-left: 5vw;
-            margin-right: 5vw;
+            margin-left: 3.125rem;
+            margin-right: 3.125rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -63,10 +63,10 @@
         }
 
         .container h1 {
-            font-size: clamp(3rem, 8vw, 8rem);
+            font-size: 4.17rem;
             color: #bdbdbd;
-            margin-top: clamp(4rem, 8vh, 6rem);
-            margin-bottom: clamp(1rem, 1.5vh, 1.5rem);
+            margin-top: 5rem;
+            margin-bottom: 0.9375rem;
             /*margin-left: 100px;*/
             font-weight: 700;
             line-height: 1.2;
@@ -79,16 +79,16 @@
         }
 
         .container h1.shrunk {
-            font-size: clamp(2rem, 4.5vw, 4.5rem);
-            margin-top: clamp(0.5rem, 1vh, 1rem);
-            margin-bottom: clamp(0.5rem, 1vh, 1rem);
+            font-size: 2.33rem;
+            margin-top: 0.625rem;
+            margin-bottom: 0.625rem;
         }
 
         h2 {
-            font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+            font-size: clamp(1.5rem, 1.8vw, 2.5rem);
             color: #000000;
-            margin-top: clamp(1rem, 1.5vh, 1.5rem);
-            margin-bottom: clamp(0.3rem, 0.5vh, 0.5rem);
+            margin-top: 0.9375rem;
+            margin-bottom: 0.3125rem;
             /*margin-left: 100px;*/
             font-weight: 600;
             line-height: 1.2;
@@ -98,29 +98,30 @@
         }
 
         .results-columns {
-            margin-top: 0.5vh;
+            margin-top: 0.3125rem;
+            margin-bottom: 1.875rem;
             display: flex;
             border:#000000;
-            gap: 10vw;
+            gap: clamp(6.25rem, 8vw, 10rem);
             width: 100%;
             text-align: center;
         }
 
         .column {
-            margin-top: 0.5vh;
+            margin-top: 0.3125rem;
             flex: 1;
             /*background: #f8f9fa;*/
-            min-width: 40vw;
-            padding: 0.5vh;
+            min-width: 25rem;
+            padding: 0.3125rem;
         }
 
         /* Clickable container for header and text */
         .column-clickable {
             cursor: pointer;
             transition: background-color 0.3s ease;
-            padding: 1vh;
-            border-radius: 0.6vw;
-            margin: -1vh;
+            padding: 0.625rem;
+            border-radius: 0.375rem;
+            margin: -0.625rem;
         }
         
         .column-clickable:hover {
@@ -130,7 +131,7 @@
         /* Column headings.. They're just called h3 because h1 didnt work */
         .column h3 {
             margin-top: 0;
-            font-size: clamp(1.2rem, 1.7vw, 2rem);
+            font-size: clamp(1.2rem, 1.4vw, 1.8rem);
             color: #000000;
             margin-bottom: 0;
             font-weight: 500;
@@ -149,28 +150,28 @@
 
         .column.selected {
             background-color: #f8f9fa;
-            border-radius: 0.8vw;
+            border-radius: 0.5rem;
         }
 
         .column h2 {
-            font-size: clamp(1.2rem, 1.7vw, 2rem);
+            font-size: clamp(1rem, 1.2vw, 1.5rem);
             color: #919191;
-            margin-top: 0;
-            margin-bottom: clamp(0.3rem, 0.5vh, 0.5rem);
+            margin-top: 0.3125rem;
+            margin-bottom: 0.5rem;
             font-weight: 400;
             font-family: 'Montserrat', sans-serif;
-            letter-spacing: clamp(0.01rem, 0.02vw, 0.03rem);
+            letter-spacing: 0.0125rem;
         }
 
         .table-container {
-            margin-top: 3vh;
-            margin-bottom: 10vh;
+            margin-top: 1.875rem;
+            margin-bottom: 6.25rem;
             width: 95%;
-            height: 50vh;
-            max-height: 50vh;
+            height: clamp(10rem, 60vh, 50rem); /* 500px */
+            max-height: 31.25rem;
             overflow-y: auto;
             border: 1px solid #e0e0e0;
-            border-radius: 0.8vw;
+            border-radius: 0.5rem;
             background: white;
             align-self: flex-start;
         }
@@ -189,18 +190,18 @@
         }
 
         #standingsTable th {
-            padding: clamp(0.8rem, 1.2vh, 1.2rem) clamp(0.8rem, 1.2vw, 1.2rem);
+            padding: 0.75rem 0.75rem;
             text-align: left;
             font-weight: 300;
             color: #ffffff;
             border: 1px solid #e5e5e5;
-            font-size: clamp(0.9rem, 1.2vw, 1.4rem);
+            font-size: clamp(0.8rem, 1vw, 1.2rem);  
         }
 
         #standingsTable td {
-            padding: clamp(0.8rem, 1.2vh, 1.2rem) clamp(0.8rem, 1.2vw, 1.2rem);
+            padding: 0.75rem;
             border: 1px solid #e5e5e5;
-            font-size: clamp(0.8rem, 1.1vw, 1.3rem);
+            font-size: clamp(0.8rem, 1vw, 1.2rem);
             color: #555;
         }
 
@@ -218,69 +219,6 @@
 
         #standingsTable tbody tr.selected-team:hover {
             background-color: #f8f9fa;
-        }
-
-        @media (max-width: 600px) {
-            .navbar h1 {
-                font-size: 12vw;
-                padding: 0 5vw;
-                margin-left: 3vw;
-            }
-            
-            .navbar.shrunk h1 {
-                font-size: 8vw;
-            }
-            
-            .container {
-                padding: 0 5vw;
-                margin-left: 3vw;
-                margin-right: 3vw;
-            }
-            
-            .container h1 {
-                font-size: 12vw;
-            }
-            
-            .container h1.shrunk {
-                font-size: 8vw;
-            }
-            
-            h2 {
-                font-size: 4vw;
-            }
-            
-            .results-columns {
-                gap: 5vw;
-                flex-direction: column;
-            }
-            
-            .column {
-                min-width: auto;
-                margin-bottom: 2vh;
-            }
-            
-            .column h3 {
-                font-size: 3.5vw;
-            }
-            
-            .column h2 {
-                font-size: 3.5vw;
-            }
-            
-            .table-container {
-                height: 60vh;
-                border-radius: 2vw;
-            }
-            
-            #standingsTable th {
-                font-size: 2.5vw;
-                padding: 2vh 2vw;
-            }
-            
-            #standingsTable td {
-                font-size: 2.2vw;
-                padding: 1.8vh 2vw;
-            }
         }
     </style>
 </head>
@@ -319,11 +257,11 @@
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const isCurrentlyShrunk = navbar.classList.contains('shrunk');
             
-            // If not shrunk and scroll > 100px, then shrink
+            // If not shrunk and scroll > 6.25rem, then shrink
             if (!isCurrentlyShrunk && scrollTop > shrinkThreshold) {
                 navbar.classList.add('shrunk');
             } 
-            // If shrunk and scroll is at top (0px), then expand
+            // If shrunk and scroll is at top (0), then expand
             else if (isCurrentlyShrunk && scrollTop === 0) {
                 navbar.classList.remove('shrunk');
             }

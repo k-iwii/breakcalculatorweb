@@ -12,10 +12,10 @@
     <style>
       .container {
         background: white;
-        padding: 0 8vw;
+        padding: 0 5rem;
         text-align: left;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 3.125rem;
+        margin-right: 3.125rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -24,10 +24,10 @@
       }
 
       h1 {
-        font-size: clamp(3rem, 8vw, 8rem);
+        font-size: clamp(2rem, 6vw, 6rem);
         color: #bdbdbd;
-        margin-top: clamp(4rem, 8vh, 6rem);
-        margin-bottom: clamp(0.5rem, 1vh, 1rem);
+        margin-top: 5rem;
+        margin-bottom: 1.875rem;
         font-weight: 700;
         line-height: 1.2;
         letter-spacing: -1px;
@@ -36,7 +36,7 @@
       }
 
       h2 {
-        font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+        font-size: clamp(1.5rem, 1.5vw, 2rem);
         color: #000000;
         font-weight: 500;
         margin-top: clamp(0.5rem, 1vh, 1rem);
@@ -87,7 +87,7 @@
         
         input[type="text"], select {
           font-size: 3vw;
-          padding: 1.5vh 2vw;
+          padding: 1.5vh 1.5vw;
         }
         
         button {
@@ -101,8 +101,8 @@
     <div class="container">
       <h1>Tournament details</h1>
       <div style="margin-top: -0.5vh; margin-bottom: 1.5vh;">
-        <span class="required-asterisk" style="color: #cc0000; font-size: clamp(1rem, 1.5vw, 1.8rem);">*</span>
-        <span class="required-text" style="color: #cc0000; font-size: clamp(0.8rem, 1.2vw, 1.4rem); font-family: 'Montserrat', sans-serif; font-weight: 300; margin-left: clamp(0.2rem, 0.3vw, 0.4rem);">Required</span>
+        <span class="required-asterisk" style="color: #cc0000; font-size: clamp(0.8rem, 1vw, 1.4rem);">*</span>
+        <span class="required-text" style="color: #cc0000; font-size: clamp(0.8rem, 1vw, 1.4rem); font-family: 'Montserrat', sans-serif; font-weight: 300; margin-left: clamp(0.2rem, 0.3vw, 0.4rem);">Required</span>
       </div>
       <h2>Debate Format <span style="color: #cc0000;">*</span></h2>
       <div style="display: flex; gap: 3vw; margin-bottom: 1vh">
@@ -111,7 +111,7 @@
             display: flex;
             align-items: center;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1rem, 1.5vw, 1.8rem);
+            font-size: clamp(1rem, 1.1vw, 1.5rem);
             font-weight: 300;
           "
         >
@@ -128,7 +128,7 @@
             display: flex;
             align-items: center;
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1rem, 1.5vw, 1.8rem);
+            font-size: clamp(1rem, 1.1vw, 1.5rem);
             font-weight: 300;
           "
         >
@@ -149,11 +149,11 @@
         id="totalRounds"
         style="
           font-family: 'Montserrat', sans-serif;
-          font-size: 12pt;
+          font-size: clamp(0.8rem, 1vw, 1.3rem);
           font-weight: 300;
           color: #000000;
           border: 1px solid #ccc;
-          padding: clamp(0.5rem, 0.8vh, 0.8rem) clamp(0.6rem, 1vw, 1rem);
+          padding: clamp(0.5rem, 0.8vh, 0.8rem) clamp(0.5vw, 0.5vw, 0.1rem);
           margin-bottom: clamp(0.5rem, 1vh, 1rem);
           width: clamp(1rem, 1.5vw, 1.8rem);
           text-align: left;
@@ -170,7 +170,7 @@
         id="openElimRound"
         style="
           font-family: 'Montserrat', sans-serif;
-          font-size: 12pt;
+          font-size: clamp(0.8rem, 1vw, 1.3rem);
           font-weight: 300;
           color: #000000;
           border: 1px solid #ccc;
@@ -191,7 +191,7 @@
         id="jrElimRound"
         style="
           font-family: 'Montserrat', sans-serif;
-          font-size: 12pt;
+          font-size: clamp(0.8rem, 1vw, 1.3rem);
           font-weight: 300;
           color: #000000;
           border: 1px solid #ccc;
@@ -214,8 +214,8 @@
           background-color: #919191;
           color: white;
           border: none;
-          padding: clamp(1rem, 1.5vh, 1.5rem) clamp(2rem, 3vw, 3rem);
-          font-size: clamp(1.2rem, 1.7vw, 2rem);
+          padding: clamp(1rem, 1.5vh, 1.5rem) clamp(1.8rem, 2.2vw, 2.5rem);
+          font-size: clamp(1rem, 1.4vw, 1.8rem);
           font-family: 'Montserrat', sans-serif;
           font-weight: 400;
           cursor: pointer;
