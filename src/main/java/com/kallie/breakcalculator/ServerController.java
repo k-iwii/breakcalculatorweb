@@ -131,15 +131,15 @@ public class ServerController {
 
         for (int i = 0; i <= len; i++) {
             if (i >= guaranteedBreak)
-                pointColours[i] = "#CDF8FC"; // blue
+                pointColours[i] = "#DEF5EE"; // blue
             else if (i + roundsLeft >= guaranteedBreak || i >= guaranteedBreak - 1)
-                pointColours[i] = "#CDFCD7"; // green
+                pointColours[i] = "#DEF5E0"; // green
             else if (i + roundsLeft * 2 >= guaranteedBreak || i + roundsLeft >= guaranteedBreak - 1)
-                pointColours[i] = "#E4FCCD"; // light green
+                pointColours[i] = "#EAF5DE"; // light green
             else if (i + roundsLeft * 3 >= guaranteedBreak || i + roundsLeft * 2 >= guaranteedBreak - 1)
-                pointColours[i] = "#FBF4CB"; // orange
+                pointColours[i] = "#F5F3DE"; // orange
             else
-                pointColours[i] = "#FBDDCB"; // red
+                pointColours[i] = "#F5EADE"; // red
         }
         
         return pointColours;
