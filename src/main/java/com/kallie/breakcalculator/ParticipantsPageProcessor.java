@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -20,7 +21,7 @@ import org.jsoup.select.Elements;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class TeamsPageProcessor {
+public class ParticipantsPageProcessor {
     private String serverUrl, tournamentSlug;
     private List<Team> teams = new ArrayList<>(), jrTeams = new ArrayList<>();
     private int roundsPassed = -1;
@@ -33,7 +34,7 @@ public class TeamsPageProcessor {
         return jrTeams.size();
     }
 
-    public TeamsPageProcessor(String serverUrl, String tournamentSlug) {
+    public ParticipantsPageProcessor(String serverUrl, String tournamentSlug) {
         this.serverUrl = serverUrl;
         this.tournamentSlug = tournamentSlug;
         System.out.println("DEBUG: Server URL: " + this.serverUrl);
@@ -41,7 +42,7 @@ public class TeamsPageProcessor {
     }
 
     // create a map <team display names, Team objects>
-    private HashMap<String, Team> findTeams(List<List<Map<String, Object>>> teamsData) {
+    private HashMap<String, Team> findTeams(List<List<Map<String, Object>>> participantsData) {
         String urlString = serverUrl + "api/v1/tournaments/" + tournamentSlug + "/teams";
         System.out.println("DEBUG: Fetching teams from: " + urlString);
 
@@ -65,7 +66,7 @@ public class TeamsPageProcessor {
             teamArray = mapper.readValue(response, Team[].class);
             System.out.println("DEBUG: Found " + teamArray.length + " teams");
             
-            displayNameType(teamsData, teamArray);
+            displayNameType(participantsData, teamArray);
 
             for (Team team : teamArray) {
                 teams.add(team);
@@ -101,29 +102,27 @@ public class TeamsPageProcessor {
     
 
     // return a 2D array [Team object][points]
-    public Object[][] processTeamsPage(List<List<Map<String, Object>>> teamsData) {
+    public Object[][] processParticipantsPage(List<List<Map<String, Object>>> participantsData) {
         List<Object[]> currentResults = new ArrayList<>();
 
         // get a <name, Team> map for quick lookup
-        HashMap<String, Team> teamMap = findTeams(teamsData);
-        
-        for (List<Map<String, Object>> teamData : teamsData) {
+        HashMap<String, Team> teamMap = findTeams(participantsData);
+
+        HashSet<String> alreadyAdded = new HashSet<>();
+        for (List<Map<String, Object>> participantData : participantsData) {
             // get team name
-            String teamName = StringEscapeUtils.unescapeHtml4(teamData.get(1).get("text").toString());
+            String teamName = StringEscapeUtils.unescapeHtml4(participantData.get(2).get("text").toString());
+            if (alreadyAdded.contains(teamName)) continue;
 
             if (roundsPassed == -1)
-                findRoundsPassed(teamData);
+                findRoundsPassed(participantData);
 
             // find the Team object that matches this team name
             Team teamObject = teamMap.get(teamName);
 
-            // get points
-            String strPoints = teamData.get(9).get("sort").toString();
-            if (strPoints.endsWith(".0"))
-                strPoints = strPoints.substring(0, strPoints.length() - 2);
-            int teamPoints = Integer.parseInt(strPoints);
-            
-            currentResults.add(new Object[]{teamObject, teamPoints});
+            // points are always set to 0
+            currentResults.add(new Object[]{teamObject, 0});
+            alreadyAdded.add(teamName);
         }
         
         // Sort by points (descending order)
@@ -133,13 +132,13 @@ public class TeamsPageProcessor {
     }
 
     // populate the displayName field of each Team object based on whether reference or shortName is used in team page
-    public void displayNameType(List<List<Map<String, Object>>> teamsData, Team[] teamArray) {
+    public void displayNameType(List<List<Map<String, Object>>> participantsData, Team[] teamArray) {
         boolean isReference = false;
         for (int i = 0; i < teamArray.length; i++) {
             if (teamArray[i].getReference().equals(teamArray[i].getShortName()))
                 continue;
-            
-            String teamName = StringEscapeUtils.unescapeHtml4(teamsData.get(i).get(0).get("text").toString());
+
+            String teamName = StringEscapeUtils.unescapeHtml4(participantsData.get(i).get(0).get("text").toString());
 
             // check if this name is a reference or shortName
             // prob have to loop again b/c api and standings list teams in diff orders
@@ -164,10 +163,10 @@ public class TeamsPageProcessor {
         }
     }
 
-    
-    // retrieve the current team data from the tournament calicotab page
-    public List<List<Map<String, Object>>> readTeamsPage() {
-        String urlString = serverUrl + tournamentSlug + "/tab/team/";
+
+    // retrieve the current participant data from the tournament calicotab page
+    public List<List<Map<String, Object>>> readParticipantsPage() {
+        String urlString = serverUrl + tournamentSlug + "/participants/list/";
         List<List<Map<String, Object>>> ans = new ArrayList<>();
 
         try {
@@ -192,13 +191,14 @@ public class TeamsPageProcessor {
                     continue;
                     
                 scriptContent = scriptContent.substring(startIdx + 13, endIdx);
+                scriptContent = "[" + scriptContent + "]"; // wrap in array brackets to make it a valid JSON array
 
                 ObjectMapper mapper = new ObjectMapper();
                 @SuppressWarnings("unchecked")
-                Map<String, Object> map = mapper.readValue(scriptContent, Map.class);
+                List<Map<String, Object>> dataArray = mapper.readValue(scriptContent, List.class);
 
                 @SuppressWarnings("unchecked")
-                List<List<Map<String, Object>>> teams = (List<List<Map<String, Object>>>)map.get("data");
+                List<List<Map<String, Object>>> teams = (List<List<Map<String, Object>>>)dataArray.get(1).get("data");
                                 
                 ans = teams;
                 break;
@@ -211,19 +211,19 @@ public class TeamsPageProcessor {
     }
 
     // find the number of rounds in the tournament; this is the same as the number of rounds passed
-    private void findRoundsPassed(List<Map<String, Object>> teamData) {
-        if (teamData.isEmpty() || teamData.size() < 3) {
-            System.out.println("DEBUG: No rounds passed found in teams data.");
+    private void findRoundsPassed(List<Map<String, Object>> participantData) {
+        if (participantData.isEmpty() || participantData.size() < 3) {
+            System.out.println("DEBUG: No rounds passed found in participants data.");
             return;
         }
 
         int x = 1;
-        for (Map<String, Object> info : teamData) {
+        for (Map<String, Object> info : participantData) {
             if (info.size() < 3)
                 x++;
         }
 
-        roundsPassed = teamData.size() - x;
+        roundsPassed = participantData.size() - x;
     }
 
     public int getRoundsPassed() { 

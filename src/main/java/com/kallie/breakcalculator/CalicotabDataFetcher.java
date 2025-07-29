@@ -9,6 +9,7 @@ public class CalicotabDataFetcher {
     
     private StandingsPageProcessor standingsProcessor;
     private TeamsPageProcessor teamsProcessor;
+    private ParticipantsPageProcessor participantsProcessor;
 
     public CalicotabDataFetcher(String url) {
         System.out.println("DEBUG: StandingsProcessor constructor called with URL: " + url);
@@ -24,38 +25,48 @@ public class CalicotabDataFetcher {
 
         standingsProcessor = new StandingsPageProcessor(serverUrl, tournamentSlug);
         teamsProcessor = new TeamsPageProcessor(serverUrl, tournamentSlug);
+        participantsProcessor = new ParticipantsPageProcessor(serverUrl, tournamentSlug);
     }
 
     public int getNumTeams() {
-        return Math.max(standingsProcessor.getNumTeams(), teamsProcessor.getNumTeams());
+        return getMax(standingsProcessor.getNumTeams(), teamsProcessor.getNumTeams(), participantsProcessor.getNumTeams());
     }
 
     public int getNumJrTeams() {
-        return Math.max(standingsProcessor.getNumJrTeams(), teamsProcessor.getNumJrTeams());
+        return getMax(standingsProcessor.getNumJrTeams(), teamsProcessor.getNumJrTeams(), participantsProcessor.getNumJrTeams());
     }
 
     public int getRoundsPassed() { 
         return roundsPassed;
     }
 
-    // kind of the main function!
+    public int getMax(int a, int b, int c) {
+        return Math.max(a, Math.max(b, c));
+    }
+
     public Object[][] getCurrentStandings() {
-        // first, try standingsprocessor
-        
+        Object[][] currentResults;
         List<List<Map<String, Object>>> standingsData = standingsProcessor.readStandingsPage();
 
-        // occurs when the tournament has ended & the standings page is hidden; use teams page instead
         if (standingsData.isEmpty()) {
-            System.out.println("DEBUG: No standings data found, using teams page instead.");
-
+            System.out.println("DEBUG: No standings data found -- not an ongoing tournament");
             List<List<Map<String, Object>>> teamsData = teamsProcessor.readTeamsPage();
-            Object[][] currentResults = teamsProcessor.processTeamsPage(teamsData);
-            roundsPassed = teamsProcessor.getRoundsPassed();
-            return currentResults;
+
+            if (teamsData.isEmpty()) {
+                System.out.println("DEBUG: No teams data found -- not a completed tournament");
+                List<List<Map<String, Object>>> participantsData = participantsProcessor.readParticipantsPage();
+
+                currentResults = participantsProcessor.processParticipantsPage(participantsData);
+                roundsPassed = participantsProcessor.getRoundsPassed();
+            } else {
+                currentResults = teamsProcessor.processTeamsPage(teamsData);
+                roundsPassed = teamsProcessor.getRoundsPassed();
+            }
+        } else {
+            currentResults = standingsProcessor.processStandingsPage(standingsData);
+            roundsPassed = standingsProcessor.getRoundsPassed();
         }
 
-        Object[][] currentResults = standingsProcessor.processStandingsPage(standingsData);
-        roundsPassed = standingsProcessor.getRoundsPassed();
         return currentResults;
     }
 }

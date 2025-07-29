@@ -1,0 +1,1586 @@
+[
+  {
+    "head": [
+      { "key": "name", "tooltip": "Name", "icon": "user" },
+      { "key": "institution", "icon": "home", "tooltip": "Institution" },
+      {
+        "key": "adjcore",
+        "tooltip": "Member of the Adjudication Core",
+        "icon": "user-check"
+      },
+      {
+        "key": "independent",
+        "tooltip": "Independent Adjudicator",
+        "icon": "user-plus"
+      }
+    ],
+    "data": [
+      [
+        {
+          "text": "Joy Luo",
+          "popover": {
+            "title": "Joy Luo",
+            "content": [
+              {
+                "text": "View Joy's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942568/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Crystal Zhang",
+          "popover": {
+            "title": "Crystal Zhang",
+            "content": [
+              {
+                "text": "View Crystal's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942569/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "David Zu",
+          "popover": {
+            "title": "David Zu",
+            "content": [
+              {
+                "text": "View David's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942570/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Jerry",
+          "popover": {
+            "title": "Jerry",
+            "content": [
+              {
+                "text": "View Jerry's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942571/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Cindy Xia",
+          "popover": {
+            "title": "Cindy Xia",
+            "content": [
+              {
+                "text": "View Cindy's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942572/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Aneya Kazmi",
+          "popover": {
+            "title": "Aneya Kazmi",
+            "content": [
+              {
+                "text": "View Aneya's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942573/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Claire Chen",
+          "popover": {
+            "title": "Claire Chen",
+            "content": [
+              {
+                "text": "View Claire's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942574/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Kosar Hemmati",
+          "popover": {
+            "title": "Kosar Hemmati",
+            "content": [
+              {
+                "text": "View Kosar's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942575/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Silin Wei",
+          "popover": {
+            "title": "Silin Wei",
+            "content": [
+              {
+                "text": "View Silin's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942576/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Hinano",
+          "popover": {
+            "title": "Hinano",
+            "content": [
+              {
+                "text": "View Hinano's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942577/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Kira Waldhalm",
+          "popover": {
+            "title": "Kira Waldhalm",
+            "content": [
+              {
+                "text": "View Kira's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942578/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Ashlyn Lu",
+          "popover": {
+            "title": "Ashlyn Lu",
+            "content": [
+              {
+                "text": "View Ashlyn's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942579/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Peace Iyaniwura Adele Kalio",
+          "popover": {
+            "title": "Peace Iyaniwura Adele Kalio",
+            "content": [
+              {
+                "text": "View Peace's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942580/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Deepankar Gaikwad",
+          "popover": {
+            "title": "Deepankar Gaikwad",
+            "content": [
+              {
+                "text": "View Deepankar's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942581/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Ronaish Arshad",
+          "popover": {
+            "title": "Ronaish Arshad",
+            "content": [
+              {
+                "text": "View Ronaish's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942582/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Sophie Zhang",
+          "popover": {
+            "title": "Sophie Zhang",
+            "content": [
+              {
+                "text": "View Sophie's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942583/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Ten Teerarit",
+          "popover": {
+            "title": "Ten Teerarit",
+            "content": [
+              {
+                "text": "View Ten's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942584/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Allenna Tang",
+          "popover": {
+            "title": "Allenna Tang",
+            "content": [
+              {
+                "text": "View Allenna's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942585/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Nyx Kucharski",
+          "popover": {
+            "title": "Nyx Kucharski",
+            "content": [
+              {
+                "text": "View Nyx's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942586/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ],
+      [
+        {
+          "text": "Akhil",
+          "popover": {
+            "title": "Akhil",
+            "content": [
+              {
+                "text": "View Akhil's  Record",
+                "link": "/hhwgm25/participants/adjudicator/942587/"
+              }
+            ]
+          }
+        },
+        { "text": "\u2014" },
+        { "icon": "", "sort": 2 },
+        { "icon": "", "sort": 2 }
+      ]
+    ],
+    "title": "Adjudicators",
+    "subtitle": "",
+    "empty_title": "No Data Available",
+    "class": "",
+    "sort_key": "name",
+    "sort_order": ""
+  },
+  {
+    "head": [
+      { "key": "name", "tooltip": "Name", "icon": "user" },
+      {
+        "key": "category",
+        "title": "Category",
+        "icon": "user-check",
+        "tooltip": "Categories"
+      },
+      { "key": "team", "tooltip": "Team", "icon": "users" }
+    ],
+    "data": [
+      [
+        { "text": "Emma Ding", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "April O&#x27;Neil",
+          "emoji": "\ud83d\udc45",
+          "sort": "April O&#x27;Neil",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "April O&#x27;Neil",
+            "content": [
+              { "text": "Kate Sergieieva, Emma Ding" },
+              {
+                "text": "View April O&#x27;Neil's Record",
+                "link": "/hhwgm25/participants/team/270310/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Kate Sergieieva", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "April O&#x27;Neil",
+          "emoji": "\ud83d\udc45",
+          "sort": "April O&#x27;Neil",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "April O&#x27;Neil",
+            "content": [
+              { "text": "Kate Sergieieva, Emma Ding" },
+              {
+                "text": "View April O&#x27;Neil's Record",
+                "link": "/hhwgm25/participants/team/270310/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Emma Zeng", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Barbara Gordon",
+          "emoji": "\ud83c\udfe5",
+          "sort": "Barbara Gordon",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Barbara Gordon",
+            "content": [
+              { "text": "Ivy Li, Emma Zeng" },
+              {
+                "text": "View Barbara Gordon's Record",
+                "link": "/hhwgm25/participants/team/270303/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Ivy Li", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Barbara Gordon",
+          "emoji": "\ud83c\udfe5",
+          "sort": "Barbara Gordon",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Barbara Gordon",
+            "content": [
+              { "text": "Ivy Li, Emma Zeng" },
+              {
+                "text": "View Barbara Gordon's Record",
+                "link": "/hhwgm25/participants/team/270303/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Lucia Wei", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Betty Cooper",
+          "emoji": "\ud83d\udeab",
+          "sort": "Betty Cooper",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Betty Cooper",
+            "content": [
+              { "text": "Deanna Lu, Lucia Wei" },
+              {
+                "text": "View Betty Cooper's Record",
+                "link": "/hhwgm25/participants/team/270313/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Deanna Lu", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Betty Cooper",
+          "emoji": "\ud83d\udeab",
+          "sort": "Betty Cooper",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Betty Cooper",
+            "content": [
+              { "text": "Deanna Lu, Lucia Wei" },
+              {
+                "text": "View Betty Cooper's Record",
+                "link": "/hhwgm25/participants/team/270313/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Aileen Jiang", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Black Canary",
+          "emoji": "\ud83c\udfbb",
+          "sort": "Black Canary",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Black Canary",
+            "content": [
+              { "text": "Aileen Jiang, Megan Lam" },
+              {
+                "text": "View Black Canary's Record",
+                "link": "/hhwgm25/participants/team/270308/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Megan Lam", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Black Canary",
+          "emoji": "\ud83c\udfbb",
+          "sort": "Black Canary",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Black Canary",
+            "content": [
+              { "text": "Aileen Jiang, Megan Lam" },
+              {
+                "text": "View Black Canary's Record",
+                "link": "/hhwgm25/participants/team/270308/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Rachel Lau", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Black Widow",
+          "emoji": "\ud83e\udd4b",
+          "sort": "Black Widow",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Black Widow",
+            "content": [
+              { "text": "Rachel Lau, Elsa Yi" },
+              {
+                "text": "View Black Widow's Record",
+                "link": "/hhwgm25/participants/team/270326/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Elsa Yi", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Black Widow",
+          "emoji": "\ud83e\udd4b",
+          "sort": "Black Widow",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Black Widow",
+            "content": [
+              { "text": "Rachel Lau, Elsa Yi" },
+              {
+                "text": "View Black Widow's Record",
+                "link": "/hhwgm25/participants/team/270326/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Tiana Zhang", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Catwoman",
+          "emoji": "\ud83e\ude9b",
+          "sort": "Catwoman",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Catwoman",
+            "content": [
+              { "text": "Tiana Zhang, Judy Wang" },
+              {
+                "text": "View Catwoman's Record",
+                "link": "/hhwgm25/participants/team/270301/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Judy Wang", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Catwoman",
+          "emoji": "\ud83e\ude9b",
+          "sort": "Catwoman",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Catwoman",
+            "content": [
+              { "text": "Tiana Zhang, Judy Wang" },
+              {
+                "text": "View Catwoman's Record",
+                "link": "/hhwgm25/participants/team/270301/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Sarina Li", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Cheryl Blossom",
+          "emoji": "\ud83e\udd2c",
+          "sort": "Cheryl Blossom",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Cheryl Blossom",
+            "content": [
+              { "text": "Sarina Li, Kelly Wang" },
+              {
+                "text": "View Cheryl Blossom's Record",
+                "link": "/hhwgm25/participants/team/270311/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Kelly Wang", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Cheryl Blossom",
+          "emoji": "\ud83e\udd2c",
+          "sort": "Cheryl Blossom",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Cheryl Blossom",
+            "content": [
+              { "text": "Sarina Li, Kelly Wang" },
+              {
+                "text": "View Cheryl Blossom's Record",
+                "link": "/hhwgm25/participants/team/270311/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Anny Xu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Cheshire",
+          "emoji": "\ud83c\udf84",
+          "sort": "Cheshire",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Cheshire",
+            "content": [
+              { "text": "Celina Wang, Anny Xu" },
+              {
+                "text": "View Cheshire's Record",
+                "link": "/hhwgm25/participants/team/270315/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Celina Wang", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Cheshire",
+          "emoji": "\ud83c\udf84",
+          "sort": "Cheshire",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Cheshire",
+            "content": [
+              { "text": "Celina Wang, Anny Xu" },
+              {
+                "text": "View Cheshire's Record",
+                "link": "/hhwgm25/participants/team/270315/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Joanna Yuan", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Circe",
+          "emoji": "\ud83c\udf96",
+          "sort": "Circe",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Circe",
+            "content": [
+              { "text": "Jiayue Li, Joanna Yuan" },
+              {
+                "text": "View Circe's Record",
+                "link": "/hhwgm25/participants/team/270317/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Jiayue Li", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Circe",
+          "emoji": "\ud83c\udf96",
+          "sort": "Circe",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Circe",
+            "content": [
+              { "text": "Jiayue Li, Joanna Yuan" },
+              {
+                "text": "View Circe's Record",
+                "link": "/hhwgm25/participants/team/270317/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Joyanne Wei", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Elektra",
+          "emoji": "\ud83d\ude02",
+          "sort": "Elektra",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Elektra",
+            "content": [
+              { "text": "Joyanne Wei, Jessica Wang" },
+              {
+                "text": "View Elektra's Record",
+                "link": "/hhwgm25/participants/team/270286/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Jessica Wang", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Elektra",
+          "emoji": "\ud83d\ude02",
+          "sort": "Elektra",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Elektra",
+            "content": [
+              { "text": "Joyanne Wei, Jessica Wang" },
+              {
+                "text": "View Elektra's Record",
+                "link": "/hhwgm25/participants/team/270286/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Claire Liu", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Emma Frost",
+          "emoji": "\ud83d\udc3e",
+          "sort": "Emma Frost",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Emma Frost",
+            "content": [
+              { "text": "Stefanie Shi, Claire Liu" },
+              {
+                "text": "View Emma Frost's Record",
+                "link": "/hhwgm25/participants/team/270304/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Stefanie Shi", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Emma Frost",
+          "emoji": "\ud83d\udc3e",
+          "sort": "Emma Frost",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Emma Frost",
+            "content": [
+              { "text": "Stefanie Shi, Claire Liu" },
+              {
+                "text": "View Emma Frost's Record",
+                "link": "/hhwgm25/participants/team/270304/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Jennifer Han", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Enchantress",
+          "emoji": "\ud83e\udd6f",
+          "sort": "Enchantress",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Enchantress",
+            "content": [
+              { "text": "Jennifer Han, Kaya Pan" },
+              {
+                "text": "View Enchantress's Record",
+                "link": "/hhwgm25/participants/team/270322/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Kaya Pan", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Enchantress",
+          "emoji": "\ud83e\udd6f",
+          "sort": "Enchantress",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Enchantress",
+            "content": [
+              { "text": "Jennifer Han, Kaya Pan" },
+              {
+                "text": "View Enchantress's Record",
+                "link": "/hhwgm25/participants/team/270322/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Arrian Kenneth wu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Envy Adams",
+          "emoji": "\ud83d\ude4b",
+          "sort": "Envy Adams",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Envy Adams",
+            "content": [
+              { "text": "Alexander Liu Vallysedigh, Arrian Kenneth wu" },
+              {
+                "text": "View Envy Adams's Record",
+                "link": "/hhwgm25/participants/team/270306/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Alexander Liu Vallysedigh", "class": "" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Envy Adams",
+          "emoji": "\ud83d\ude4b",
+          "sort": "Envy Adams",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Envy Adams",
+            "content": [
+              { "text": "Alexander Liu Vallysedigh, Arrian Kenneth wu" },
+              {
+                "text": "View Envy Adams's Record",
+                "link": "/hhwgm25/participants/team/270306/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Fabiha Nuzhat", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Gamora",
+          "emoji": "\ud83d\udc63",
+          "sort": "Gamora",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Gamora",
+            "content": [
+              { "text": "Fabiha Nuzhat, Aishani Chhimwal" },
+              {
+                "text": "View Gamora's Record",
+                "link": "/hhwgm25/participants/team/270321/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Aishani Chhimwal", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Gamora",
+          "emoji": "\ud83d\udc63",
+          "sort": "Gamora",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Gamora",
+            "content": [
+              { "text": "Fabiha Nuzhat, Aishani Chhimwal" },
+              {
+                "text": "View Gamora's Record",
+                "link": "/hhwgm25/participants/team/270321/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Heather Dong", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Gwen Stacy",
+          "emoji": "\ud83d\udc3f",
+          "sort": "Gwen Stacy",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Gwen Stacy",
+            "content": [
+              { "text": "Heian Cheong, Heather Dong" },
+              {
+                "text": "View Gwen Stacy's Record",
+                "link": "/hhwgm25/participants/team/270300/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Heian Cheong", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Gwen Stacy",
+          "emoji": "\ud83d\udc3f",
+          "sort": "Gwen Stacy",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Gwen Stacy",
+            "content": [
+              { "text": "Heian Cheong, Heather Dong" },
+              {
+                "text": "View Gwen Stacy's Record",
+                "link": "/hhwgm25/participants/team/270300/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Cynthia Wu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Harley Quinn",
+          "emoji": "\ud83e\udd88",
+          "sort": "Harley Quinn",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Harley Quinn",
+            "content": [
+              { "text": "Alina Feng, Cynthia Wu" },
+              {
+                "text": "View Harley Quinn's Record",
+                "link": "/hhwgm25/participants/team/270307/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Alina Feng", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Harley Quinn",
+          "emoji": "\ud83e\udd88",
+          "sort": "Harley Quinn",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Harley Quinn",
+            "content": [
+              { "text": "Alina Feng, Cynthia Wu" },
+              {
+                "text": "View Harley Quinn's Record",
+                "link": "/hhwgm25/participants/team/270307/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Catherine Luo", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Jennika",
+          "emoji": "\ud83e\udd51",
+          "sort": "Jennika",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Jennika",
+            "content": [
+              { "text": "Catherine Luo, Ella" },
+              {
+                "text": "View Jennika's Record",
+                "link": "/hhwgm25/participants/team/270314/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Ella", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Jennika",
+          "emoji": "\ud83e\udd51",
+          "sort": "Jennika",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Jennika",
+            "content": [
+              { "text": "Catherine Luo, Ella" },
+              {
+                "text": "View Jennika's Record",
+                "link": "/hhwgm25/participants/team/270314/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Afia Sehrish", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Magneta",
+          "emoji": "\ud83e\udd29",
+          "sort": "Magneta",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Magneta",
+            "content": [
+              { "text": "Cyndi Zou, Afia Sehrish" },
+              {
+                "text": "View Magneta's Record",
+                "link": "/hhwgm25/participants/team/270318/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Cyndi Zou", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Magneta",
+          "emoji": "\ud83e\udd29",
+          "sort": "Magneta",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Magneta",
+            "content": [
+              { "text": "Cyndi Zou, Afia Sehrish" },
+              {
+                "text": "View Magneta's Record",
+                "link": "/hhwgm25/participants/team/270318/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Abigail Liang", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Mystique",
+          "emoji": "\ud83d\ude4c",
+          "sort": "Mystique",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Mystique",
+            "content": [
+              { "text": "Abigail Liang, Audrey Gao" },
+              {
+                "text": "View Mystique's Record",
+                "link": "/hhwgm25/participants/team/270316/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Audrey Gao", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Mystique",
+          "emoji": "\ud83d\ude4c",
+          "sort": "Mystique",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Mystique",
+            "content": [
+              { "text": "Abigail Liang, Audrey Gao" },
+              {
+                "text": "View Mystique's Record",
+                "link": "/hhwgm25/participants/team/270316/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Susanna Li", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Persepolis",
+          "emoji": "\ud83e\udef5",
+          "sort": "Persepolis",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Persepolis",
+            "content": [
+              { "text": "Isolde Li, Susanna Li" },
+              {
+                "text": "View Persepolis's Record",
+                "link": "/hhwgm25/participants/team/270323/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Isolde Li", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Persepolis",
+          "emoji": "\ud83e\udef5",
+          "sort": "Persepolis",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Persepolis",
+            "content": [
+              { "text": "Isolde Li, Susanna Li" },
+              {
+                "text": "View Persepolis's Record",
+                "link": "/hhwgm25/participants/team/270323/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Christina Liang", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Poison Ivy",
+          "emoji": "\ud83c\udd92",
+          "sort": "Poison Ivy",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Poison Ivy",
+            "content": [
+              { "text": "Sarah Wang, Christina Liang" },
+              {
+                "text": "View Poison Ivy's Record",
+                "link": "/hhwgm25/participants/team/270302/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Sarah Wang", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Poison Ivy",
+          "emoji": "\ud83c\udd92",
+          "sort": "Poison Ivy",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Poison Ivy",
+            "content": [
+              { "text": "Sarah Wang, Christina Liang" },
+              {
+                "text": "View Poison Ivy's Record",
+                "link": "/hhwgm25/participants/team/270302/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "alexander liu vallysedigh", "class": "" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Ramona Flowers",
+          "emoji": "\ud83e\uddae",
+          "sort": "Ramona Flowers",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Ramona Flowers",
+            "content": [
+              { "text": "Arrian wu, alexander liu vallysedigh" },
+              {
+                "text": "View Ramona Flowers's Record",
+                "link": "/hhwgm25/participants/team/270305/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Arrian wu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Ramona Flowers",
+          "emoji": "\ud83e\uddae",
+          "sort": "Ramona Flowers",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Ramona Flowers",
+            "content": [
+              { "text": "Arrian wu, alexander liu vallysedigh" },
+              {
+                "text": "View Ramona Flowers's Record",
+                "link": "/hhwgm25/participants/team/270305/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "N/A", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Rosalind",
+          "emoji": "\ud83c\udf21",
+          "sort": "Rosalind",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Rosalind",
+            "content": [
+              { "text": "Alisa Chen, N/A" },
+              {
+                "text": "View Rosalind's Record",
+                "link": "/hhwgm25/participants/team/270325/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Alisa Chen", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Rosalind",
+          "emoji": "\ud83c\udf21",
+          "sort": "Rosalind",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Rosalind",
+            "content": [
+              { "text": "Alisa Chen, N/A" },
+              {
+                "text": "View Rosalind's Record",
+                "link": "/hhwgm25/participants/team/270325/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Farhana Rahman", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Sabrina Spellman",
+          "emoji": "\ud83e\uddf2",
+          "sort": "Sabrina Spellman",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Sabrina Spellman",
+            "content": [
+              { "text": "Farhana Rahman, Arsha Rashid" },
+              {
+                "text": "View Sabrina Spellman's Record",
+                "link": "/hhwgm25/participants/team/270324/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Arsha Rashid", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Sabrina Spellman",
+          "emoji": "\ud83e\uddf2",
+          "sort": "Sabrina Spellman",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Sabrina Spellman",
+            "content": [
+              { "text": "Farhana Rahman, Arsha Rashid" },
+              {
+                "text": "View Sabrina Spellman's Record",
+                "link": "/hhwgm25/participants/team/270324/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Habiba Fatima", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Scarlet Witch",
+          "emoji": "\u26f1",
+          "sort": "Scarlet Witch",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Scarlet Witch",
+            "content": [
+              { "text": ".Zainab Gul, Habiba Fatima" },
+              {
+                "text": "View Scarlet Witch's Record",
+                "link": "/hhwgm25/participants/team/270319/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": ".Zainab Gul", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Scarlet Witch",
+          "emoji": "\u26f1",
+          "sort": "Scarlet Witch",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Scarlet Witch",
+            "content": [
+              { "text": ".Zainab Gul, Habiba Fatima" },
+              {
+                "text": "View Scarlet Witch's Record",
+                "link": "/hhwgm25/participants/team/270319/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Alisa yu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Starfire",
+          "emoji": "\ud83e\udddd",
+          "sort": "Starfire",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Starfire",
+            "content": [
+              { "text": "Alisa yu, Olivia Sony" },
+              {
+                "text": "View Starfire's Record",
+                "link": "/hhwgm25/participants/team/270309/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Olivia Sony", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Starfire",
+          "emoji": "\ud83e\udddd",
+          "sort": "Starfire",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Starfire",
+            "content": [
+              { "text": "Alisa yu, Olivia Sony" },
+              {
+                "text": "View Starfire's Record",
+                "link": "/hhwgm25/participants/team/270309/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Charlotte Chen", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Thundra",
+          "emoji": "\ud83e\udead",
+          "sort": "Thundra",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Thundra",
+            "content": [
+              { "text": "Alysha Xu, Charlotte Chen" },
+              {
+                "text": "View Thundra's Record",
+                "link": "/hhwgm25/participants/team/270320/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Alysha Xu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Thundra",
+          "emoji": "\ud83e\udead",
+          "sort": "Thundra",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Thundra",
+            "content": [
+              { "text": "Alysha Xu, Charlotte Chen" },
+              {
+                "text": "View Thundra's Record",
+                "link": "/hhwgm25/participants/team/270320/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Valerie Fan", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Veronica Lodge",
+          "emoji": "\ud83d\udc7e",
+          "sort": "Veronica Lodge",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Veronica Lodge",
+            "content": [
+              { "text": "Valerie Fan, Vannice Fan" },
+              {
+                "text": "View Veronica Lodge's Record",
+                "link": "/hhwgm25/participants/team/270312/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Vannice Fan", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Veronica Lodge",
+          "emoji": "\ud83d\udc7e",
+          "sort": "Veronica Lodge",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Veronica Lodge",
+            "content": [
+              { "text": "Valerie Fan, Vannice Fan" },
+              {
+                "text": "View Veronica Lodge's Record",
+                "link": "/hhwgm25/participants/team/270312/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Suraya Islam tithi", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Wonder Woman",
+          "emoji": "\ud83e\ude97",
+          "sort": "Wonder Woman",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Wonder Woman",
+            "content": [
+              { "text": "Suraya Islam tithi, Fariya hoque Orin" },
+              {
+                "text": "View Wonder Woman's Record",
+                "link": "/hhwgm25/participants/team/270285/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Fariya hoque Orin", "class": "no-wrap" },
+        { "text": "Open" },
+        {
+          "text": "Wonder Woman",
+          "emoji": "\ud83e\ude97",
+          "sort": "Wonder Woman",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Wonder Woman",
+            "content": [
+              { "text": "Suraya Islam tithi, Fariya hoque Orin" },
+              {
+                "text": "View Wonder Woman's Record",
+                "link": "/hhwgm25/participants/team/270285/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Emily Mu", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Zatanna",
+          "emoji": "\ud83c\udff9",
+          "sort": "Zatanna",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Zatanna",
+            "content": [
+              { "text": "Catherine Sun, Emily Mu" },
+              {
+                "text": "View Zatanna's Record",
+                "link": "/hhwgm25/participants/team/270299/"
+              }
+            ]
+          }
+        }
+      ],
+      [
+        { "text": "Catherine Sun", "class": "no-wrap" },
+        { "text": "Open, Junior" },
+        {
+          "text": "Zatanna",
+          "emoji": "\ud83c\udff9",
+          "sort": "Zatanna",
+          "class": "team-name no-wrap",
+          "popover": {
+            "title": "Zatanna",
+            "content": [
+              { "text": "Catherine Sun, Emily Mu" },
+              {
+                "text": "View Zatanna's Record",
+                "link": "/hhwgm25/participants/team/270299/"
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "title": "Speakers",
+    "subtitle": "",
+    "empty_title": "No Data Available",
+    "class": "",
+    "sort_key": "team",
+    "sort_order": ""
+  }
+]
