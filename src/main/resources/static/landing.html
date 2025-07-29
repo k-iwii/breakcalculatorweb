@@ -6,8 +6,14 @@
     <title>Debate Break Calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        body {
+            background: #FFFEF7;
+            margin: 0;
+            padding: 0;
+        }
+        
         .container {
-            background: white;
+            background: #FFFEF7;
             padding: 0px clamp(2rem, 8vw, 5rem);
             text-align: left;
             margin-left: clamp(1.5rem, 5vw, 3rem);
@@ -19,7 +25,7 @@
 
         h1 {
             font-size: clamp(3rem, 8vw, 8rem);
-            color: #bdbdbd;
+            color: #9BB594;
             margin: 0;
             margin-bottom: clamp(1.5rem, 3vw, 3rem);
             font-weight: 700;
@@ -31,7 +37,7 @@
 
         h2 {
             font-size: clamp(1.5rem, 3.5vw, 3.5rem);
-            color: #bdbdbd;
+            color: #C2DBBB;
             margin-bottom: 0;
             margin-top: clamp(4rem, 12vw, 10rem);
             font-weight: 700;
@@ -41,7 +47,7 @@
 
         h3 {
             font-size: clamp(1rem, 2.2vw, 2rem);
-            color: #000000;
+            color: #768C70;
             margin-bottom: clamp(0.5rem, 1vw, 1rem);
             font-weight: 500;
             text-align: left;
@@ -64,7 +70,7 @@
             border: none;
             outline: none;
             transition: all 0.3s ease;
-            background: #f5f5f5;
+            background: #F2F6F1;
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
             width: 100%;
@@ -72,18 +78,19 @@
 
         input[type="text"]::placeholder {
             font-style: italic;
+            color: #4d5b49;
         }
 
         input[type="text"]:focus, input[type="number"]:focus, select:focus {
-            border-color: #f5f5f5;
-            background: white;
+            border-color: #F2F6F1;
+            background: FFFEF7;
             box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.1);
             transform: translateY(-2px);
         }
 
         .go-button {
-            background: #919191;
-            color: white;
+            background: #9BB594;
+            color: #FFFEF7;
             border: none;
             padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1.2rem, 2.5vw, 1.6rem);
             font-size: clamp(1rem, 2vw, 1.6rem);
@@ -137,7 +144,7 @@
     <div class="container">
         <h2>Kallie's</h2>
         <h1>Debate Break<br>Calculator</h1>
-        <h3>Enter tournament details to begin...</h3>
+        <h3>Enter a Calicotab URL to begin...</h3>
         
         <div class="input-group">
             <input type="text" id="urlInput" placeholder="Enter Calicotab URL here..." autocomplete="off">

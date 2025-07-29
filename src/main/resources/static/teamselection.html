@@ -7,8 +7,14 @@
     <title>Debate Break Calculator</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        body {
+            background: #FFFEF7;
+            margin: 0;
+            padding: 0;
+        }
+
         .container {
-            background: white;
+            background: #FFFEF7;
             padding: 0 5rem;
             text-align: left;
             margin-left: 3.125rem;
@@ -22,7 +28,7 @@
 
         h1 {
             font-size: clamp(2rem, 6vw, 6rem);
-            color: #bdbdbd;
+            color: #9BB594;
             margin-top: 5rem;
             margin-bottom: 1.875rem;
             font-weight: 700;
@@ -48,7 +54,7 @@
             border: none;
             outline: none;
             transition: all 0.3s ease;
-            background: #f5f5f5;
+            background: #F2F6F1;
             box-sizing: border-box;
             font-family: 'Montserrat', sans-serif;
             width: 100%;
@@ -56,19 +62,20 @@
 
         input[type="text"]::placeholder {
             font-style: italic;
+            color: #9BB594;
             font-size: clamp(1rem, 1.6vw, 1.2rem);
         }
 
         input[type="text"]:focus, input[type="number"]:focus, select:focus {
-            border-color: #f5f5f5;
-            background: white;
+            border-color: #F2F6F1;
+            background: #FFFEF7;
             box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.1);
             transform: translateY(-2px);
         }
 
         .search-button {
-            background: #919191;
-            color: white;
+            background: #768C70;
+            color: #FFFEF7;
             border: none;
             padding: 0.9375rem 0.9375rem;
             font-size: 1.2rem;
@@ -101,9 +108,9 @@
             width: 95%;
             height: clamp(10rem, 55vh, 50rem);
             overflow-y: auto;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #C2DBBB;
             border-radius: 0.5rem;
-            background: white;
+            background: #FAFEF7;
         }
 
         #standingsTable {
@@ -115,7 +122,7 @@
         #standingsTable thead {
             position: sticky;
             top: 0;
-            background: #919191;
+            background: #768C70;
             z-index: 10;
         }
 
@@ -123,38 +130,38 @@
             padding: 0.9375rem 0.75rem;
             text-align: left;
             font-weight: 300;
-            color: #ffffff;
-            border: 1px solid #e5e5e5;
+            color: #F9FDF8;
+            border: 1px solid #4D5B49;
             font-size: clamp(0.8rem, 0.8vw, 1.1rem);
         }
 
         #standingsTable td {
             padding: 0.75rem;
-            border: 1px solid #e5e5e5;
+            border: 1px solid #C2DBBB;
             font-size: clamp(0.8rem, 0.8vw, 1.1rem);
-            color: #555;
+            color: #768C70;
         }
 
         #standingsTable tbody tr:hover {
-            background-color: #f8f9fa;
+            background-color: #F1F8EF;
             cursor: pointer;
         }
 
         #standingsTable tbody tr:nth-child(even) {
-            background-color: #fafafa;
+            background-color: #F1F8EF;
         }
 
         #standingsTable tbody tr:nth-child(even):hover {
-            background-color: #f0f0f0;
+            background-color: #EAF4E7;
         }
 
         #standingsTable tbody tr.selected {
-            background-color: #e5e5e5 !important;
-            border: 2px solid #919191;
+            background-color: #C2DBBB !important;
+            border: 2px solid #768C70;
         }
 
         #standingsTable tbody tr.selected td {
-            border: 1px solid #919191;
+            border: 1px solid #768C70;
         }
 
     </style>
