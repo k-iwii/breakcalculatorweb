@@ -75,8 +75,8 @@
       input[type="number"]:focus,
       select:focus {
         border-color: #f2f6f1;
-        background: #fffef7;
-        box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.1);
+        background: #f2f6f1;
+        border-left: 4px solid #C2DBBB;
         transform: translateY(-2px);
       }
 
@@ -113,7 +113,7 @@
       .table-container {
         margin-top: 0.625rem;
         width: 95%;
-        height: clamp(10rem, 45vh, 50rem);
+        height: clamp(10rem, 55vh, 50rem);
         overflow-y: auto;
         border: 1px solid #c2dbbb;
         border-radius: 0.5rem;
@@ -214,16 +214,6 @@
   <body>
     <div class="container">
       <h1>Which team are you?</h1>
-      <p
-        style="
-          color: #4d5b49;
-          font-family: 'Montserrat', sans-serif;
-          margin: 0.625rem 0;
-          margin-bottom: 1.5rem;
-        "
-      >
-        The table may take a moment to load. Hang tight!
-      </p>
       <div class="search-bar">
         <input
           type="text"

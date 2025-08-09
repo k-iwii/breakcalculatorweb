@@ -90,7 +90,6 @@
             color: #4D5B49;
             margin-top: 0.9375rem;
             margin-bottom: 0.3125rem;
-            /*margin-left: 100px;*/
             font-weight: 600;
             line-height: 1.2;
             letter-spacing: -1px;
@@ -126,7 +125,7 @@
         }
         
         .column-clickable:hover {
-            background-color: #F9FDF8;
+            background-color: #FAF8F0;
         }
         
         /* Column headings.. They're just called h3 because h1 didnt work */
@@ -150,7 +149,7 @@
         }
 
         .column.selected {
-            background-color: #FFFEF7;
+            background-color: #F5F7E5;
             border-radius: 0.5rem;
         }
 
@@ -166,7 +165,7 @@
 
         .table-container {
             margin-top: 1.875rem;
-            margin-bottom: 6.25rem;
+            margin-bottom: 0;
             width: 95%;
             height: clamp(10rem, 60vh, 50rem); /* 500px */
             max-height: 31.25rem;
@@ -185,7 +184,7 @@
 
         #standingsTable thead {
             position: sticky;
-            top: 0;
+            top: -1px;
             background: #768C70;
             z-index: 10;
         }
@@ -195,7 +194,7 @@
             text-align: left;
             font-weight: 300;
             color: #F9FDF8;
-            border: 1px solid #4D5B49;
+            border: 1px solid #C2DBBB;
             font-size: clamp(0.8rem, 1vw, 1.2rem);  
         }
 
@@ -254,6 +253,121 @@
             font-family: "Montserrat", sans-serif;
             font-size: 0.9rem;
         }
+
+        .legend {
+            margin-top: 2rem;
+            margin-bottom: 6.25rem;
+            padding: 1.5rem;
+            background: #FAFEF7;
+            border: 1px solid #C2DBBB;
+            border-radius: 0.5rem;
+            width: 95%;
+            align-self: flex-start;
+        }
+
+        .legend h3 {
+            color: #4D5B49;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 1rem 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            gap: 0.75rem;
+        }
+
+        .legend-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .legend-color {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .legend-color.blue {
+            background-color: #DEF5EE;
+        }
+
+        .legend-color.green {
+            background-color: #DEF5E0;
+        }
+
+        .legend-color.light-green {
+            background-color: #EAF5DE;
+        }
+
+        .legend-color.orange {
+            background-color: #F5F3DE;
+        }
+
+        .legend-color.red {
+            background-color: #F5EADE;
+        }
+
+        .legend-text {
+            color: #4D5B49;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .odds-header {
+            font-size: clamp(1.5rem, 1.8vw, 2.5rem);
+            color: #768C70;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        .odds-columns {
+            margin-bottom: 1.875rem;
+            display: flex;
+            gap: clamp(6.25rem, 8vw, 10rem);
+            width: 100%;
+            text-align: center;
+        }
+
+        .odds-column {
+            flex: 1;
+            min-width: 25rem;
+            padding: 0.3125rem;
+        }
+
+        .odds-column .top-text {
+            font-size: clamp(1rem, 1.2vw, 1.3rem);
+            color: #4D5B49;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .odds-column .middle-text {
+            font-size: clamp(2rem, 3vw, 4rem);
+            color: #4D5B49;
+            margin: 0.5rem 0;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .odds-column .bottom-text {
+            font-size: clamp(0.8rem, 1vw, 1rem);
+            color: #4D5B49;
+            margin-top: 0.5rem;
+            font-weight: 400;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -261,10 +375,28 @@
         <h1>The break is...</h1>
     </div>
     <div class="container">
+        <p style="color: #4D5B49; font-family: 'Montserrat', sans-serif; margin: 1rem 0; text-align: center; font-size: clamp(1rem, 1.2vw, 1.3rem);">
+            Click on one of the cases below to see your odds of breaking in that scenario!
+        </p>
         <h2 id="junior-break-header">Junior Break</h2>
         <div id="junior-results" style="display: none;"></div>
         <h2>Open Break</h2>
         <div id="results"></div>
+        
+        <h2 class="odds-header">How do my odds stack up?</h2>
+        
+        <div class="odds-columns">
+            <div class="odds-column">
+                <div class="top-text">Your odds...</div>
+                <div class="middle-text" id="break-percentage">--</div>
+                <div class="bottom-text">Assuming that every result is equally likely for all future rounds, these are your odds of becoming guaranteed.</div>
+            </div>
+            <div class="odds-column">
+                <div class="top-text">You are...</div>
+                <div class="middle-text" id="team-status">Word</div>
+                <div class="bottom-text" id="team-advice">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+            </div>
+        </div>
         
         <div class="table-container" style="position: relative;">
             <div id="loadingSpinner" class="loading-spinner">
@@ -283,6 +415,30 @@
                 <tbody id="standingsTableBody">
                 </tbody>
             </table>
+        </div>
+        
+        <div class="legend">
+            <h3>Legend</h3>
+            <div class="legend-item">
+                <span class="legend-color blue"></span>
+                <span class="legend-text"><strong>Guaranteed! 🔥</strong> You have enough points to be guaranteed to break!</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color green"></span>
+                <span class="legend-text"><strong>On track! 😁</strong> Even if you only take 3rds from here on out, you'll be guaranteed. Or, even if you only take 4ths, you could still break on speaks.</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color light-green"></span>
+                <span class="legend-text"><strong>Doing okay. 💪</strong> If you only take 2nds from here on out, you'll be guaranteed. Or, even if you only take 3rds, you could still break on speaks.</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color orange"></span>
+                <span class="legend-text"><strong>Good luck... 😰</strong> If you take all 1sts from here on out, you'll be guaranteed. Or, if you only take 2nds, you could break on speaks.</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color red"></span>
+                <span class="legend-text"><strong>You're cooked! 💀</strong> No chance.</span>
+            </div>
         </div>
     </div>
     
@@ -400,6 +556,9 @@
                     // Load standings data for the table
                     loadStandingsTable();
                     
+                    // Load break percentage
+                    loadBreakPercentage();
+                    
                     // Select default column after content is loaded
                     setTimeout(() => {
                         selectDefaultColumn();
@@ -457,6 +616,64 @@
                     console.error('Error fetching junior status for table:', error);
                     // Hide loading spinner on error
                     document.getElementById("loadingSpinner").style.display = "none";
+                });
+        }
+
+        function loadBreakPercentage() {
+            const selectedTeam = sessionStorage.getItem('selectedTeam');
+            const showJunior = sessionStorage.getItem('showJunior') === 'true';
+            
+            if (!selectedTeam) {
+                document.getElementById('break-percentage').textContent = '--';
+                return;
+            }
+
+            // Determine break type based on team's junior status
+            const tournamentUrl = sessionStorage.getItem('tournamentUrl');
+            if (!tournamentUrl) {
+                document.getElementById('break-percentage').textContent = '--';
+                return;
+            }
+
+            // First get team info to determine if junior
+            fetch(`/api/standings?url=${encodeURIComponent(tournamentUrl)}`)
+                .then(response => response.json())
+                .then(standings => {
+                    const teamData = standings.find(standing => {
+                        const team = standing[0];
+                        return team && team.displayName === selectedTeam;
+                    });
+                    
+                    let breakType = 'open';
+                    if (selectedColumn && selectedColumn.breakType) {
+                        breakType = selectedColumn.breakType;
+                    } else if (teamData && teamData[0] && teamData[0].isJunior && showJunior) {
+                        breakType = 'junior';
+                    }
+
+                    // Determine case type from selected column
+                    let caseType = 'worst'; // default
+                    if (selectedColumn && selectedColumn.caseType) {
+                        caseType = selectedColumn.caseType;
+                    }
+
+                    // Fetch break percentage
+                    fetch(`/api/break-percentage?teamName=${encodeURIComponent(selectedTeam)}&breakType=${breakType}&caseType=${caseType}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const percentage = Math.round(data.percentage);
+                            document.getElementById('break-percentage').textContent = percentage + '%';
+                            // Update team status when break percentage is loaded
+                            updateTeamStatus();
+                        })
+                        .catch(error => {
+                            console.error('Error fetching break percentage:', error);
+                            document.getElementById('break-percentage').textContent = '--';
+                        });
+                })
+                .catch(error => {
+                    console.error('Error fetching team data for break percentage:', error);
+                    document.getElementById('break-percentage').textContent = '--';
                 });
         }
         
@@ -555,6 +772,9 @@
             
             // Fetch point colours for this selection and refresh row colors
             fetchColoursAndRefresh();
+            
+            // Update break percentage for new selection
+            loadBreakPercentage();
         }
 
         function selectDefaultColumn() {
@@ -614,6 +834,9 @@
             
             // Fetch point colours for default selection and refresh row colors
             fetchColoursAndRefresh();
+            
+            // Update break percentage for new selection
+            loadBreakPercentage();
         }
 
         function fetchColoursAndRefresh() {
@@ -660,6 +883,74 @@
                         rows[i].style.backgroundColor = color;
                     }
                 }
+            }
+            
+            // Update team status based on selected team's color
+            updateTeamStatus();
+        }
+        
+        function updateTeamStatus() {
+            const selectedTeam = sessionStorage.getItem('selectedTeam');
+            if (!selectedTeam) {
+                document.getElementById('team-status').textContent = 'Word';
+                document.getElementById('team-advice').textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
+                return;
+            }
+            
+            const tableBody = document.getElementById('standingsTableBody');
+            const rows = tableBody.getElementsByTagName('tr');
+            
+            // Find the selected team's row
+            for (let i = 0; i < rows.length; i++) {
+                const teamNameCell = rows[i].getElementsByTagName('td')[0];
+                if (teamNameCell && teamNameCell.textContent === selectedTeam) {
+                    const backgroundColor = rows[i].style.backgroundColor;
+                    const statusText = getStatusTextFromColor(backgroundColor);
+                    const adviceText = getAdviceTextFromColor(backgroundColor);
+                    document.getElementById('team-status').textContent = statusText;
+                    document.getElementById('team-advice').textContent = adviceText;
+                    break;
+                }
+            }
+        }
+        
+        function getStatusTextFromColor(backgroundColor) {
+            // Convert background color to lowercase for consistent matching
+            const color = backgroundColor.toLowerCase();
+            
+            // Map colors to status text based on the legend colors
+            if (color.includes('def5ee') || color === 'rgb(222, 245, 238)') {
+                return 'Guaranteed!';
+            } else if (color.includes('def5e0') || color === 'rgb(222, 245, 224)') {
+                return 'On track!';
+            } else if (color.includes('eaf5de') || color === 'rgb(234, 245, 222)') {
+                return 'Doing okay.';
+            } else if (color.includes('f5f3de') || color === 'rgb(245, 243, 222)') {
+                return 'Working on it...';
+            } else if (color.includes('f5eade') || color === 'rgb(245, 234, 222)') {
+                return 'Cooked.';
+            } else {
+                return 'Word';
+            }
+        }
+        
+        function getAdviceTextFromColor(backgroundColor) {
+            // Convert background color to lowercase for consistent matching
+            const color = backgroundColor.toLowerCase();
+            
+            // Map colors to advice text based on the legend colors
+            if (color.includes('def5ee') || color === 'rgb(222, 245, 238)') {
+                return "You're guaranteed to break!";
+            } else if (color.includes('def5e0') || color === 'rgb(222, 245, 224)') {
+                return "If you take all 3rds from here on out, you'll be guaranteed. If you take 4ths, you could still break on speaks.";
+            } else if (color.includes('eaf5de') || color === 'rgb(234, 245, 222)') {
+                return "If you take all 2nds from here on out, you'll be guaranteed. If you take 3rds, you could still break on speaks.";
+            } else if (color.includes('f5f3de') || color === 'rgb(245, 243, 222)') {
+                return "If you take all 1sts from here on out, you'll be guaranteed. If you take 2nds, you could still break on speaks.";
+            } else if (color.includes('f5eade') || color === 'rgb(245, 234, 222)') {
+                return "Even if you take all 1sts, you still couldn't break.";
+            } else {
+                return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit';
             }
         }
 /*

@@ -212,6 +212,43 @@ public class ServerController {
 
         return breakResults;
     }
+
+    public int getUserPoints(String teamName) {
+        int currentPoints = -1;
+        for (Object[] teamData : currentStandings) {
+            Team team = (Team) teamData[0];
+            if (team.getDisplayName().equals(teamName)) {
+                currentPoints = (int) teamData[1];
+                break;
+            }
+        }
+        return currentPoints;
+    }
+
+    @GetMapping("/break-percentage")
+    public Map<String, Double> getBreakPercentage(
+        @RequestParam String teamName,
+        @RequestParam(required = false, defaultValue = "open") String breakType,
+        @RequestParam(required = false, defaultValue = "worst") String caseType
+    ) {
+        if (roundsLeft <= 0 || currentStandings.isEmpty())
+            return Map.of("percentage", 0.0);
+
+        int currentPoints = getUserPoints(teamName);
+        if (currentPoints == -1) return Map.of("percentage", 0.0);
+
+        // Determine minimum points needed to break
+        int minPointsToBreak = getGuaranteedBreak(breakType, caseType);
+        int pointsNeeded = minPointsToBreak - currentPoints;
+
+        if (pointsNeeded <= 0)
+            return Map.of("percentage", 100.0);
+
+        BreakPercentageCalculator calculator = new BreakPercentageCalculator(roundsLeft, pointsNeeded);
+        double percentage = calculator.calculateBreakPercentage();
+
+        return Map.of("percentage", percentage);
+    }
 }
 
 @Controller
