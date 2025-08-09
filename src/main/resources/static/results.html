@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
+            background: #FFFEF7;
             margin: 0;
             padding: 0;
             min-height: 100vh;
@@ -125,7 +126,7 @@
         }
         
         .column-clickable:hover {
-            background-color: #f5f5f5;
+            background-color: #F9FDF8;
         }
         
         /* Column headings.. They're just called h3 because h1 didnt work */
@@ -220,6 +221,39 @@
         #standingsTable tbody tr.selected-team:hover {
             background-color: #F1F8EF;
         }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 2vw;
+            height: 2vw;
+            border: 4px solid #c2dbbb;
+            border-top: 4px solid #768c70;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            text-align: center;
+            margin-top: 10px;
+            color: #768c70; 
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -232,7 +266,11 @@
         <h2>Open Break</h2>
         <div id="results"></div>
         
-        <div class="table-container">
+        <div class="table-container" style="position: relative;">
+            <div id="loadingSpinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <div class="loading-text">Loading results...</div>
+            </div>
             <table id="standingsTable">
                 <thead>
                     <tr>
@@ -375,10 +413,15 @@
         };
         
         function loadStandingsTable() {
+            // Show loading spinner
+            document.getElementById("loadingSpinner").style.display = "flex";
+            
             // Get tournament URL from session storage (set during the flow)
             const tournamentUrl = sessionStorage.getItem('tournamentUrl');
             if (!tournamentUrl) {
                 console.error('No tournament URL found in session storage');
+                // Hide loading spinner on error
+                document.getElementById("loadingSpinner").style.display = "none";
                 return;
             }
             
@@ -393,6 +436,9 @@
                         .then(standings => {
                             populateStandingsTable(standings, jrStatus.showJunior);
                             
+                            // Hide loading spinner after data is loaded
+                            document.getElementById("loadingSpinner").style.display = "none";
+                            
                             // Auto-scroll to selected team if available
                             const selectedTeam = sessionStorage.getItem('selectedTeam');
                             if (selectedTeam) {
@@ -403,10 +449,14 @@
                         })
                         .catch(error => {
                             console.error('Error loading standings:', error);
+                            // Hide loading spinner on error
+                            document.getElementById("loadingSpinner").style.display = "none";
                         });
                 })
                 .catch(error => {
                     console.error('Error fetching junior status for table:', error);
+                    // Hide loading spinner on error
+                    document.getElementById("loadingSpinner").style.display = "none";
                 });
         }
         

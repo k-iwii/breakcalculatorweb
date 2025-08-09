@@ -50,7 +50,7 @@ public class CalicotabDataFetcher {
 
         if (standingsData.isEmpty()) {
             System.out.println("DEBUG: No standings data found -- not an ongoing tournament");
-            List<List<Map<String, Object>>> teamsData = teamsProcessor.readTeamsPage();
+            List<List<Map<String, Object>>> teamsData = teamsProcessor.readTeamsPage(); 
 
             if (teamsData.isEmpty()) {
                 System.out.println("DEBUG: No teams data found -- not a completed tournament");
